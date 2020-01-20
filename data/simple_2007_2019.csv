@@ -1,0 +1,1619 @@
+Academic Year,InState,InternationalStatus,Ethnicity,ChurchAffiliation,ClassLevel,Gender,StudentCount
+2007,FALSE,International Student,International Student,Christian Reformed,First-year,Female,31
+2007,FALSE,International Student,International Student,Christian Reformed,First-year,Male,12
+2007,FALSE,International Student,International Student,Christian Reformed,Junior,Female,16
+2007,FALSE,International Student,International Student,Christian Reformed,Junior,Male,13
+2007,FALSE,International Student,International Student,Christian Reformed,Junior,Not Entered,1
+2007,FALSE,International Student,International Student,Christian Reformed,Senior,Female,15
+2007,FALSE,International Student,International Student,Christian Reformed,Senior,Male,16
+2007,FALSE,International Student,International Student,Christian Reformed,Sophomore,Female,20
+2007,FALSE,International Student,International Student,Christian Reformed,Sophomore,Male,25
+2007,FALSE,International Student,International Student,Other,First-year,Female,30
+2007,FALSE,International Student,International Student,Other,First-year,Male,18
+2007,FALSE,International Student,International Student,Other,Junior,Female,7
+2007,FALSE,International Student,International Student,Other,Junior,Male,11
+2007,FALSE,International Student,International Student,Other,Senior,Female,7
+2007,FALSE,International Student,International Student,Other,Senior,Male,14
+2007,FALSE,International Student,International Student,Other,Sophomore,Female,14
+2007,FALSE,International Student,International Student,Other,Sophomore,Male,11
+2007,TRUE,International Student,International Student,Christian Reformed,First-year,Male,1
+2007,TRUE,International Student,International Student,Christian Reformed,Junior,Female,1
+2007,TRUE,International Student,International Student,Christian Reformed,Junior,Male,3
+2007,TRUE,International Student,International Student,Christian Reformed,Senior,Female,4
+2007,TRUE,International Student,International Student,Christian Reformed,Senior,Male,5
+2007,TRUE,International Student,International Student,Christian Reformed,Sophomore,Female,1
+2007,TRUE,International Student,International Student,Christian Reformed,Sophomore,Male,1
+2007,TRUE,International Student,International Student,Other,First-year,Female,4
+2007,TRUE,International Student,International Student,Other,Junior,Male,1
+2007,TRUE,International Student,International Student,Other,Senior,Male,2
+2007,TRUE,International Student,International Student,Other,Sophomore,Male,1
+2008,FALSE,International Student,International Student,Christian Reformed,First-year,Female,23
+2008,FALSE,International Student,International Student,Christian Reformed,First-year,Male,22
+2008,FALSE,International Student,International Student,Christian Reformed,Junior,Female,24
+2008,FALSE,International Student,International Student,Christian Reformed,Junior,Male,21
+2008,FALSE,International Student,International Student,Christian Reformed,Senior,Female,16
+2008,FALSE,International Student,International Student,Christian Reformed,Senior,Male,13
+2008,FALSE,International Student,International Student,Christian Reformed,Senior,Not Entered,1
+2008,FALSE,International Student,International Student,Christian Reformed,Sophomore,Female,27
+2008,FALSE,International Student,International Student,Christian Reformed,Sophomore,Male,12
+2008,FALSE,International Student,International Student,Other,First-year,Female,11
+2008,FALSE,International Student,International Student,Other,First-year,Male,25
+2008,FALSE,International Student,International Student,Other,Junior,Female,15
+2008,FALSE,International Student,International Student,Other,Junior,Male,11
+2008,FALSE,International Student,International Student,Other,Senior,Female,8
+2008,FALSE,International Student,International Student,Other,Senior,Male,12
+2008,FALSE,International Student,International Student,Other,Sophomore,Female,21
+2008,FALSE,International Student,International Student,Other,Sophomore,Male,16
+2008,TRUE,International Student,International Student,Christian Reformed,First-year,Female,1
+2008,TRUE,International Student,International Student,Christian Reformed,First-year,Male,2
+2008,TRUE,International Student,International Student,Christian Reformed,Junior,Female,1
+2008,TRUE,International Student,International Student,Christian Reformed,Junior,Male,1
+2008,TRUE,International Student,International Student,Christian Reformed,Senior,Female,2
+2008,TRUE,International Student,International Student,Christian Reformed,Senior,Male,3
+2008,TRUE,International Student,International Student,Christian Reformed,Sophomore,Male,1
+2008,TRUE,International Student,International Student,Other,First-year,Female,3
+2008,TRUE,International Student,International Student,Other,First-year,Male,1
+2008,TRUE,International Student,International Student,Other,Junior,Female,2
+2008,TRUE,International Student,International Student,Other,Junior,Male,1
+2008,TRUE,International Student,International Student,Other,Senior,Male,1
+2008,TRUE,International Student,International Student,Other,Sophomore,Female,3
+2008,TRUE,International Student,International Student,Other,Sophomore,Male,1
+2009,FALSE,International Student,International Student,Christian Reformed,First-year,Female,4
+2009,FALSE,International Student,International Student,Christian Reformed,First-year,Male,9
+2009,FALSE,International Student,International Student,Christian Reformed,Junior,Female,32
+2009,FALSE,International Student,International Student,Christian Reformed,Junior,Male,8
+2009,FALSE,International Student,International Student,Christian Reformed,Senior,Female,25
+2009,FALSE,International Student,International Student,Christian Reformed,Senior,Male,27
+2009,FALSE,International Student,International Student,Christian Reformed,Sophomore,Female,16
+2009,FALSE,International Student,International Student,Christian Reformed,Sophomore,Male,19
+2009,FALSE,International Student,International Student,Other,First-year,Female,26
+2009,FALSE,International Student,International Student,Other,First-year,Male,34
+2009,FALSE,International Student,International Student,Other,Junior,Female,20
+2009,FALSE,International Student,International Student,Other,Junior,Male,9
+2009,FALSE,International Student,International Student,Other,Senior,Female,15
+2009,FALSE,International Student,International Student,Other,Senior,Male,11
+2009,FALSE,International Student,International Student,Other,Sophomore,Female,13
+2009,FALSE,International Student,International Student,Other,Sophomore,Male,17
+2009,TRUE,International Student,International Student,Christian Reformed,First-year,Female,2
+2009,TRUE,International Student,International Student,Christian Reformed,First-year,Male,2
+2009,TRUE,International Student,International Student,Christian Reformed,Junior,Male,1
+2009,TRUE,International Student,International Student,Christian Reformed,Senior,Female,1
+2009,TRUE,International Student,International Student,Christian Reformed,Senior,Male,3
+2009,TRUE,International Student,International Student,Christian Reformed,Sophomore,Female,1
+2009,TRUE,International Student,International Student,Christian Reformed,Sophomore,Male,2
+2009,TRUE,International Student,International Student,Other,First-year,Female,1
+2009,TRUE,International Student,International Student,Other,First-year,Male,1
+2009,TRUE,International Student,International Student,Other,Junior,Female,2
+2009,TRUE,International Student,International Student,Other,Junior,Male,1
+2009,TRUE,International Student,International Student,Other,Senior,Female,2
+2009,TRUE,International Student,International Student,Other,Senior,Male,2
+2009,TRUE,International Student,International Student,Other,Sophomore,Female,3
+2009,TRUE,International Student,International Student,Other,Sophomore,Male,1
+2010,FALSE,International Student,International Student,Christian Reformed,First-year,Female,6
+2010,FALSE,International Student,International Student,Christian Reformed,First-year,Male,17
+2010,FALSE,International Student,International Student,Christian Reformed,Junior,Female,21
+2010,FALSE,International Student,International Student,Christian Reformed,Junior,Male,19
+2010,FALSE,International Student,International Student,Christian Reformed,Senior,Female,31
+2010,FALSE,International Student,International Student,Christian Reformed,Senior,Male,13
+2010,FALSE,International Student,International Student,Christian Reformed,Sophomore,Female,10
+2010,FALSE,International Student,International Student,Christian Reformed,Sophomore,Male,5
+2010,FALSE,International Student,International Student,Other,First-year,Female,24
+2010,FALSE,International Student,International Student,Other,First-year,Male,38
+2010,FALSE,International Student,International Student,Other,Junior,Female,10
+2010,FALSE,International Student,International Student,Other,Junior,Male,17
+2010,FALSE,International Student,International Student,Other,Senior,Female,21
+2010,FALSE,International Student,International Student,Other,Senior,Male,11
+2010,FALSE,International Student,International Student,Other,Sophomore,Female,22
+2010,FALSE,International Student,International Student,Other,Sophomore,Male,30
+2010,TRUE,International Student,International Student,Christian Reformed,Junior,Female,1
+2010,TRUE,International Student,International Student,Christian Reformed,Junior,Male,2
+2010,TRUE,International Student,International Student,Christian Reformed,Senior,Male,1
+2010,TRUE,International Student,International Student,Christian Reformed,Sophomore,Female,2
+2010,TRUE,International Student,International Student,Christian Reformed,Sophomore,Male,2
+2010,TRUE,International Student,International Student,Other,First-year,Female,3
+2010,TRUE,International Student,International Student,Other,First-year,Male,2
+2010,TRUE,International Student,International Student,Other,Junior,Female,4
+2010,TRUE,International Student,International Student,Other,Junior,Male,1
+2010,TRUE,International Student,International Student,Other,Senior,Female,1
+2010,TRUE,International Student,International Student,Other,Senior,Male,1
+2010,TRUE,International Student,International Student,Other,Sophomore,Female,2
+2010,TRUE,International Student,International Student,Other,Sophomore,Male,2
+2011,FALSE,International Student,International Student,Christian Reformed,First-year,Female,14
+2011,FALSE,International Student,International Student,Christian Reformed,First-year,Male,8
+2011,FALSE,International Student,International Student,Christian Reformed,Junior,Female,9
+2011,FALSE,International Student,International Student,Christian Reformed,Junior,Male,8
+2011,FALSE,International Student,International Student,Christian Reformed,Senior,Female,22
+2011,FALSE,International Student,International Student,Christian Reformed,Senior,Male,16
+2011,FALSE,International Student,International Student,Christian Reformed,Sophomore,Female,6
+2011,FALSE,International Student,International Student,Christian Reformed,Sophomore,Male,13
+2011,FALSE,International Student,International Student,Other,First-year,Female,29
+2011,FALSE,International Student,International Student,Other,First-year,Male,41
+2011,FALSE,International Student,International Student,Other,Junior,Female,20
+2011,FALSE,International Student,International Student,Other,Junior,Male,25
+2011,FALSE,International Student,International Student,Other,Senior,Female,17
+2011,FALSE,International Student,International Student,Other,Senior,Male,23
+2011,FALSE,International Student,International Student,Other,Sophomore,Female,25
+2011,FALSE,International Student,International Student,Other,Sophomore,Male,36
+2011,TRUE,International Student,International Student,Christian Reformed,First-year,Male,1
+2011,TRUE,International Student,International Student,Christian Reformed,Junior,Female,2
+2011,TRUE,International Student,International Student,Christian Reformed,Junior,Male,1
+2011,TRUE,International Student,International Student,Christian Reformed,Senior,Female,1
+2011,TRUE,International Student,International Student,Christian Reformed,Senior,Male,2
+2011,TRUE,International Student,International Student,Other,First-year,Female,7
+2011,TRUE,International Student,International Student,Other,First-year,Male,2
+2011,TRUE,International Student,International Student,Other,Junior,Female,1
+2011,TRUE,International Student,International Student,Other,Junior,Male,1
+2011,TRUE,International Student,International Student,Other,Senior,Female,4
+2011,TRUE,International Student,International Student,Other,Senior,Male,2
+2011,TRUE,International Student,International Student,Other,Sophomore,Female,3
+2011,TRUE,International Student,International Student,Other,Sophomore,Male,3
+2012,FALSE,International Student,International Student,Christian Reformed,First-year,Female,20
+2012,FALSE,International Student,International Student,Christian Reformed,First-year,Male,7
+2012,FALSE,International Student,International Student,Christian Reformed,Junior,Female,6
+2012,FALSE,International Student,International Student,Christian Reformed,Junior,Male,12
+2012,FALSE,International Student,International Student,Christian Reformed,Senior,Female,8
+2012,FALSE,International Student,International Student,Christian Reformed,Senior,Male,9
+2012,FALSE,International Student,International Student,Christian Reformed,Sophomore,Female,10
+2012,FALSE,International Student,International Student,Christian Reformed,Sophomore,Male,8
+2012,FALSE,International Student,International Student,Other,First-year,Female,48
+2012,FALSE,International Student,International Student,Other,First-year,Male,43
+2012,FALSE,International Student,International Student,Other,Junior,Female,23
+2012,FALSE,International Student,International Student,Other,Junior,Male,30
+2012,FALSE,International Student,International Student,Other,Senior,Female,26
+2012,FALSE,International Student,International Student,Other,Senior,Male,39
+2012,FALSE,International Student,International Student,Other,Sophomore,Female,25
+2012,FALSE,International Student,International Student,Other,Sophomore,Male,37
+2012,TRUE,International Student,International Student,Christian Reformed,First-year,Female,3
+2012,TRUE,International Student,International Student,Christian Reformed,Junior,Male,1
+2012,TRUE,International Student,International Student,Christian Reformed,Senior,Female,2
+2012,TRUE,International Student,International Student,Christian Reformed,Senior,Male,2
+2012,TRUE,International Student,International Student,Christian Reformed,Sophomore,Male,1
+2012,TRUE,International Student,International Student,Other,First-year,Female,2
+2012,TRUE,International Student,International Student,Other,First-year,Male,3
+2012,TRUE,International Student,International Student,Other,Junior,Female,4
+2012,TRUE,International Student,International Student,Other,Junior,Male,1
+2012,TRUE,International Student,International Student,Other,Senior,Female,2
+2012,TRUE,International Student,International Student,Other,Senior,Male,3
+2012,TRUE,International Student,International Student,Other,Sophomore,Female,6
+2012,TRUE,International Student,International Student,Other,Sophomore,Male,1
+2013,FALSE,International Student,International Student,Christian Reformed,First-year,Female,9
+2013,FALSE,International Student,International Student,Christian Reformed,First-year,Male,5
+2013,FALSE,International Student,International Student,Christian Reformed,Junior,Female,9
+2013,FALSE,International Student,International Student,Christian Reformed,Junior,Male,4
+2013,FALSE,International Student,International Student,Christian Reformed,Senior,Female,8
+2013,FALSE,International Student,International Student,Christian Reformed,Senior,Male,11
+2013,FALSE,International Student,International Student,Christian Reformed,Sophomore,Female,16
+2013,FALSE,International Student,International Student,Christian Reformed,Sophomore,Male,8
+2013,FALSE,International Student,International Student,Other,First-year,Female,37
+2013,FALSE,International Student,International Student,Other,First-year,Male,35
+2013,FALSE,International Student,International Student,Other,Junior,Female,26
+2013,FALSE,International Student,International Student,Other,Junior,Male,29
+2013,FALSE,International Student,International Student,Other,Senior,Female,29
+2013,FALSE,International Student,International Student,Other,Senior,Male,40
+2013,FALSE,International Student,International Student,Other,Sophomore,Female,46
+2013,FALSE,International Student,International Student,Other,Sophomore,Male,42
+2013,TRUE,International Student,International Student,Christian Reformed,Junior,Male,1
+2013,TRUE,International Student,International Student,Christian Reformed,Senior,Male,2
+2013,TRUE,International Student,International Student,Christian Reformed,Sophomore,Female,3
+2013,TRUE,International Student,International Student,Other,First-year,Female,3
+2013,TRUE,International Student,International Student,Other,First-year,Male,4
+2013,TRUE,International Student,International Student,Other,Junior,Female,3
+2013,TRUE,International Student,International Student,Other,Junior,Male,1
+2013,TRUE,International Student,International Student,Other,Senior,Female,5
+2013,TRUE,International Student,International Student,Other,Senior,Male,1
+2013,TRUE,International Student,International Student,Other,Sophomore,Female,4
+2013,TRUE,International Student,International Student,Other,Sophomore,Male,3
+2014,FALSE,International Student,International Student,Christian Reformed,First-year,Female,3
+2014,FALSE,International Student,International Student,Christian Reformed,First-year,Male,7
+2014,FALSE,International Student,International Student,Christian Reformed,Graduate Student,Female,1
+2014,FALSE,International Student,International Student,Christian Reformed,Junior,Female,15
+2014,FALSE,International Student,International Student,Christian Reformed,Junior,Male,6
+2014,FALSE,International Student,International Student,Christian Reformed,Senior,Female,7
+2014,FALSE,International Student,International Student,Christian Reformed,Senior,Male,7
+2014,FALSE,International Student,International Student,Christian Reformed,Sophomore,Female,11
+2014,FALSE,International Student,International Student,Christian Reformed,Sophomore,Male,3
+2014,FALSE,International Student,International Student,Other,First-year,Female,37
+2014,FALSE,International Student,International Student,Other,First-year,Male,47
+2014,FALSE,International Student,International Student,Other,Junior,Female,43
+2014,FALSE,International Student,International Student,Other,Junior,Male,37
+2014,FALSE,International Student,International Student,Other,Senior,Female,32
+2014,FALSE,International Student,International Student,Other,Senior,Male,32
+2014,FALSE,International Student,International Student,Other,Sophomore,Female,30
+2014,FALSE,International Student,International Student,Other,Sophomore,Male,34
+2014,TRUE,International Student,International Student,Christian Reformed,First-year,Female,2
+2014,TRUE,International Student,International Student,Christian Reformed,First-year,Male,1
+2014,TRUE,International Student,International Student,Christian Reformed,Junior,Female,3
+2014,TRUE,International Student,International Student,Christian Reformed,Senior,Male,2
+2014,TRUE,International Student,International Student,Other,First-year,Female,12
+2014,TRUE,International Student,International Student,Other,First-year,Male,4
+2014,TRUE,International Student,International Student,Other,Junior,Female,3
+2014,TRUE,International Student,International Student,Other,Junior,Male,2
+2014,TRUE,International Student,International Student,Other,Senior,Female,5
+2014,TRUE,International Student,International Student,Other,Senior,Male,1
+2014,TRUE,International Student,International Student,Other,Sophomore,Female,3
+2014,TRUE,International Student,International Student,Other,Sophomore,Male,4
+2015,FALSE,International Student,International Student,Christian Reformed,First-year,Female,3
+2015,FALSE,International Student,International Student,Christian Reformed,First-year,Male,2
+2015,FALSE,International Student,International Student,Christian Reformed,Junior,Female,10
+2015,FALSE,International Student,International Student,Christian Reformed,Junior,Male,4
+2015,FALSE,International Student,International Student,Christian Reformed,Senior,Female,12
+2015,FALSE,International Student,International Student,Christian Reformed,Senior,Male,4
+2015,FALSE,International Student,International Student,Christian Reformed,Sophomore,Female,3
+2015,FALSE,International Student,International Student,Christian Reformed,Sophomore,Male,4
+2015,FALSE,International Student,International Student,Other,First-year,Female,40
+2015,FALSE,International Student,International Student,Other,First-year,Male,28
+2015,FALSE,International Student,International Student,Other,Junior,Female,29
+2015,FALSE,International Student,International Student,Other,Junior,Male,31
+2015,FALSE,International Student,International Student,Other,Senior,Female,48
+2015,FALSE,International Student,International Student,Other,Senior,Male,40
+2015,FALSE,International Student,International Student,Other,Sophomore,Female,34
+2015,FALSE,International Student,International Student,Other,Sophomore,Male,47
+2015,TRUE,International Student,International Student,Christian Reformed,First-year,Female,1
+2015,TRUE,International Student,International Student,Christian Reformed,Senior,Female,3
+2015,TRUE,International Student,International Student,Christian Reformed,Sophomore,Female,2
+2015,TRUE,International Student,International Student,Christian Reformed,Sophomore,Male,1
+2015,TRUE,International Student,International Student,Other,First-year,Female,7
+2015,TRUE,International Student,International Student,Other,First-year,Male,5
+2015,TRUE,International Student,International Student,Other,Junior,Female,3
+2015,TRUE,International Student,International Student,Other,Junior,Male,4
+2015,TRUE,International Student,International Student,Other,Senior,Female,4
+2015,TRUE,International Student,International Student,Other,Senior,Male,1
+2015,TRUE,International Student,International Student,Other,Sophomore,Female,13
+2015,TRUE,International Student,International Student,Other,Sophomore,Male,4
+2016,FALSE,International Student,International Student,Christian Reformed,First-year,Female,2
+2016,FALSE,International Student,International Student,Christian Reformed,First-year,Male,1
+2016,FALSE,International Student,International Student,Christian Reformed,Junior,Female,1
+2016,FALSE,International Student,International Student,Christian Reformed,Junior,Male,5
+2016,FALSE,International Student,International Student,Christian Reformed,Senior,Female,12
+2016,FALSE,International Student,International Student,Christian Reformed,Senior,Male,5
+2016,FALSE,International Student,International Student,Christian Reformed,Sophomore,Female,3
+2016,FALSE,International Student,International Student,Christian Reformed,Sophomore,Male,3
+2016,FALSE,International Student,International Student,Other,First-year,Female,52
+2016,FALSE,International Student,International Student,Other,First-year,Male,60
+2016,FALSE,International Student,International Student,Other,Junior,Female,33
+2016,FALSE,International Student,International Student,Other,Junior,Male,40
+2016,FALSE,International Student,International Student,Other,Senior,Female,36
+2016,FALSE,International Student,International Student,Other,Senior,Male,32
+2016,FALSE,International Student,International Student,Other,Sophomore,Female,35
+2016,FALSE,International Student,International Student,Other,Sophomore,Male,24
+2016,TRUE,International Student,International Student,Christian Reformed,Junior,Female,2
+2016,TRUE,International Student,International Student,Christian Reformed,Junior,Male,1
+2016,TRUE,International Student,International Student,Christian Reformed,Senior,Female,1
+2016,TRUE,International Student,International Student,Christian Reformed,Sophomore,Female,1
+2016,TRUE,International Student,International Student,Other,First-year,Female,2
+2016,TRUE,International Student,International Student,Other,First-year,Male,2
+2016,TRUE,International Student,International Student,Other,Junior,Female,14
+2016,TRUE,International Student,International Student,Other,Junior,Male,7
+2016,TRUE,International Student,International Student,Other,Senior,Female,3
+2016,TRUE,International Student,International Student,Other,Senior,Male,4
+2016,TRUE,International Student,International Student,Other,Sophomore,Female,6
+2016,TRUE,International Student,International Student,Other,Sophomore,Male,3
+2017,FALSE,International Student,International Student,Christian Reformed,First-year,Female,4
+2017,FALSE,International Student,International Student,Christian Reformed,First-year,Male,3
+2017,FALSE,International Student,International Student,Christian Reformed,Junior,Female,2
+2017,FALSE,International Student,International Student,Christian Reformed,Junior,Male,2
+2017,FALSE,International Student,International Student,Christian Reformed,Senior,Female,5
+2017,FALSE,International Student,International Student,Christian Reformed,Senior,Male,5
+2017,FALSE,International Student,International Student,Christian Reformed,Sophomore,Female,2
+2017,FALSE,International Student,International Student,Christian Reformed,Sophomore,Male,1
+2017,FALSE,International Student,International Student,Other,First-year,Female,56
+2017,FALSE,International Student,International Student,Other,First-year,Male,68
+2017,FALSE,International Student,International Student,Other,Junior,Female,28
+2017,FALSE,International Student,International Student,Other,Junior,Male,26
+2017,FALSE,International Student,International Student,Other,Senior,Female,45
+2017,FALSE,International Student,International Student,Other,Senior,Male,44
+2017,FALSE,International Student,International Student,Other,Sophomore,Female,54
+2017,FALSE,International Student,International Student,Other,Sophomore,Male,52
+2017,TRUE,International Student,International Student,Christian Reformed,Junior,Female,1
+2017,TRUE,International Student,International Student,Christian Reformed,Senior,Female,2
+2017,TRUE,International Student,International Student,Christian Reformed,Senior,Male,1
+2017,TRUE,International Student,International Student,Other,First-year,Female,3
+2017,TRUE,International Student,International Student,Other,First-year,Male,3
+2017,TRUE,International Student,International Student,Other,Junior,Female,6
+2017,TRUE,International Student,International Student,Other,Junior,Male,4
+2017,TRUE,International Student,International Student,Other,Senior,Female,14
+2017,TRUE,International Student,International Student,Other,Senior,Male,8
+2017,TRUE,International Student,International Student,Other,Sophomore,Female,2
+2018,FALSE,International Student,International Student,Christian Reformed,First-year,Female,4
+2018,FALSE,International Student,International Student,Christian Reformed,First-year,Male,6
+2018,FALSE,International Student,International Student,Christian Reformed,Junior,Female,2
+2018,FALSE,International Student,International Student,Christian Reformed,Junior,Male,2
+2018,FALSE,International Student,International Student,Christian Reformed,Senior,Female,4
+2018,FALSE,International Student,International Student,Christian Reformed,Senior,Male,2
+2018,FALSE,International Student,International Student,Christian Reformed,Sophomore,Female,4
+2018,FALSE,International Student,International Student,Christian Reformed,Sophomore,Male,3
+2018,FALSE,International Student,International Student,Other,First-year,Female,51
+2018,FALSE,International Student,International Student,Other,First-year,Male,54
+2018,FALSE,International Student,International Student,Other,Junior,Female,52
+2018,FALSE,International Student,International Student,Other,Junior,Male,49
+2018,FALSE,International Student,International Student,Other,Senior,Female,34
+2018,FALSE,International Student,International Student,Other,Senior,Male,38
+2018,FALSE,International Student,International Student,Other,Sophomore,Female,52
+2018,FALSE,International Student,International Student,Other,Sophomore,Male,50
+2018,TRUE,International Student,International Student,Christian Reformed,Senior,Female,1
+2018,TRUE,International Student,International Student,Other,First-year,Female,3
+2018,TRUE,International Student,International Student,Other,First-year,Male,5
+2018,TRUE,International Student,International Student,Other,Junior,Female,2
+2018,TRUE,International Student,International Student,Other,Senior,Female,10
+2018,TRUE,International Student,International Student,Other,Senior,Male,6
+2018,TRUE,International Student,International Student,Other,Sophomore,Female,4
+2018,TRUE,International Student,International Student,Other,Sophomore,Male,4
+2019,FALSE,International Student,International Student,Christian Reformed,First-year,Female,1
+2019,FALSE,International Student,International Student,Christian Reformed,First-year,Male,2
+2019,FALSE,International Student,International Student,Christian Reformed,Junior,Female,2
+2019,FALSE,International Student,International Student,Christian Reformed,Junior,Male,2
+2019,FALSE,International Student,International Student,Christian Reformed,Senior,Female,3
+2019,FALSE,International Student,International Student,Christian Reformed,Senior,Male,4
+2019,FALSE,International Student,International Student,Christian Reformed,Sophomore,Female,4
+2019,FALSE,International Student,International Student,Christian Reformed,Sophomore,Male,5
+2019,FALSE,International Student,International Student,Other,First-year,Female,35
+2019,FALSE,International Student,International Student,Other,First-year,Male,51
+2019,FALSE,International Student,International Student,Other,Junior,Female,56
+2019,FALSE,International Student,International Student,Other,Junior,Male,48
+2019,FALSE,International Student,International Student,Other,Senior,Female,51
+2019,FALSE,International Student,International Student,Other,Senior,Male,54
+2019,FALSE,International Student,International Student,Other,Sophomore,Female,46
+2019,FALSE,International Student,International Student,Other,Sophomore,Male,47
+2019,TRUE,International Student,International Student,Christian Reformed,First-year,Male,1
+2019,TRUE,International Student,International Student,Other,First-year,Female,4
+2019,TRUE,International Student,International Student,Other,First-year,Male,1
+2019,TRUE,International Student,International Student,Other,Junior,Female,4
+2019,TRUE,International Student,International Student,Other,Junior,Male,3
+2019,TRUE,International Student,International Student,Other,Senior,Female,3
+2019,TRUE,International Student,International Student,Other,Senior,Male,1
+2019,TRUE,International Student,International Student,Other,Sophomore,Female,2
+2019,TRUE,International Student,International Student,Other,Sophomore,Male,3
+2007,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Female,5
+2007,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Male,9
+2007,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Female,7
+2007,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Male,2
+2007,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Female,5
+2007,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Male,10
+2007,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,8
+2007,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,3
+2007,FALSE,Not internation student,AHANA,Other,First-year,Female,19
+2007,FALSE,Not internation student,AHANA,Other,First-year,Male,17
+2007,FALSE,Not internation student,AHANA,Other,Junior,Female,12
+2007,FALSE,Not internation student,AHANA,Other,Junior,Male,4
+2007,FALSE,Not internation student,AHANA,Other,Senior,Female,22
+2007,FALSE,Not internation student,AHANA,Other,Senior,Male,12
+2007,FALSE,Not internation student,AHANA,Other,Sophomore,Female,13
+2007,FALSE,Not internation student,AHANA,Other,Sophomore,Male,11
+2007,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Female,2
+2007,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Male,7
+2007,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Female,5
+2007,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Male,5
+2007,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Female,8
+2007,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Male,2
+2007,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,5
+2007,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,2
+2007,TRUE,Not internation student,AHANA,Other,First-year,Female,12
+2007,TRUE,Not internation student,AHANA,Other,First-year,Male,6
+2007,TRUE,Not internation student,AHANA,Other,Junior,Female,18
+2007,TRUE,Not internation student,AHANA,Other,Junior,Male,2
+2007,TRUE,Not internation student,AHANA,Other,Senior,Female,7
+2007,TRUE,Not internation student,AHANA,Other,Senior,Male,4
+2007,TRUE,Not internation student,AHANA,Other,Sophomore,Female,7
+2007,TRUE,Not internation student,AHANA,Other,Sophomore,Male,6
+2008,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Female,7
+2008,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Male,5
+2008,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Female,6
+2008,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Male,3
+2008,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Female,10
+2008,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Male,4
+2008,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,4
+2008,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,7
+2008,FALSE,Not internation student,AHANA,Other,First-year,Female,20
+2008,FALSE,Not internation student,AHANA,Other,First-year,Male,20
+2008,FALSE,Not internation student,AHANA,Other,Junior,Female,11
+2008,FALSE,Not internation student,AHANA,Other,Junior,Male,9
+2008,FALSE,Not internation student,AHANA,Other,Senior,Female,13
+2008,FALSE,Not internation student,AHANA,Other,Senior,Male,6
+2008,FALSE,Not internation student,AHANA,Other,Sophomore,Female,12
+2008,FALSE,Not internation student,AHANA,Other,Sophomore,Male,12
+2008,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Female,6
+2008,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Male,5
+2008,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Female,4
+2008,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Male,2
+2008,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Female,3
+2008,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Male,3
+2008,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,3
+2008,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,5
+2008,TRUE,Not internation student,AHANA,Other,First-year,Female,15
+2008,TRUE,Not internation student,AHANA,Other,First-year,Male,8
+2008,TRUE,Not internation student,AHANA,Other,Junior,Female,6
+2008,TRUE,Not internation student,AHANA,Other,Junior,Male,5
+2008,TRUE,Not internation student,AHANA,Other,Senior,Female,18
+2008,TRUE,Not internation student,AHANA,Other,Senior,Male,2
+2008,TRUE,Not internation student,AHANA,Other,Sophomore,Female,13
+2008,TRUE,Not internation student,AHANA,Other,Sophomore,Male,8
+2009,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Female,5
+2009,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Male,6
+2009,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Female,4
+2009,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Male,8
+2009,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Female,6
+2009,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Male,3
+2009,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,7
+2009,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,6
+2009,FALSE,Not internation student,AHANA,Other,First-year,Female,22
+2009,FALSE,Not internation student,AHANA,Other,First-year,Male,22
+2009,FALSE,Not internation student,AHANA,Other,Junior,Female,12
+2009,FALSE,Not internation student,AHANA,Other,Junior,Male,8
+2009,FALSE,Not internation student,AHANA,Other,Senior,Female,11
+2009,FALSE,Not internation student,AHANA,Other,Senior,Male,11
+2009,FALSE,Not internation student,AHANA,Other,Sophomore,Female,14
+2009,FALSE,Not internation student,AHANA,Other,Sophomore,Male,11
+2009,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Female,6
+2009,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Male,1
+2009,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Female,2
+2009,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Male,7
+2009,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Female,6
+2009,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Male,1
+2009,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,4
+2009,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,3
+2009,TRUE,Not internation student,AHANA,Other,First-year,Female,21
+2009,TRUE,Not internation student,AHANA,Other,First-year,Male,25
+2009,TRUE,Not internation student,AHANA,Other,Junior,Female,12
+2009,TRUE,Not internation student,AHANA,Other,Junior,Male,6
+2009,TRUE,Not internation student,AHANA,Other,Senior,Female,9
+2009,TRUE,Not internation student,AHANA,Other,Senior,Male,6
+2009,TRUE,Not internation student,AHANA,Other,Sophomore,Female,7
+2009,TRUE,Not internation student,AHANA,Other,Sophomore,Male,9
+2010,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Female,6
+2010,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Male,6
+2010,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Female,7
+2010,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Male,4
+2010,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Female,7
+2010,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Male,10
+2010,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,9
+2010,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,6
+2010,FALSE,Not internation student,AHANA,Other,First-year,Female,21
+2010,FALSE,Not internation student,AHANA,Other,First-year,Male,36
+2010,FALSE,Not internation student,AHANA,Other,Junior,Female,16
+2010,FALSE,Not internation student,AHANA,Other,Junior,Male,16
+2010,FALSE,Not internation student,AHANA,Other,Senior,Female,14
+2010,FALSE,Not internation student,AHANA,Other,Senior,Male,12
+2010,FALSE,Not internation student,AHANA,Other,Sophomore,Female,23
+2010,FALSE,Not internation student,AHANA,Other,Sophomore,Male,16
+2010,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Female,6
+2010,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Male,9
+2010,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Female,3
+2010,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Male,3
+2010,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Female,6
+2010,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Male,9
+2010,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,3
+2010,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,5
+2010,TRUE,Not internation student,AHANA,Other,First-year,Female,21
+2010,TRUE,Not internation student,AHANA,Other,First-year,Male,23
+2010,TRUE,Not internation student,AHANA,Other,Junior,Female,9
+2010,TRUE,Not internation student,AHANA,Other,Junior,Male,8
+2010,TRUE,Not internation student,AHANA,Other,Senior,Female,13
+2010,TRUE,Not internation student,AHANA,Other,Senior,Male,11
+2010,TRUE,Not internation student,AHANA,Other,Sophomore,Female,20
+2010,TRUE,Not internation student,AHANA,Other,Sophomore,Male,16
+2011,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Female,8
+2011,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Male,6
+2011,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Female,11
+2011,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Male,7
+2011,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Female,6
+2011,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Male,5
+2011,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,5
+2011,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,6
+2011,FALSE,Not internation student,AHANA,Other,First-year,Female,44
+2011,FALSE,Not internation student,AHANA,Other,First-year,Male,39
+2011,FALSE,Not internation student,AHANA,Other,Junior,Female,20
+2011,FALSE,Not internation student,AHANA,Other,Junior,Male,15
+2011,FALSE,Not internation student,AHANA,Other,Senior,Female,19
+2011,FALSE,Not internation student,AHANA,Other,Senior,Male,18
+2011,FALSE,Not internation student,AHANA,Other,Sophomore,Female,24
+2011,FALSE,Not internation student,AHANA,Other,Sophomore,Male,24
+2011,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Female,7
+2011,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Male,14
+2011,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Female,2
+2011,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Male,7
+2011,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Female,2
+2011,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Male,5
+2011,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,3
+2011,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,8
+2011,TRUE,Not internation student,AHANA,Other,First-year,Female,28
+2011,TRUE,Not internation student,AHANA,Other,First-year,Male,19
+2011,TRUE,Not internation student,AHANA,Other,Junior,Female,16
+2011,TRUE,Not internation student,AHANA,Other,Junior,Male,13
+2011,TRUE,Not internation student,AHANA,Other,Senior,Female,12
+2011,TRUE,Not internation student,AHANA,Other,Senior,Male,12
+2011,TRUE,Not internation student,AHANA,Other,Sophomore,Female,18
+2011,TRUE,Not internation student,AHANA,Other,Sophomore,Male,17
+2012,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Female,5
+2012,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Male,3
+2012,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Female,6
+2012,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Male,4
+2012,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Female,10
+2012,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Male,11
+2012,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,7
+2012,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,4
+2012,FALSE,Not internation student,AHANA,Other,First-year,Female,29
+2012,FALSE,Not internation student,AHANA,Other,First-year,Male,28
+2012,FALSE,Not internation student,AHANA,Other,Graduate Student,Female,1
+2012,FALSE,Not internation student,AHANA,Other,Junior,Female,24
+2012,FALSE,Not internation student,AHANA,Other,Junior,Male,19
+2012,FALSE,Not internation student,AHANA,Other,Senior,Female,23
+2012,FALSE,Not internation student,AHANA,Other,Senior,Male,19
+2012,FALSE,Not internation student,AHANA,Other,Sophomore,Female,35
+2012,FALSE,Not internation student,AHANA,Other,Sophomore,Male,29
+2012,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Female,9
+2012,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Male,7
+2012,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Female,3
+2012,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Male,9
+2012,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Female,3
+2012,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Male,9
+2012,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,6
+2012,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,9
+2012,TRUE,Not internation student,AHANA,Other,First-year,Female,28
+2012,TRUE,Not internation student,AHANA,Other,First-year,Male,20
+2012,TRUE,Not internation student,AHANA,Other,Junior,Female,17
+2012,TRUE,Not internation student,AHANA,Other,Junior,Male,14
+2012,TRUE,Not internation student,AHANA,Other,Senior,Female,18
+2012,TRUE,Not internation student,AHANA,Other,Senior,Male,17
+2012,TRUE,Not internation student,AHANA,Other,Sophomore,Female,25
+2012,TRUE,Not internation student,AHANA,Other,Sophomore,Male,15
+2013,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Female,4
+2013,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Male,7
+2013,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Female,7
+2013,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Male,4
+2013,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Female,10
+2013,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Male,6
+2013,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,5
+2013,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,3
+2013,FALSE,Not internation student,AHANA,Other,First-year,Female,42
+2013,FALSE,Not internation student,AHANA,Other,First-year,Male,36
+2013,FALSE,Not internation student,AHANA,Other,Junior,Female,28
+2013,FALSE,Not internation student,AHANA,Other,Junior,Male,20
+2013,FALSE,Not internation student,AHANA,Other,Senior,Female,23
+2013,FALSE,Not internation student,AHANA,Other,Senior,Male,24
+2013,FALSE,Not internation student,AHANA,Other,Sophomore,Female,25
+2013,FALSE,Not internation student,AHANA,Other,Sophomore,Male,20
+2013,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Female,9
+2013,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Male,7
+2013,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Female,5
+2013,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Male,9
+2013,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Female,5
+2013,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Male,12
+2013,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,8
+2013,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,6
+2013,TRUE,Not internation student,AHANA,Other,First-year,Female,39
+2013,TRUE,Not internation student,AHANA,Other,First-year,Male,30
+2013,TRUE,Not internation student,AHANA,Other,Junior,Female,24
+2013,TRUE,Not internation student,AHANA,Other,Junior,Male,16
+2013,TRUE,Not internation student,AHANA,Other,Senior,Female,20
+2013,TRUE,Not internation student,AHANA,Other,Senior,Male,16
+2013,TRUE,Not internation student,AHANA,Other,Sophomore,Female,30
+2013,TRUE,Not internation student,AHANA,Other,Sophomore,Male,12
+2014,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Female,3
+2014,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Male,3
+2014,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Female,5
+2014,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Male,4
+2014,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Female,8
+2014,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Male,5
+2014,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,2
+2014,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,5
+2014,FALSE,Not internation student,AHANA,Other,First-year,Female,45
+2014,FALSE,Not internation student,AHANA,Other,First-year,Male,24
+2014,FALSE,Not internation student,AHANA,Other,Junior,Female,23
+2014,FALSE,Not internation student,AHANA,Other,Junior,Male,16
+2014,FALSE,Not internation student,AHANA,Other,Senior,Female,29
+2014,FALSE,Not internation student,AHANA,Other,Senior,Male,25
+2014,FALSE,Not internation student,AHANA,Other,Sophomore,Female,27
+2014,FALSE,Not internation student,AHANA,Other,Sophomore,Male,24
+2014,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Female,14
+2014,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Male,10
+2014,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Female,7
+2014,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Male,5
+2014,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Female,9
+2014,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Male,12
+2014,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,8
+2014,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,6
+2014,TRUE,Not internation student,AHANA,Other,First-year,Female,40
+2014,TRUE,Not internation student,AHANA,Other,First-year,Male,23
+2014,TRUE,Not internation student,AHANA,Other,Junior,Female,27
+2014,TRUE,Not internation student,AHANA,Other,Junior,Male,15
+2014,TRUE,Not internation student,AHANA,Other,Senior,Female,26
+2014,TRUE,Not internation student,AHANA,Other,Senior,Male,16
+2014,TRUE,Not internation student,AHANA,Other,Sophomore,Female,25
+2014,TRUE,Not internation student,AHANA,Other,Sophomore,Male,24
+2015,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Female,5
+2015,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Male,4
+2015,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Female,2
+2015,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Male,2
+2015,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Female,5
+2015,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Male,4
+2015,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,4
+2015,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,3
+2015,FALSE,Not internation student,AHANA,Other,First-year,Female,51
+2015,FALSE,Not internation student,AHANA,Other,First-year,Male,37
+2015,FALSE,Not internation student,AHANA,Other,Junior,Female,25
+2015,FALSE,Not internation student,AHANA,Other,Junior,Male,16
+2015,FALSE,Not internation student,AHANA,Other,Senior,Female,27
+2015,FALSE,Not internation student,AHANA,Other,Senior,Male,18
+2015,FALSE,Not internation student,AHANA,Other,Sophomore,Female,35
+2015,FALSE,Not internation student,AHANA,Other,Sophomore,Male,22
+2015,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Female,8
+2015,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Male,6
+2015,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Female,8
+2015,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Male,7
+2015,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Female,8
+2015,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Male,8
+2015,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,9
+2015,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,9
+2015,TRUE,Not internation student,AHANA,Other,First-year,Female,38
+2015,TRUE,Not internation student,AHANA,Other,First-year,Male,24
+2015,TRUE,Not internation student,AHANA,Other,Junior,Female,22
+2015,TRUE,Not internation student,AHANA,Other,Junior,Male,27
+2015,TRUE,Not internation student,AHANA,Other,Senior,Female,29
+2015,TRUE,Not internation student,AHANA,Other,Senior,Male,15
+2015,TRUE,Not internation student,AHANA,Other,Sophomore,Female,41
+2015,TRUE,Not internation student,AHANA,Other,Sophomore,Male,21
+2016,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Female,6
+2016,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Male,2
+2016,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Female,6
+2016,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Male,3
+2016,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Male,3
+2016,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,3
+2016,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,3
+2016,FALSE,Not internation student,AHANA,Other,First-year,Female,46
+2016,FALSE,Not internation student,AHANA,Other,First-year,Male,27
+2016,FALSE,Not internation student,AHANA,Other,Junior,Female,35
+2016,FALSE,Not internation student,AHANA,Other,Junior,Male,21
+2016,FALSE,Not internation student,AHANA,Other,Senior,Female,32
+2016,FALSE,Not internation student,AHANA,Other,Senior,Male,20
+2016,FALSE,Not internation student,AHANA,Other,Sophomore,Female,40
+2016,FALSE,Not internation student,AHANA,Other,Sophomore,Male,23
+2016,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Female,4
+2016,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Male,4
+2016,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Female,5
+2016,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Male,8
+2016,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Female,10
+2016,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Male,7
+2016,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,9
+2016,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,5
+2016,TRUE,Not internation student,AHANA,Other,First-year,Female,32
+2016,TRUE,Not internation student,AHANA,Other,First-year,Male,25
+2016,TRUE,Not internation student,AHANA,Other,Junior,Female,37
+2016,TRUE,Not internation student,AHANA,Other,Junior,Male,20
+2016,TRUE,Not internation student,AHANA,Other,Senior,Female,28
+2016,TRUE,Not internation student,AHANA,Other,Senior,Male,22
+2016,TRUE,Not internation student,AHANA,Other,Sophomore,Female,29
+2016,TRUE,Not internation student,AHANA,Other,Sophomore,Male,17
+2017,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Female,1
+2017,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Male,2
+2017,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Female,2
+2017,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Male,3
+2017,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Female,4
+2017,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Male,5
+2017,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,8
+2017,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,2
+2017,FALSE,Not internation student,AHANA,Other,First-year,Female,45
+2017,FALSE,Not internation student,AHANA,Other,First-year,Male,32
+2017,FALSE,Not internation student,AHANA,Other,Junior,Female,39
+2017,FALSE,Not internation student,AHANA,Other,Junior,Male,24
+2017,FALSE,Not internation student,AHANA,Other,Senior,Female,39
+2017,FALSE,Not internation student,AHANA,Other,Senior,Male,22
+2017,FALSE,Not internation student,AHANA,Other,Sophomore,Female,38
+2017,FALSE,Not internation student,AHANA,Other,Sophomore,Male,22
+2017,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Female,10
+2017,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Male,7
+2017,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Female,10
+2017,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Male,8
+2017,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Female,8
+2017,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Male,9
+2017,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,5
+2017,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,6
+2017,TRUE,Not internation student,AHANA,Other,First-year,Female,30
+2017,TRUE,Not internation student,AHANA,Other,First-year,Male,35
+2017,TRUE,Not internation student,AHANA,Other,Junior,Female,23
+2017,TRUE,Not internation student,AHANA,Other,Junior,Male,13
+2017,TRUE,Not internation student,AHANA,Other,Senior,Female,37
+2017,TRUE,Not internation student,AHANA,Other,Senior,Male,29
+2017,TRUE,Not internation student,AHANA,Other,Sophomore,Female,25
+2017,TRUE,Not internation student,AHANA,Other,Sophomore,Male,17
+2018,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Female,4
+2018,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Male,3
+2018,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Female,6
+2018,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Male,1
+2018,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Female,3
+2018,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Male,3
+2018,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,2
+2018,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,2
+2018,FALSE,Not internation student,AHANA,Other,First-year,Female,34
+2018,FALSE,Not internation student,AHANA,Other,First-year,Male,22
+2018,FALSE,Not internation student,AHANA,Other,Junior,Female,40
+2018,FALSE,Not internation student,AHANA,Other,Junior,Male,16
+2018,FALSE,Not internation student,AHANA,Other,Senior,Female,47
+2018,FALSE,Not internation student,AHANA,Other,Senior,Male,30
+2018,FALSE,Not internation student,AHANA,Other,Sophomore,Female,43
+2018,FALSE,Not internation student,AHANA,Other,Sophomore,Male,28
+2018,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Female,12
+2018,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Male,4
+2018,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Female,7
+2018,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Male,5
+2018,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Female,9
+2018,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Male,9
+2018,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,10
+2018,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,7
+2018,TRUE,Not internation student,AHANA,Other,First-year,Female,33
+2018,TRUE,Not internation student,AHANA,Other,First-year,Male,29
+2018,TRUE,Not internation student,AHANA,Other,Junior,Female,26
+2018,TRUE,Not internation student,AHANA,Other,Junior,Male,14
+2018,TRUE,Not internation student,AHANA,Other,Senior,Female,35
+2018,TRUE,Not internation student,AHANA,Other,Senior,Male,24
+2018,TRUE,Not internation student,AHANA,Other,Sophomore,Female,28
+2018,TRUE,Not internation student,AHANA,Other,Sophomore,Male,26
+2019,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Female,4
+2019,FALSE,Not internation student,AHANA,Christian Reformed,First-year,Male,1
+2019,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Female,2
+2019,FALSE,Not internation student,AHANA,Christian Reformed,Junior,Male,3
+2019,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Female,5
+2019,FALSE,Not internation student,AHANA,Christian Reformed,Senior,Male,3
+2019,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,4
+2019,FALSE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,4
+2019,FALSE,Not internation student,AHANA,Other,First-year,Female,31
+2019,FALSE,Not internation student,AHANA,Other,First-year,Male,21
+2019,FALSE,Not internation student,AHANA,Other,Junior,Female,35
+2019,FALSE,Not internation student,AHANA,Other,Junior,Male,27
+2019,FALSE,Not internation student,AHANA,Other,Senior,Female,51
+2019,FALSE,Not internation student,AHANA,Other,Senior,Male,23
+2019,FALSE,Not internation student,AHANA,Other,Sophomore,Female,29
+2019,FALSE,Not internation student,AHANA,Other,Sophomore,Male,24
+2019,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Female,9
+2019,TRUE,Not internation student,AHANA,Christian Reformed,First-year,Male,9
+2019,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Female,10
+2019,TRUE,Not internation student,AHANA,Christian Reformed,Junior,Male,9
+2019,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Female,8
+2019,TRUE,Not internation student,AHANA,Christian Reformed,Senior,Male,5
+2019,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Female,10
+2019,TRUE,Not internation student,AHANA,Christian Reformed,Sophomore,Male,5
+2019,TRUE,Not internation student,AHANA,Other,First-year,Female,29
+2019,TRUE,Not internation student,AHANA,Other,First-year,Male,18
+2019,TRUE,Not internation student,AHANA,Other,Junior,Female,23
+2019,TRUE,Not internation student,AHANA,Other,Junior,Male,27
+2019,TRUE,Not internation student,AHANA,Other,Senior,Female,33
+2019,TRUE,Not internation student,AHANA,Other,Senior,Male,19
+2019,TRUE,Not internation student,AHANA,Other,Sophomore,Female,22
+2019,TRUE,Not internation student,AHANA,Other,Sophomore,Male,24
+2007,FALSE,Not internation student,International Student,Other,First-year,Male,1
+2007,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Female,1
+2007,FALSE,Not internation student,Not Stated,Christian Reformed,Junior,Female,1
+2007,FALSE,Not internation student,Not Stated,Christian Reformed,Junior,Male,1
+2007,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Male,2
+2007,FALSE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,3
+2007,FALSE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,2
+2007,FALSE,Not internation student,Not Stated,Other,First-year,Female,5
+2007,FALSE,Not internation student,Not Stated,Other,First-year,Male,5
+2007,FALSE,Not internation student,Not Stated,Other,Junior,Female,2
+2007,FALSE,Not internation student,Not Stated,Other,Junior,Male,2
+2007,FALSE,Not internation student,Not Stated,Other,Senior,Female,2
+2007,FALSE,Not internation student,Not Stated,Other,Senior,Male,3
+2007,FALSE,Not internation student,Not Stated,Other,Sophomore,Female,2
+2007,FALSE,Not internation student,Not Stated,Other,Sophomore,Male,3
+2007,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Female,1
+2007,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Male,2
+2007,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,1
+2007,TRUE,Not internation student,Not Stated,Other,First-year,Female,1
+2007,TRUE,Not internation student,Not Stated,Other,Junior,Female,2
+2007,TRUE,Not internation student,Not Stated,Other,Junior,Male,1
+2007,TRUE,Not internation student,Not Stated,Other,Senior,Female,1
+2007,TRUE,Not internation student,Not Stated,Other,Senior,Male,2
+2007,TRUE,Not internation student,Not Stated,Other,Sophomore,Female,1
+2007,TRUE,Not internation student,Not Stated,Other,Sophomore,Male,6
+2008,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Female,2
+2008,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Male,3
+2008,FALSE,Not internation student,Not Stated,Christian Reformed,Junior,Female,2
+2008,FALSE,Not internation student,Not Stated,Christian Reformed,Junior,Male,1
+2008,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Female,2
+2008,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Male,3
+2008,FALSE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,1
+2008,FALSE,Not internation student,Not Stated,Other,First-year,Female,4
+2008,FALSE,Not internation student,Not Stated,Other,First-year,Male,2
+2008,FALSE,Not internation student,Not Stated,Other,Junior,Female,1
+2008,FALSE,Not internation student,Not Stated,Other,Junior,Male,3
+2008,FALSE,Not internation student,Not Stated,Other,Senior,Female,2
+2008,FALSE,Not internation student,Not Stated,Other,Senior,Male,3
+2008,FALSE,Not internation student,Not Stated,Other,Sophomore,Female,5
+2008,FALSE,Not internation student,Not Stated,Other,Sophomore,Male,4
+2008,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Female,1
+2008,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Male,2
+2008,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Male,1
+2008,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,1
+2008,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,1
+2008,TRUE,Not internation student,Not Stated,Other,First-year,Male,2
+2008,TRUE,Not internation student,Not Stated,Other,Junior,Female,1
+2008,TRUE,Not internation student,Not Stated,Other,Junior,Male,4
+2008,TRUE,Not internation student,Not Stated,Other,Senior,Female,2
+2008,TRUE,Not internation student,Not Stated,Other,Senior,Male,2
+2008,TRUE,Not internation student,Not Stated,Other,Sophomore,Female,1
+2009,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Female,1
+2009,FALSE,Not internation student,Not Stated,Christian Reformed,Junior,Female,2
+2009,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Female,3
+2009,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Male,2
+2009,FALSE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,2
+2009,FALSE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,3
+2009,FALSE,Not internation student,Not Stated,Other,First-year,Male,2
+2009,FALSE,Not internation student,Not Stated,Other,Junior,Female,3
+2009,FALSE,Not internation student,Not Stated,Other,Junior,Male,4
+2009,FALSE,Not internation student,Not Stated,Other,Senior,Female,3
+2009,FALSE,Not internation student,Not Stated,Other,Senior,Male,3
+2009,FALSE,Not internation student,Not Stated,Other,Sophomore,Female,2
+2009,FALSE,Not internation student,Not Stated,Other,Sophomore,Male,2
+2009,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Female,3
+2009,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Male,1
+2009,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Female,1
+2009,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Male,1
+2009,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Male,1
+2009,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,1
+2009,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,2
+2009,TRUE,Not internation student,Not Stated,Other,First-year,Female,3
+2009,TRUE,Not internation student,Not Stated,Other,First-year,Male,3
+2009,TRUE,Not internation student,Not Stated,Other,Junior,Female,1
+2009,TRUE,Not internation student,Not Stated,Other,Junior,Male,1
+2009,TRUE,Not internation student,Not Stated,Other,Senior,Female,1
+2009,TRUE,Not internation student,Not Stated,Other,Senior,Male,5
+2009,TRUE,Not internation student,Not Stated,Other,Sophomore,Male,4
+2010,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Female,1
+2010,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Male,2
+2010,FALSE,Not internation student,Not Stated,Christian Reformed,Junior,Female,4
+2010,FALSE,Not internation student,Not Stated,Christian Reformed,Junior,Male,2
+2010,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Female,4
+2010,FALSE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,2
+2010,FALSE,Not internation student,Not Stated,Other,First-year,Female,6
+2010,FALSE,Not internation student,Not Stated,Other,First-year,Male,4
+2010,FALSE,Not internation student,Not Stated,Other,Junior,Female,3
+2010,FALSE,Not internation student,Not Stated,Other,Junior,Male,7
+2010,FALSE,Not internation student,Not Stated,Other,Senior,Female,9
+2010,FALSE,Not internation student,Not Stated,Other,Senior,Male,6
+2010,FALSE,Not internation student,Not Stated,Other,Sophomore,Male,2
+2010,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Female,2
+2010,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Male,3
+2010,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Female,2
+2010,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Male,2
+2010,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Female,2
+2010,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Male,1
+2010,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,2
+2010,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,1
+2010,TRUE,Not internation student,Not Stated,Other,First-year,Female,6
+2010,TRUE,Not internation student,Not Stated,Other,First-year,Male,3
+2010,TRUE,Not internation student,Not Stated,Other,Junior,Female,1
+2010,TRUE,Not internation student,Not Stated,Other,Junior,Male,6
+2010,TRUE,Not internation student,Not Stated,Other,Senior,Female,2
+2010,TRUE,Not internation student,Not Stated,Other,Senior,Male,4
+2010,TRUE,Not internation student,Not Stated,Other,Sophomore,Female,3
+2010,TRUE,Not internation student,Not Stated,Other,Sophomore,Male,5
+2011,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Male,1
+2011,FALSE,Not internation student,Not Stated,Christian Reformed,Junior,Female,2
+2011,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Female,3
+2011,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Male,3
+2011,FALSE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,1
+2011,FALSE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,1
+2011,FALSE,Not internation student,Not Stated,Other,First-year,Female,4
+2011,FALSE,Not internation student,Not Stated,Other,First-year,Male,4
+2011,FALSE,Not internation student,Not Stated,Other,Junior,Female,1
+2011,FALSE,Not internation student,Not Stated,Other,Junior,Male,2
+2011,FALSE,Not internation student,Not Stated,Other,Senior,Female,4
+2011,FALSE,Not internation student,Not Stated,Other,Senior,Male,8
+2011,FALSE,Not internation student,Not Stated,Other,Sophomore,Female,6
+2011,FALSE,Not internation student,Not Stated,Other,Sophomore,Male,2
+2011,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Male,4
+2011,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Female,2
+2011,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Male,2
+2011,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Female,3
+2011,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Male,4
+2011,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,2
+2011,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,4
+2011,TRUE,Not internation student,Not Stated,Other,First-year,Female,3
+2011,TRUE,Not internation student,Not Stated,Other,Junior,Female,4
+2011,TRUE,Not internation student,Not Stated,Other,Junior,Male,3
+2011,TRUE,Not internation student,Not Stated,Other,Senior,Female,1
+2011,TRUE,Not internation student,Not Stated,Other,Senior,Male,5
+2011,TRUE,Not internation student,Not Stated,Other,Sophomore,Female,5
+2011,TRUE,Not internation student,Not Stated,Other,Sophomore,Male,3
+2012,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Male,4
+2012,FALSE,Not internation student,Not Stated,Christian Reformed,Junior,Female,1
+2012,FALSE,Not internation student,Not Stated,Christian Reformed,Junior,Male,1
+2012,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Female,4
+2012,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Male,1
+2012,FALSE,Not internation student,Not Stated,Other,First-year,Female,1
+2012,FALSE,Not internation student,Not Stated,Other,Junior,Female,7
+2012,FALSE,Not internation student,Not Stated,Other,Junior,Male,3
+2012,FALSE,Not internation student,Not Stated,Other,Senior,Male,4
+2012,FALSE,Not internation student,Not Stated,Other,Sophomore,Female,1
+2012,FALSE,Not internation student,Not Stated,Other,Sophomore,Male,3
+2012,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Female,1
+2012,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Male,5
+2012,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Female,3
+2012,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Male,5
+2012,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Female,4
+2012,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Male,3
+2012,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,2
+2012,TRUE,Not internation student,Not Stated,Other,First-year,Female,2
+2012,TRUE,Not internation student,Not Stated,Other,First-year,Male,6
+2012,TRUE,Not internation student,Not Stated,Other,Junior,Female,3
+2012,TRUE,Not internation student,Not Stated,Other,Junior,Male,2
+2012,TRUE,Not internation student,Not Stated,Other,Senior,Female,3
+2012,TRUE,Not internation student,Not Stated,Other,Senior,Male,3
+2012,TRUE,Not internation student,Not Stated,Other,Sophomore,Female,4
+2012,TRUE,Not internation student,Not Stated,Other,Sophomore,Male,2
+2013,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Female,1
+2013,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Female,2
+2013,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Male,2
+2013,FALSE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,4
+2013,FALSE,Not internation student,Not Stated,Other,First-year,Female,4
+2013,FALSE,Not internation student,Not Stated,Other,First-year,Male,4
+2013,FALSE,Not internation student,Not Stated,Other,Junior,Female,1
+2013,FALSE,Not internation student,Not Stated,Other,Junior,Male,1
+2013,FALSE,Not internation student,Not Stated,Other,Senior,Female,7
+2013,FALSE,Not internation student,Not Stated,Other,Senior,Male,5
+2013,FALSE,Not internation student,Not Stated,Other,Sophomore,Female,1
+2013,FALSE,Not internation student,Not Stated,Other,Sophomore,Male,1
+2013,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Female,3
+2013,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Male,1
+2013,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Male,2
+2013,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Female,3
+2013,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Male,4
+2013,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,1
+2013,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,4
+2013,TRUE,Not internation student,Not Stated,Other,First-year,Female,3
+2013,TRUE,Not internation student,Not Stated,Other,First-year,Male,5
+2013,TRUE,Not internation student,Not Stated,Other,Junior,Female,4
+2013,TRUE,Not internation student,Not Stated,Other,Junior,Male,4
+2013,TRUE,Not internation student,Not Stated,Other,Senior,Female,3
+2013,TRUE,Not internation student,Not Stated,Other,Sophomore,Female,2
+2013,TRUE,Not internation student,Not Stated,Other,Sophomore,Male,3
+2014,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Female,1
+2014,FALSE,Not internation student,Not Stated,Christian Reformed,Junior,Male,4
+2014,FALSE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,1
+2014,FALSE,Not internation student,Not Stated,Other,First-year,Female,2
+2014,FALSE,Not internation student,Not Stated,Other,First-year,Male,1
+2014,FALSE,Not internation student,Not Stated,Other,Junior,Female,1
+2014,FALSE,Not internation student,Not Stated,Other,Junior,Male,2
+2014,FALSE,Not internation student,Not Stated,Other,Senior,Female,2
+2014,FALSE,Not internation student,Not Stated,Other,Senior,Male,4
+2014,FALSE,Not internation student,Not Stated,Other,Sophomore,Female,3
+2014,FALSE,Not internation student,Not Stated,Other,Sophomore,Male,3
+2014,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Male,1
+2014,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Female,1
+2014,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Male,4
+2014,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Female,1
+2014,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Male,2
+2014,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,2
+2014,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,1
+2014,TRUE,Not internation student,Not Stated,Other,First-year,Female,3
+2014,TRUE,Not internation student,Not Stated,Other,First-year,Male,1
+2014,TRUE,Not internation student,Not Stated,Other,Junior,Female,2
+2014,TRUE,Not internation student,Not Stated,Other,Junior,Male,3
+2014,TRUE,Not internation student,Not Stated,Other,Senior,Female,5
+2014,TRUE,Not internation student,Not Stated,Other,Senior,Male,4
+2014,TRUE,Not internation student,Not Stated,Other,Sophomore,Female,2
+2014,TRUE,Not internation student,Not Stated,Other,Sophomore,Male,6
+2015,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Female,1
+2015,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Male,1
+2015,FALSE,Not internation student,Not Stated,Christian Reformed,Junior,Female,1
+2015,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Male,4
+2015,FALSE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,1
+2015,FALSE,Not internation student,Not Stated,Other,First-year,Female,5
+2015,FALSE,Not internation student,Not Stated,Other,First-year,Male,6
+2015,FALSE,Not internation student,Not Stated,Other,Junior,Female,1
+2015,FALSE,Not internation student,Not Stated,Other,Junior,Male,5
+2015,FALSE,Not internation student,Not Stated,Other,Senior,Female,1
+2015,FALSE,Not internation student,Not Stated,Other,Senior,Male,2
+2015,FALSE,Not internation student,Not Stated,Other,Sophomore,Female,2
+2015,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Female,1
+2015,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Male,1
+2015,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Female,2
+2015,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Male,1
+2015,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Female,1
+2015,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Male,5
+2015,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,1
+2015,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,1
+2015,TRUE,Not internation student,Not Stated,Other,First-year,Female,7
+2015,TRUE,Not internation student,Not Stated,Other,First-year,Male,4
+2015,TRUE,Not internation student,Not Stated,Other,Junior,Female,1
+2015,TRUE,Not internation student,Not Stated,Other,Junior,Male,5
+2015,TRUE,Not internation student,Not Stated,Other,Senior,Female,1
+2015,TRUE,Not internation student,Not Stated,Other,Senior,Male,5
+2015,TRUE,Not internation student,Not Stated,Other,Sophomore,Female,3
+2016,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Female,1
+2016,FALSE,Not internation student,Not Stated,Christian Reformed,First-year,Male,1
+2016,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Female,2
+2016,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Male,2
+2016,FALSE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,2
+2016,FALSE,Not internation student,Not Stated,Other,First-year,Female,2
+2016,FALSE,Not internation student,Not Stated,Other,First-year,Male,1
+2016,FALSE,Not internation student,Not Stated,Other,Senior,Female,1
+2016,FALSE,Not internation student,Not Stated,Other,Senior,Male,5
+2016,FALSE,Not internation student,Not Stated,Other,Sophomore,Female,5
+2016,FALSE,Not internation student,Not Stated,Other,Sophomore,Male,6
+2016,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Female,3
+2016,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Male,1
+2016,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Female,1
+2016,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Female,2
+2016,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Male,3
+2016,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,1
+2016,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,1
+2016,TRUE,Not internation student,Not Stated,Other,First-year,Female,1
+2016,TRUE,Not internation student,Not Stated,Other,First-year,Male,2
+2016,TRUE,Not internation student,Not Stated,Other,Junior,Female,3
+2016,TRUE,Not internation student,Not Stated,Other,Junior,Male,1
+2016,TRUE,Not internation student,Not Stated,Other,Senior,Female,1
+2016,TRUE,Not internation student,Not Stated,Other,Senior,Male,7
+2016,TRUE,Not internation student,Not Stated,Other,Sophomore,Female,8
+2016,TRUE,Not internation student,Not Stated,Other,Sophomore,Male,4
+2017,FALSE,Not internation student,Not Stated,Christian Reformed,Junior,Female,1
+2017,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Female,1
+2017,FALSE,Not internation student,Not Stated,Other,First-year,Female,4
+2017,FALSE,Not internation student,Not Stated,Other,First-year,Male,1
+2017,FALSE,Not internation student,Not Stated,Other,Junior,Female,5
+2017,FALSE,Not internation student,Not Stated,Other,Junior,Male,6
+2017,FALSE,Not internation student,Not Stated,Other,Senior,Male,3
+2017,FALSE,Not internation student,Not Stated,Other,Sophomore,Female,3
+2017,FALSE,Not internation student,Not Stated,Other,Sophomore,Male,1
+2017,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Male,1
+2017,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Female,1
+2017,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Female,1
+2017,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Male,1
+2017,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Female,3
+2017,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,2
+2017,TRUE,Not internation student,Not Stated,Other,First-year,Female,2
+2017,TRUE,Not internation student,Not Stated,Other,First-year,Male,1
+2017,TRUE,Not internation student,Not Stated,Other,Junior,Female,6
+2017,TRUE,Not internation student,Not Stated,Other,Junior,Male,5
+2017,TRUE,Not internation student,Not Stated,Other,Senior,Female,4
+2017,TRUE,Not internation student,Not Stated,Other,Senior,Male,2
+2017,TRUE,Not internation student,Not Stated,Other,Sophomore,Female,3
+2017,TRUE,Not internation student,Not Stated,Other,Sophomore,Male,1
+2018,FALSE,Not internation student,Not Stated,Christian Reformed,Senior,Female,2
+2018,FALSE,Not internation student,Not Stated,Other,First-year,Male,2
+2018,FALSE,Not internation student,Not Stated,Other,Junior,Female,4
+2018,FALSE,Not internation student,Not Stated,Other,Junior,Male,1
+2018,FALSE,Not internation student,Not Stated,Other,Senior,Female,5
+2018,FALSE,Not internation student,Not Stated,Other,Senior,Male,6
+2018,FALSE,Not internation student,Not Stated,Other,Sophomore,Female,3
+2018,FALSE,Not internation student,Not Stated,Other,Sophomore,Male,1
+2018,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Female,1
+2018,TRUE,Not internation student,Not Stated,Christian Reformed,First-year,Male,1
+2018,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Female,3
+2018,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Female,1
+2018,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Male,1
+2018,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,2
+2018,TRUE,Not internation student,Not Stated,Other,First-year,Female,2
+2018,TRUE,Not internation student,Not Stated,Other,First-year,Male,1
+2018,TRUE,Not internation student,Not Stated,Other,Junior,Female,2
+2018,TRUE,Not internation student,Not Stated,Other,Junior,Male,1
+2018,TRUE,Not internation student,Not Stated,Other,Senior,Female,7
+2018,TRUE,Not internation student,Not Stated,Other,Senior,Male,5
+2018,TRUE,Not internation student,Not Stated,Other,Sophomore,Female,1
+2019,FALSE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,1
+2019,FALSE,Not internation student,Not Stated,Other,First-year,Male,1
+2019,FALSE,Not internation student,Not Stated,Other,Junior,Female,3
+2019,FALSE,Not internation student,Not Stated,Other,Junior,Male,1
+2019,FALSE,Not internation student,Not Stated,Other,Senior,Female,6
+2019,FALSE,Not internation student,Not Stated,Other,Senior,Male,1
+2019,FALSE,Not internation student,Not Stated,Other,Sophomore,Male,2
+2019,TRUE,Not internation student,Not Stated,Christian Reformed,Junior,Male,1
+2019,TRUE,Not internation student,Not Stated,Christian Reformed,Senior,Female,4
+2019,TRUE,Not internation student,Not Stated,Christian Reformed,Sophomore,Male,1
+2019,TRUE,Not internation student,Not Stated,Other,First-year,Male,1
+2019,TRUE,Not internation student,Not Stated,Other,Junior,Female,1
+2019,TRUE,Not internation student,Not Stated,Other,Senior,Female,2
+2019,TRUE,Not internation student,Not Stated,Other,Senior,Male,4
+2019,TRUE,Not internation student,Not Stated,Other,Sophomore,Female,2
+2019,TRUE,Not internation student,Not Stated,Other,Sophomore,Male,2
+2007,FALSE,Not internation student,Other Ethnicity,Christian Reformed,First-year,Female,3
+2007,FALSE,Not internation student,Other Ethnicity,Christian Reformed,First-year,Male,1
+2007,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Junior,Male,1
+2007,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Senior,Female,2
+2007,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Senior,Male,3
+2007,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Sophomore,Female,3
+2007,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Sophomore,Male,2
+2007,FALSE,Not internation student,Other Ethnicity,Other,First-year,Female,7
+2007,FALSE,Not internation student,Other Ethnicity,Other,First-year,Male,5
+2007,FALSE,Not internation student,Other Ethnicity,Other,Junior,Female,2
+2007,FALSE,Not internation student,Other Ethnicity,Other,Junior,Male,3
+2007,FALSE,Not internation student,Other Ethnicity,Other,Senior,Female,4
+2007,FALSE,Not internation student,Other Ethnicity,Other,Senior,Male,4
+2007,FALSE,Not internation student,Other Ethnicity,Other,Sophomore,Female,6
+2007,FALSE,Not internation student,Other Ethnicity,Other,Sophomore,Male,3
+2007,TRUE,Not internation student,Other Ethnicity,Christian Reformed,First-year,Female,2
+2007,TRUE,Not internation student,Other Ethnicity,Christian Reformed,First-year,Male,2
+2007,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Junior,Male,3
+2007,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Senior,Female,1
+2007,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Senior,Male,1
+2007,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Sophomore,Female,2
+2007,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Sophomore,Male,1
+2007,TRUE,Not internation student,Other Ethnicity,Other,First-year,Female,3
+2007,TRUE,Not internation student,Other Ethnicity,Other,First-year,Male,5
+2007,TRUE,Not internation student,Other Ethnicity,Other,Junior,Female,3
+2007,TRUE,Not internation student,Other Ethnicity,Other,Junior,Male,1
+2007,TRUE,Not internation student,Other Ethnicity,Other,Senior,Female,2
+2007,TRUE,Not internation student,Other Ethnicity,Other,Senior,Male,1
+2007,TRUE,Not internation student,Other Ethnicity,Other,Sophomore,Female,3
+2007,TRUE,Not internation student,Other Ethnicity,Other,Sophomore,Male,1
+2008,FALSE,Not internation student,Other Ethnicity,Christian Reformed,First-year,Female,3
+2008,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Junior,Female,2
+2008,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Junior,Male,2
+2008,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Senior,Male,2
+2008,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Sophomore,Female,3
+2008,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Sophomore,Male,1
+2008,FALSE,Not internation student,Other Ethnicity,Other,First-year,Female,5
+2008,FALSE,Not internation student,Other Ethnicity,Other,First-year,Male,4
+2008,FALSE,Not internation student,Other Ethnicity,Other,Junior,Female,5
+2008,FALSE,Not internation student,Other Ethnicity,Other,Junior,Male,6
+2008,FALSE,Not internation student,Other Ethnicity,Other,Senior,Female,3
+2008,FALSE,Not internation student,Other Ethnicity,Other,Senior,Male,3
+2008,FALSE,Not internation student,Other Ethnicity,Other,Sophomore,Female,5
+2008,FALSE,Not internation student,Other Ethnicity,Other,Sophomore,Male,2
+2008,TRUE,Not internation student,Other Ethnicity,Christian Reformed,First-year,Female,1
+2008,TRUE,Not internation student,Other Ethnicity,Christian Reformed,First-year,Male,2
+2008,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Junior,Female,2
+2008,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Junior,Male,1
+2008,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Senior,Male,3
+2008,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Sophomore,Female,2
+2008,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Sophomore,Male,1
+2008,TRUE,Not internation student,Other Ethnicity,Other,First-year,Female,3
+2008,TRUE,Not internation student,Other Ethnicity,Other,First-year,Male,3
+2008,TRUE,Not internation student,Other Ethnicity,Other,Junior,Female,2
+2008,TRUE,Not internation student,Other Ethnicity,Other,Senior,Female,4
+2008,TRUE,Not internation student,Other Ethnicity,Other,Senior,Male,1
+2008,TRUE,Not internation student,Other Ethnicity,Other,Sophomore,Female,2
+2008,TRUE,Not internation student,Other Ethnicity,Other,Sophomore,Male,6
+2009,FALSE,Not internation student,Other Ethnicity,Christian Reformed,First-year,Female,1
+2009,FALSE,Not internation student,Other Ethnicity,Christian Reformed,First-year,Male,4
+2009,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Junior,Female,3
+2009,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Junior,Male,1
+2009,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Senior,Female,2
+2009,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Senior,Male,1
+2009,FALSE,Not internation student,Other Ethnicity,Christian Reformed,Sophomore,Female,3
+2009,FALSE,Not internation student,Other Ethnicity,Other,First-year,Female,6
+2009,FALSE,Not internation student,Other Ethnicity,Other,First-year,Male,3
+2009,FALSE,Not internation student,Other Ethnicity,Other,Junior,Female,4
+2009,FALSE,Not internation student,Other Ethnicity,Other,Junior,Male,1
+2009,FALSE,Not internation student,Other Ethnicity,Other,Senior,Female,6
+2009,FALSE,Not internation student,Other Ethnicity,Other,Senior,Male,5
+2009,FALSE,Not internation student,Other Ethnicity,Other,Sophomore,Female,2
+2009,FALSE,Not internation student,Other Ethnicity,Other,Sophomore,Male,5
+2009,TRUE,Not internation student,Other Ethnicity,Christian Reformed,First-year,Male,1
+2009,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Junior,Female,2
+2009,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Junior,Male,1
+2009,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Senior,Female,2
+2009,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Senior,Male,3
+2009,TRUE,Not internation student,Other Ethnicity,Christian Reformed,Sophomore,Male,1
+2009,TRUE,Not internation student,Other Ethnicity,Other,First-year,Female,6
+2009,TRUE,Not internation student,Other Ethnicity,Other,First-year,Male,1
+2009,TRUE,Not internation student,Other Ethnicity,Other,Junior,Female,2
+2009,TRUE,Not internation student,Other Ethnicity,Other,Junior,Male,3
+2009,TRUE,Not internation student,Other Ethnicity,Other,Senior,Female,4
+2009,TRUE,Not internation student,Other Ethnicity,Other,Senior,Male,1
+2009,TRUE,Not internation student,Other Ethnicity,Other,Sophomore,Female,2
+2009,TRUE,Not internation student,Other Ethnicity,Other,Sophomore,Male,4
+2018,FALSE,Not internation student,Unknown,Christian Reformed,First-year,Male,1
+2018,FALSE,Not internation student,Unknown,Other,Sophomore,Female,1
+2010,FALSE,Not internation student,White,Christian Reformed,First-year,Female,59
+2010,FALSE,Not internation student,White,Christian Reformed,First-year,Male,54
+2010,FALSE,Not internation student,White,Christian Reformed,Junior,Female,87
+2010,FALSE,Not internation student,White,Christian Reformed,Junior,Male,50
+2010,FALSE,Not internation student,White,Christian Reformed,Senior,Female,89
+2010,FALSE,Not internation student,White,Christian Reformed,Senior,Male,87
+2010,FALSE,Not internation student,White,Christian Reformed,Sophomore,Female,54
+2010,FALSE,Not internation student,White,Christian Reformed,Sophomore,Male,48
+2010,FALSE,Not internation student,White,Other,First-year,Female,108
+2010,FALSE,Not internation student,White,Other,First-year,Male,99
+2010,FALSE,Not internation student,White,Other,Junior,Female,82
+2010,FALSE,Not internation student,White,Other,Junior,Male,76
+2010,FALSE,Not internation student,White,Other,Senior,Female,127
+2010,FALSE,Not internation student,White,Other,Senior,Male,108
+2010,FALSE,Not internation student,White,Other,Sophomore,Female,99
+2010,FALSE,Not internation student,White,Other,Sophomore,Male,74
+2010,TRUE,Not internation student,White,Christian Reformed,First-year,Female,117
+2010,TRUE,Not internation student,White,Christian Reformed,First-year,Male,115
+2010,TRUE,Not internation student,White,Christian Reformed,Junior,Female,106
+2010,TRUE,Not internation student,White,Christian Reformed,Junior,Male,107
+2010,TRUE,Not internation student,White,Christian Reformed,Senior,Female,138
+2010,TRUE,Not internation student,White,Christian Reformed,Senior,Male,119
+2010,TRUE,Not internation student,White,Christian Reformed,Sophomore,Female,123
+2010,TRUE,Not internation student,White,Christian Reformed,Sophomore,Male,119
+2010,TRUE,Not internation student,White,Other,First-year,Female,103
+2010,TRUE,Not internation student,White,Other,First-year,Male,95
+2010,TRUE,Not internation student,White,Other,Junior,Female,101
+2010,TRUE,Not internation student,White,Other,Junior,Male,77
+2010,TRUE,Not internation student,White,Other,Junior,Not Entered,1
+2010,TRUE,Not internation student,White,Other,Senior,Female,127
+2010,TRUE,Not internation student,White,Other,Senior,Male,81
+2010,TRUE,Not internation student,White,Other,Sophomore,Female,119
+2010,TRUE,Not internation student,White,Other,Sophomore,Male,93
+2011,FALSE,Not internation student,White,Christian Reformed,First-year,Female,57
+2011,FALSE,Not internation student,White,Christian Reformed,First-year,Male,53
+2011,FALSE,Not internation student,White,Christian Reformed,Junior,Female,50
+2011,FALSE,Not internation student,White,Christian Reformed,Junior,Male,42
+2011,FALSE,Not internation student,White,Christian Reformed,Senior,Female,90
+2011,FALSE,Not internation student,White,Christian Reformed,Senior,Male,70
+2011,FALSE,Not internation student,White,Christian Reformed,Sophomore,Female,55
+2011,FALSE,Not internation student,White,Christian Reformed,Sophomore,Male,51
+2011,FALSE,Not internation student,White,Other,First-year,Female,103
+2011,FALSE,Not internation student,White,Other,First-year,Male,70
+2011,FALSE,Not internation student,White,Other,Junior,Female,88
+2011,FALSE,Not internation student,White,Other,Junior,Male,73
+2011,FALSE,Not internation student,White,Other,Senior,Female,101
+2011,FALSE,Not internation student,White,Other,Senior,Male,93
+2011,FALSE,Not internation student,White,Other,Sophomore,Female,109
+2011,FALSE,Not internation student,White,Other,Sophomore,Male,91
+2011,TRUE,Not internation student,White,Christian Reformed,First-year,Female,115
+2011,TRUE,Not internation student,White,Christian Reformed,First-year,Male,99
+2011,TRUE,Not internation student,White,Christian Reformed,Junior,Female,108
+2011,TRUE,Not internation student,White,Christian Reformed,Junior,Male,107
+2011,TRUE,Not internation student,White,Christian Reformed,Senior,Female,126
+2011,TRUE,Not internation student,White,Christian Reformed,Senior,Male,126
+2011,TRUE,Not internation student,White,Christian Reformed,Sophomore,Female,118
+2011,TRUE,Not internation student,White,Christian Reformed,Sophomore,Male,101
+2011,TRUE,Not internation student,White,Other,First-year,Female,115
+2011,TRUE,Not internation student,White,Other,First-year,Male,102
+2011,TRUE,Not internation student,White,Other,Junior,Female,119
+2011,TRUE,Not internation student,White,Other,Junior,Male,93
+2011,TRUE,Not internation student,White,Other,Senior,Female,117
+2011,TRUE,Not internation student,White,Other,Senior,Male,94
+2011,TRUE,Not internation student,White,Other,Senior,Not Entered,1
+2011,TRUE,Not internation student,White,Other,Sophomore,Female,97
+2011,TRUE,Not internation student,White,Other,Sophomore,Male,83
+2012,FALSE,Not internation student,White,Christian Reformed,First-year,Female,59
+2012,FALSE,Not internation student,White,Christian Reformed,First-year,Male,45
+2012,FALSE,Not internation student,White,Christian Reformed,Graduate Student,Female,4
+2012,FALSE,Not internation student,White,Christian Reformed,Junior,Female,53
+2012,FALSE,Not internation student,White,Christian Reformed,Junior,Male,49
+2012,FALSE,Not internation student,White,Christian Reformed,Senior,Female,60
+2012,FALSE,Not internation student,White,Christian Reformed,Senior,Male,56
+2012,FALSE,Not internation student,White,Christian Reformed,Sophomore,Female,51
+2012,FALSE,Not internation student,White,Christian Reformed,Sophomore,Male,44
+2012,FALSE,Not internation student,White,Other,First-year,Female,125
+2012,FALSE,Not internation student,White,Other,First-year,Male,96
+2012,FALSE,Not internation student,White,Other,Junior,Female,102
+2012,FALSE,Not internation student,White,Other,Junior,Male,88
+2012,FALSE,Not internation student,White,Other,Senior,Female,110
+2012,FALSE,Not internation student,White,Other,Senior,Male,92
+2012,FALSE,Not internation student,White,Other,Sophomore,Female,94
+2012,FALSE,Not internation student,White,Other,Sophomore,Male,73
+2012,TRUE,Not internation student,White,Christian Reformed,First-year,Female,117
+2012,TRUE,Not internation student,White,Christian Reformed,First-year,Male,110
+2012,TRUE,Not internation student,White,Christian Reformed,Graduate Student,Female,4
+2012,TRUE,Not internation student,White,Christian Reformed,Junior,Female,113
+2012,TRUE,Not internation student,White,Christian Reformed,Junior,Male,87
+2012,TRUE,Not internation student,White,Christian Reformed,Senior,Female,129
+2012,TRUE,Not internation student,White,Christian Reformed,Senior,Male,132
+2012,TRUE,Not internation student,White,Christian Reformed,Sophomore,Female,108
+2012,TRUE,Not internation student,White,Christian Reformed,Sophomore,Male,96
+2012,TRUE,Not internation student,White,Other,First-year,Female,113
+2012,TRUE,Not internation student,White,Other,First-year,Male,92
+2012,TRUE,Not internation student,White,Other,Graduate Student,Female,1
+2012,TRUE,Not internation student,White,Other,Junior,Female,97
+2012,TRUE,Not internation student,White,Other,Junior,Male,77
+2012,TRUE,Not internation student,White,Other,Senior,Female,131
+2012,TRUE,Not internation student,White,Other,Senior,Male,108
+2012,TRUE,Not internation student,White,Other,Senior,Not Entered,1
+2012,TRUE,Not internation student,White,Other,Sophomore,Female,113
+2012,TRUE,Not internation student,White,Other,Sophomore,Male,83
+2013,FALSE,Not internation student,White,Christian Reformed,First-year,Female,37
+2013,FALSE,Not internation student,White,Christian Reformed,First-year,Male,27
+2013,FALSE,Not internation student,White,Christian Reformed,Junior,Female,46
+2013,FALSE,Not internation student,White,Christian Reformed,Junior,Male,45
+2013,FALSE,Not internation student,White,Christian Reformed,Senior,Female,70
+2013,FALSE,Not internation student,White,Christian Reformed,Senior,Male,59
+2013,FALSE,Not internation student,White,Christian Reformed,Sophomore,Female,58
+2013,FALSE,Not internation student,White,Christian Reformed,Sophomore,Male,42
+2013,FALSE,Not internation student,White,Other,First-year,Female,118
+2013,FALSE,Not internation student,White,Other,First-year,Male,102
+2013,FALSE,Not internation student,White,Other,Junior,Female,85
+2013,FALSE,Not internation student,White,Other,Junior,Male,70
+2013,FALSE,Not internation student,White,Other,Senior,Female,136
+2013,FALSE,Not internation student,White,Other,Senior,Male,102
+2013,FALSE,Not internation student,White,Other,Sophomore,Female,118
+2013,FALSE,Not internation student,White,Other,Sophomore,Male,82
+2013,TRUE,Not internation student,White,Christian Reformed,First-year,Female,116
+2013,TRUE,Not internation student,White,Christian Reformed,First-year,Male,110
+2013,TRUE,Not internation student,White,Christian Reformed,Junior,Female,91
+2013,TRUE,Not internation student,White,Christian Reformed,Junior,Male,99
+2013,TRUE,Not internation student,White,Christian Reformed,Senior,Female,138
+2013,TRUE,Not internation student,White,Christian Reformed,Senior,Male,97
+2013,TRUE,Not internation student,White,Christian Reformed,Sophomore,Female,116
+2013,TRUE,Not internation student,White,Christian Reformed,Sophomore,Male,97
+2013,TRUE,Not internation student,White,Other,First-year,Female,130
+2013,TRUE,Not internation student,White,Other,First-year,Male,109
+2013,TRUE,Not internation student,White,Other,Junior,Female,109
+2013,TRUE,Not internation student,White,Other,Junior,Male,78
+2013,TRUE,Not internation student,White,Other,Senior,Female,119
+2013,TRUE,Not internation student,White,Other,Senior,Male,95
+2013,TRUE,Not internation student,White,Other,Sophomore,Female,120
+2013,TRUE,Not internation student,White,Other,Sophomore,Male,93
+2014,FALSE,Not internation student,White,Christian Reformed,First-year,Female,56
+2014,FALSE,Not internation student,White,Christian Reformed,First-year,Male,32
+2014,FALSE,Not internation student,White,Christian Reformed,Junior,Female,52
+2014,FALSE,Not internation student,White,Christian Reformed,Junior,Male,40
+2014,FALSE,Not internation student,White,Christian Reformed,Senior,Female,56
+2014,FALSE,Not internation student,White,Christian Reformed,Senior,Male,57
+2014,FALSE,Not internation student,White,Christian Reformed,Sophomore,Female,37
+2014,FALSE,Not internation student,White,Christian Reformed,Sophomore,Male,29
+2014,FALSE,Not internation student,White,Other,First-year,Female,95
+2014,FALSE,Not internation student,White,Other,First-year,Male,103
+2014,FALSE,Not internation student,White,Other,Junior,Female,103
+2014,FALSE,Not internation student,White,Other,Junior,Male,79
+2014,FALSE,Not internation student,White,Other,Senior,Female,120
+2014,FALSE,Not internation student,White,Other,Senior,Male,89
+2014,FALSE,Not internation student,White,Other,Sophomore,Female,116
+2014,FALSE,Not internation student,White,Other,Sophomore,Male,78
+2014,TRUE,Not internation student,White,Christian Reformed,First-year,Female,98
+2014,TRUE,Not internation student,White,Christian Reformed,First-year,Male,101
+2014,TRUE,Not internation student,White,Christian Reformed,Junior,Female,103
+2014,TRUE,Not internation student,White,Christian Reformed,Junior,Male,91
+2014,TRUE,Not internation student,White,Christian Reformed,Senior,Female,109
+2014,TRUE,Not internation student,White,Christian Reformed,Senior,Male,107
+2014,TRUE,Not internation student,White,Christian Reformed,Sophomore,Female,119
+2014,TRUE,Not internation student,White,Christian Reformed,Sophomore,Male,95
+2014,TRUE,Not internation student,White,Other,First-year,Female,123
+2014,TRUE,Not internation student,White,Other,First-year,Male,92
+2014,TRUE,Not internation student,White,Other,Junior,Female,107
+2014,TRUE,Not internation student,White,Other,Junior,Male,78
+2014,TRUE,Not internation student,White,Other,Senior,Female,136
+2014,TRUE,Not internation student,White,Other,Senior,Male,102
+2014,TRUE,Not internation student,White,Other,Sophomore,Female,132
+2014,TRUE,Not internation student,White,Other,Sophomore,Male,109
+2015,FALSE,Not internation student,White,Christian Reformed,First-year,Female,34
+2015,FALSE,Not internation student,White,Christian Reformed,First-year,Male,24
+2015,FALSE,Not internation student,White,Christian Reformed,Junior,Female,34
+2015,FALSE,Not internation student,White,Christian Reformed,Junior,Male,29
+2015,FALSE,Not internation student,White,Christian Reformed,Senior,Female,61
+2015,FALSE,Not internation student,White,Christian Reformed,Senior,Male,46
+2015,FALSE,Not internation student,White,Christian Reformed,Sophomore,Female,53
+2015,FALSE,Not internation student,White,Christian Reformed,Sophomore,Male,25
+2015,FALSE,Not internation student,White,Other,First-year,Female,82
+2015,FALSE,Not internation student,White,Other,First-year,Male,82
+2015,FALSE,Not internation student,White,Other,Junior,Female,109
+2015,FALSE,Not internation student,White,Other,Junior,Male,71
+2015,FALSE,Not internation student,White,Other,Senior,Female,134
+2015,FALSE,Not internation student,White,Other,Senior,Male,88
+2015,FALSE,Not internation student,White,Other,Sophomore,Female,83
+2015,FALSE,Not internation student,White,Other,Sophomore,Male,87
+2015,TRUE,Not internation student,White,Christian Reformed,First-year,Female,101
+2015,TRUE,Not internation student,White,Christian Reformed,First-year,Male,78
+2015,TRUE,Not internation student,White,Christian Reformed,Junior,Female,115
+2015,TRUE,Not internation student,White,Christian Reformed,Junior,Male,98
+2015,TRUE,Not internation student,White,Christian Reformed,Senior,Female,116
+2015,TRUE,Not internation student,White,Christian Reformed,Senior,Male,106
+2015,TRUE,Not internation student,White,Christian Reformed,Sophomore,Female,95
+2015,TRUE,Not internation student,White,Christian Reformed,Sophomore,Male,100
+2015,TRUE,Not internation student,White,Other,First-year,Female,146
+2015,TRUE,Not internation student,White,Other,First-year,Male,117
+2015,TRUE,Not internation student,White,Other,Junior,Female,122
+2015,TRUE,Not internation student,White,Other,Junior,Male,101
+2015,TRUE,Not internation student,White,Other,Senior,Female,130
+2015,TRUE,Not internation student,White,Other,Senior,Male,106
+2015,TRUE,Not internation student,White,Other,Sophomore,Female,116
+2015,TRUE,Not internation student,White,Other,Sophomore,Male,92
+2016,FALSE,Not internation student,White,Christian Reformed,First-year,Female,27
+2016,FALSE,Not internation student,White,Christian Reformed,First-year,Male,31
+2016,FALSE,Not internation student,White,Christian Reformed,Junior,Female,48
+2016,FALSE,Not internation student,White,Christian Reformed,Junior,Male,22
+2016,FALSE,Not internation student,White,Christian Reformed,Senior,Female,49
+2016,FALSE,Not internation student,White,Christian Reformed,Senior,Male,40
+2016,FALSE,Not internation student,White,Christian Reformed,Sophomore,Female,35
+2016,FALSE,Not internation student,White,Christian Reformed,Sophomore,Male,25
+2016,FALSE,Not internation student,White,Other,First-year,Female,110
+2016,FALSE,Not internation student,White,Other,First-year,Male,95
+2016,FALSE,Not internation student,White,Other,Junior,Female,77
+2016,FALSE,Not internation student,White,Other,Junior,Male,75
+2016,FALSE,Not internation student,White,Other,Senior,Female,130
+2016,FALSE,Not internation student,White,Other,Senior,Male,99
+2016,FALSE,Not internation student,White,Other,Sophomore,Female,79
+2016,FALSE,Not internation student,White,Other,Sophomore,Male,68
+2016,TRUE,Not internation student,White,Christian Reformed,First-year,Female,88
+2016,TRUE,Not internation student,White,Christian Reformed,First-year,Male,98
+2016,TRUE,Not internation student,White,Christian Reformed,Junior,Female,85
+2016,TRUE,Not internation student,White,Christian Reformed,Junior,Male,92
+2016,TRUE,Not internation student,White,Christian Reformed,Senior,Female,131
+2016,TRUE,Not internation student,White,Christian Reformed,Senior,Male,114
+2016,TRUE,Not internation student,White,Christian Reformed,Sophomore,Female,102
+2016,TRUE,Not internation student,White,Christian Reformed,Sophomore,Male,80
+2016,TRUE,Not internation student,White,Other,First-year,Female,113
+2016,TRUE,Not internation student,White,Other,First-year,Male,95
+2016,TRUE,Not internation student,White,Other,Junior,Female,105
+2016,TRUE,Not internation student,White,Other,Junior,Male,78
+2016,TRUE,Not internation student,White,Other,Senior,Female,144
+2016,TRUE,Not internation student,White,Other,Senior,Male,126
+2016,TRUE,Not internation student,White,Other,Sophomore,Female,121
+2016,TRUE,Not internation student,White,Other,Sophomore,Male,104
+2017,FALSE,Not internation student,White,Christian Reformed,First-year,Female,25
+2017,FALSE,Not internation student,White,Christian Reformed,First-year,Male,17
+2017,FALSE,Not internation student,White,Christian Reformed,Junior,Female,33
+2017,FALSE,Not internation student,White,Christian Reformed,Junior,Male,26
+2017,FALSE,Not internation student,White,Christian Reformed,Senior,Female,55
+2017,FALSE,Not internation student,White,Christian Reformed,Senior,Male,32
+2017,FALSE,Not internation student,White,Christian Reformed,Sophomore,Female,24
+2017,FALSE,Not internation student,White,Christian Reformed,Sophomore,Male,30
+2017,FALSE,Not internation student,White,Other,First-year,Female,98
+2017,FALSE,Not internation student,White,Other,First-year,Male,78
+2017,FALSE,Not internation student,White,Other,Junior,Female,79
+2017,FALSE,Not internation student,White,Other,Junior,Male,57
+2017,FALSE,Not internation student,White,Other,Senior,Female,106
+2017,FALSE,Not internation student,White,Other,Senior,Male,96
+2017,FALSE,Not internation student,White,Other,Sophomore,Female,102
+2017,FALSE,Not internation student,White,Other,Sophomore,Male,87
+2017,TRUE,Not internation student,White,Christian Reformed,First-year,Female,96
+2017,TRUE,Not internation student,White,Christian Reformed,First-year,Male,80
+2017,TRUE,Not internation student,White,Christian Reformed,Junior,Female,91
+2017,TRUE,Not internation student,White,Christian Reformed,Junior,Male,75
+2017,TRUE,Not internation student,White,Christian Reformed,Senior,Female,111
+2017,TRUE,Not internation student,White,Christian Reformed,Senior,Male,107
+2017,TRUE,Not internation student,White,Christian Reformed,Sophomore,Female,90
+2017,TRUE,Not internation student,White,Christian Reformed,Sophomore,Male,81
+2017,TRUE,Not internation student,White,Other,First-year,Female,118
+2017,TRUE,Not internation student,White,Other,First-year,Male,105
+2017,TRUE,Not internation student,White,Other,Junior,Female,116
+2017,TRUE,Not internation student,White,Other,Junior,Male,103
+2017,TRUE,Not internation student,White,Other,Senior,Female,126
+2017,TRUE,Not internation student,White,Other,Senior,Male,101
+2017,TRUE,Not internation student,White,Other,Sophomore,Female,98
+2017,TRUE,Not internation student,White,Other,Sophomore,Male,90
+2018,FALSE,Not internation student,White,Christian Reformed,First-year,Female,18
+2018,FALSE,Not internation student,White,Christian Reformed,First-year,Male,28
+2018,FALSE,Not internation student,White,Christian Reformed,Junior,Female,27
+2018,FALSE,Not internation student,White,Christian Reformed,Junior,Male,29
+2018,FALSE,Not internation student,White,Christian Reformed,Senior,Female,40
+2018,FALSE,Not internation student,White,Christian Reformed,Senior,Male,30
+2018,FALSE,Not internation student,White,Christian Reformed,Sophomore,Female,24
+2018,FALSE,Not internation student,White,Christian Reformed,Sophomore,Male,14
+2018,FALSE,Not internation student,White,Other,First-year,Female,73
+2018,FALSE,Not internation student,White,Other,First-year,Male,91
+2018,FALSE,Not internation student,White,Other,Junior,Female,99
+2018,FALSE,Not internation student,White,Other,Junior,Male,81
+2018,FALSE,Not internation student,White,Other,Senior,Female,96
+2018,FALSE,Not internation student,White,Other,Senior,Male,84
+2018,FALSE,Not internation student,White,Other,Sophomore,Female,95
+2018,FALSE,Not internation student,White,Other,Sophomore,Male,72
+2018,TRUE,Not internation student,White,Christian Reformed,First-year,Female,85
+2018,TRUE,Not internation student,White,Christian Reformed,First-year,Male,83
+2018,TRUE,Not internation student,White,Christian Reformed,Junior,Female,83
+2018,TRUE,Not internation student,White,Christian Reformed,Junior,Male,68
+2018,TRUE,Not internation student,White,Christian Reformed,Senior,Female,103
+2018,TRUE,Not internation student,White,Christian Reformed,Senior,Male,92
+2018,TRUE,Not internation student,White,Christian Reformed,Sophomore,Female,88
+2018,TRUE,Not internation student,White,Christian Reformed,Sophomore,Male,77
+2018,TRUE,Not internation student,White,Other,First-year,Female,109
+2018,TRUE,Not internation student,White,Other,First-year,Male,77
+2018,TRUE,Not internation student,White,Other,Junior,Female,99
+2018,TRUE,Not internation student,White,Other,Junior,Male,83
+2018,TRUE,Not internation student,White,Other,Senior,Female,134
+2018,TRUE,Not internation student,White,Other,Senior,Male,118
+2018,TRUE,Not internation student,White,Other,Sophomore,Female,118
+2018,TRUE,Not internation student,White,Other,Sophomore,Male,88
+2019,FALSE,Not internation student,White,Christian Reformed,First-year,Female,25
+2019,FALSE,Not internation student,White,Christian Reformed,First-year,Male,24
+2019,FALSE,Not internation student,White,Christian Reformed,Junior,Female,27
+2019,FALSE,Not internation student,White,Christian Reformed,Junior,Male,11
+2019,FALSE,Not internation student,White,Christian Reformed,Senior,Female,27
+2019,FALSE,Not internation student,White,Christian Reformed,Senior,Male,32
+2019,FALSE,Not internation student,White,Christian Reformed,Sophomore,Female,16
+2019,FALSE,Not internation student,White,Christian Reformed,Sophomore,Male,26
+2019,FALSE,Not internation student,White,Other,First-year,Female,95
+2019,FALSE,Not internation student,White,Other,First-year,Male,69
+2019,FALSE,Not internation student,White,Other,Junior,Female,91
+2019,FALSE,Not internation student,White,Other,Junior,Male,62
+2019,FALSE,Not internation student,White,Other,Senior,Female,112
+2019,FALSE,Not internation student,White,Other,Senior,Male,97
+2019,FALSE,Not internation student,White,Other,Sophomore,Female,83
+2019,FALSE,Not internation student,White,Other,Sophomore,Male,81
+2019,TRUE,Not internation student,White,Christian Reformed,First-year,Female,73
+2019,TRUE,Not internation student,White,Christian Reformed,First-year,Male,64
+2019,TRUE,Not internation student,White,Christian Reformed,Junior,Female,95
+2019,TRUE,Not internation student,White,Christian Reformed,Junior,Male,73
+2019,TRUE,Not internation student,White,Christian Reformed,Senior,Female,105
+2019,TRUE,Not internation student,White,Christian Reformed,Senior,Male,86
+2019,TRUE,Not internation student,White,Christian Reformed,Sophomore,Female,76
+2019,TRUE,Not internation student,White,Christian Reformed,Sophomore,Male,69
+2019,TRUE,Not internation student,White,Other,First-year,Female,92
+2019,TRUE,Not internation student,White,Other,First-year,Male,106
+2019,TRUE,Not internation student,White,Other,Junior,Female,110
+2019,TRUE,Not internation student,White,Other,Junior,Male,86
+2019,TRUE,Not internation student,White,Other,Senior,Female,115
+2019,TRUE,Not internation student,White,Other,Senior,Male,98
+2019,TRUE,Not internation student,White,Other,Sophomore,Female,101
+2019,TRUE,Not internation student,White,Other,Sophomore,Male,59
+2007,FALSE,Not internation student,White/Caucasian,Christian Reformed,First-year,Female,86
+2007,FALSE,Not internation student,White/Caucasian,Christian Reformed,First-year,Male,97
+2007,FALSE,Not internation student,White/Caucasian,Christian Reformed,Junior,Female,87
+2007,FALSE,Not internation student,White/Caucasian,Christian Reformed,Junior,Male,90
+2007,FALSE,Not internation student,White/Caucasian,Christian Reformed,Senior,Female,99
+2007,FALSE,Not internation student,White/Caucasian,Christian Reformed,Senior,Male,103
+2007,FALSE,Not internation student,White/Caucasian,Christian Reformed,Sophomore,Female,87
+2007,FALSE,Not internation student,White/Caucasian,Christian Reformed,Sophomore,Male,78
+2007,FALSE,Not internation student,White/Caucasian,Other,First-year,Female,136
+2007,FALSE,Not internation student,White/Caucasian,Other,First-year,Male,123
+2007,FALSE,Not internation student,White/Caucasian,Other,Junior,Female,141
+2007,FALSE,Not internation student,White/Caucasian,Other,Junior,Male,86
+2007,FALSE,Not internation student,White/Caucasian,Other,Senior,Female,137
+2007,FALSE,Not internation student,White/Caucasian,Other,Senior,Male,123
+2007,FALSE,Not internation student,White/Caucasian,Other,Sophomore,Female,131
+2007,FALSE,Not internation student,White/Caucasian,Other,Sophomore,Male,109
+2007,TRUE,Not internation student,White/Caucasian,Christian Reformed,First-year,Female,132
+2007,TRUE,Not internation student,White/Caucasian,Christian Reformed,First-year,Male,131
+2007,TRUE,Not internation student,White/Caucasian,Christian Reformed,Junior,Female,108
+2007,TRUE,Not internation student,White/Caucasian,Christian Reformed,Junior,Male,85
+2007,TRUE,Not internation student,White/Caucasian,Christian Reformed,Senior,Female,131
+2007,TRUE,Not internation student,White/Caucasian,Christian Reformed,Senior,Male,107
+2007,TRUE,Not internation student,White/Caucasian,Christian Reformed,Sophomore,Female,122
+2007,TRUE,Not internation student,White/Caucasian,Christian Reformed,Sophomore,Male,108
+2007,TRUE,Not internation student,White/Caucasian,Other,First-year,Female,132
+2007,TRUE,Not internation student,White/Caucasian,Other,First-year,Male,98
+2007,TRUE,Not internation student,White/Caucasian,Other,Junior,Female,88
+2007,TRUE,Not internation student,White/Caucasian,Other,Junior,Male,81
+2007,TRUE,Not internation student,White/Caucasian,Other,Senior,Female,90
+2007,TRUE,Not internation student,White/Caucasian,Other,Senior,Male,90
+2007,TRUE,Not internation student,White/Caucasian,Other,Sophomore,Female,123
+2007,TRUE,Not internation student,White/Caucasian,Other,Sophomore,Male,81
+2008,FALSE,Not internation student,White/Caucasian,Christian Reformed,First-year,Female,80
+2008,FALSE,Not internation student,White/Caucasian,Christian Reformed,First-year,Male,67
+2008,FALSE,Not internation student,White/Caucasian,Christian Reformed,Junior,Female,79
+2008,FALSE,Not internation student,White/Caucasian,Christian Reformed,Junior,Male,80
+2008,FALSE,Not internation student,White/Caucasian,Christian Reformed,Senior,Female,105
+2008,FALSE,Not internation student,White/Caucasian,Christian Reformed,Senior,Male,106
+2008,FALSE,Not internation student,White/Caucasian,Christian Reformed,Sophomore,Female,82
+2008,FALSE,Not internation student,White/Caucasian,Christian Reformed,Sophomore,Male,76
+2008,FALSE,Not internation student,White/Caucasian,Other,First-year,Female,108
+2008,FALSE,Not internation student,White/Caucasian,Other,First-year,Male,99
+2008,FALSE,Not internation student,White/Caucasian,Other,Junior,Female,129
+2008,FALSE,Not internation student,White/Caucasian,Other,Junior,Male,100
+2008,FALSE,Not internation student,White/Caucasian,Other,Senior,Female,169
+2008,FALSE,Not internation student,White/Caucasian,Other,Senior,Male,108
+2008,FALSE,Not internation student,White/Caucasian,Other,Sophomore,Female,101
+2008,FALSE,Not internation student,White/Caucasian,Other,Sophomore,Male,102
+2008,TRUE,Not internation student,White/Caucasian,Christian Reformed,First-year,Female,120
+2008,TRUE,Not internation student,White/Caucasian,Christian Reformed,First-year,Male,118
+2008,TRUE,Not internation student,White/Caucasian,Christian Reformed,Junior,Female,113
+2008,TRUE,Not internation student,White/Caucasian,Christian Reformed,Junior,Male,101
+2008,TRUE,Not internation student,White/Caucasian,Christian Reformed,Senior,Female,129
+2008,TRUE,Not internation student,White/Caucasian,Christian Reformed,Senior,Male,104
+2008,TRUE,Not internation student,White/Caucasian,Christian Reformed,Sophomore,Female,129
+2008,TRUE,Not internation student,White/Caucasian,Christian Reformed,Sophomore,Male,120
+2008,TRUE,Not internation student,White/Caucasian,Other,First-year,Female,125
+2008,TRUE,Not internation student,White/Caucasian,Other,First-year,Male,98
+2008,TRUE,Not internation student,White/Caucasian,Other,Junior,Female,109
+2008,TRUE,Not internation student,White/Caucasian,Other,Junior,Male,81
+2008,TRUE,Not internation student,White/Caucasian,Other,Senior,Female,109
+2008,TRUE,Not internation student,White/Caucasian,Other,Senior,Male,95
+2008,TRUE,Not internation student,White/Caucasian,Other,Sophomore,Female,116
+2008,TRUE,Not internation student,White/Caucasian,Other,Sophomore,Male,71
+2009,FALSE,Not internation student,White/Caucasian,Christian Reformed,First-year,Female,53
+2009,FALSE,Not internation student,White/Caucasian,Christian Reformed,First-year,Male,49
+2009,FALSE,Not internation student,White/Caucasian,Christian Reformed,Junior,Female,79
+2009,FALSE,Not internation student,White/Caucasian,Christian Reformed,Junior,Male,71
+2009,FALSE,Not internation student,White/Caucasian,Christian Reformed,Senior,Female,99
+2009,FALSE,Not internation student,White/Caucasian,Christian Reformed,Senior,Male,93
+2009,FALSE,Not internation student,White/Caucasian,Christian Reformed,Sophomore,Female,82
+2009,FALSE,Not internation student,White/Caucasian,Christian Reformed,Sophomore,Male,59
+2009,FALSE,Not internation student,White/Caucasian,Other,First-year,Female,111
+2009,FALSE,Not internation student,White/Caucasian,Other,First-year,Male,85
+2009,FALSE,Not internation student,White/Caucasian,Other,Junior,Female,105
+2009,FALSE,Not internation student,White/Caucasian,Other,Junior,Male,96
+2009,FALSE,Not internation student,White/Caucasian,Other,Senior,Female,147
+2009,FALSE,Not internation student,White/Caucasian,Other,Senior,Male,118
+2009,FALSE,Not internation student,White/Caucasian,Other,Sophomore,Female,90
+2009,FALSE,Not internation student,White/Caucasian,Other,Sophomore,Male,85
+2009,TRUE,Not internation student,White/Caucasian,Christian Reformed,First-year,Female,129
+2009,TRUE,Not internation student,White/Caucasian,Christian Reformed,First-year,Male,131
+2009,TRUE,Not internation student,White/Caucasian,Christian Reformed,Junior,Female,118
+2009,TRUE,Not internation student,White/Caucasian,Christian Reformed,Junior,Male,113
+2009,TRUE,Not internation student,White/Caucasian,Christian Reformed,Senior,Female,132
+2009,TRUE,Not internation student,White/Caucasian,Christian Reformed,Senior,Male,116
+2009,TRUE,Not internation student,White/Caucasian,Christian Reformed,Sophomore,Female,111
+2009,TRUE,Not internation student,White/Caucasian,Christian Reformed,Sophomore,Male,105
+2009,TRUE,Not internation student,White/Caucasian,Other,First-year,Female,120
+2009,TRUE,Not internation student,White/Caucasian,Other,First-year,Male,110
+2009,TRUE,Not internation student,White/Caucasian,Other,First-year,Not Entered,1
+2009,TRUE,Not internation student,White/Caucasian,Other,Junior,Female,119
+2009,TRUE,Not internation student,White/Caucasian,Other,Junior,Male,62
+2009,TRUE,Not internation student,White/Caucasian,Other,Senior,Female,124
+2009,TRUE,Not internation student,White/Caucasian,Other,Senior,Male,95
+2009,TRUE,Not internation student,White/Caucasian,Other,Sophomore,Female,109
+2009,TRUE,Not internation student,White/Caucasian,Other,Sophomore,Male,84

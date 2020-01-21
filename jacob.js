@@ -1,1 +1,6 @@
-dataPromise.then(d => console.log("Data is loaded and setup!"));
+dataPromise.then(d => () => myBarChart(d));
+
+const myBarChart = (data) => {
+    console.log("My function")
+    console.log(data);
+};

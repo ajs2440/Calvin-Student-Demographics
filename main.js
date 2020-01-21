@@ -7,13 +7,8 @@ const dataPromise = d3.csv('data/simple_2007_2019.csv')
     console.log(error);
 });
 
-const studentsByClassLevel = d3.group(dataPromise, d => d.ClassLevel);
-console.log(studentsByClassLevel);
-
 function cleaupData(d) {
-    for (k of Object.keys(d)) {
-        //todo: convert numbers in strings to numbers
-    }
+    
 }
 
 function setup(d) {
@@ -24,7 +19,6 @@ function setup(d) {
 let xvar, year;
 
 function update() {
-    console.log("update");
     xvar = d3.select('select#x-selector').property('value');
     year = +d3.select('input#slider').property('value');
 }
@@ -47,9 +41,8 @@ function setupSelector(da) {
         .attr('value', d => d)
         .text(d => d);
 
-}
+}    
 
-    
 
 d3.select('#slider')
   .on('change', () => update())
@@ -59,5 +52,4 @@ d3.select('#slider')
   .append('g')
   .attr('transform', 'translate(30,30)')
   .call(slider)
-  .
 

@@ -1,0 +1,1 @@
+dataPromise.then(d => console.log("Data is loaded and setup!"));

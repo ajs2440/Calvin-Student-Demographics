@@ -21,3 +21,5 @@ var svg = d3.select("#advait")
           "translate(" + margin.left + "," + margin.top + ")");
 
 
+var slider = d3.select("#tom")
+.sliderHorizontal()

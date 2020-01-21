@@ -1,6 +1,6 @@
-dataPromise.then(d => () => myBarChart(d));
+dataPromise.then(myBarChart);
 
-const myBarChart = (data) => {
-    console.log("My function")
-    console.log(data);
+function myBarChart(d) {
+    console.log("myBarChart");
+    console.log(d);
 };

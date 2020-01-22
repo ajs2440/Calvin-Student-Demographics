@@ -192,15 +192,20 @@ function update(data) {
   //https://stackoverflow.com/questions/45211408/making-a-grouped-bar-chart-using-d3-js
 
   svg.selectAll("rect.bar").data(flattenedData).join(
-    enter => enter.append("rect")
-      .attr("x", d => xVarScale(d.varvalue)+xYearScale(d.year))
-      .attr("y", d => yScale(d.studentcount))
-      .attr("width", xVarScale.bandwidth())
-      .attr("height", d=> nHEIGHT-yScale(d.studentcount))
-      .style("fill", d => colorScale(ordinalVarScale(d.varvalue)))
-      .classed("bar", true),
+    enter => enter
+      .append("rect")
+      .classed("bar", true)
+      .transition() 
+      .duration(TRANSITION_DURATION)
+        .attr("x", d => xVarScale(d.varvalue)+xYearScale(d.year))
+        .attr("y", d => yScale(d.studentcount))
+        .attr("width", xVarScale.bandwidth())
+        .attr("height", d=> nHEIGHT-yScale(d.studentcount))
+        .style("fill", d => colorScale(ordinalVarScale(d.varvalue)))
+       ,
     update =>
       update.transition()
+      .duration(TRANSITION_DURATION)
       .attr("x", d => xVarScale(d.varvalue)+xYearScale(d.year))
       .attr("y", d => yScale(d.studentcount))
       .attr("width", xVarScale.bandwidth())
@@ -208,7 +213,7 @@ function update(data) {
       .style("fill", d => colorScale(ordinalVarScale(d.varvalue))),
     exit => 
       exit.transition()
-      .duration(TRANSITION_DURATION)
+      .duration(0)
       .remove()
   )
   console.log("marker3");

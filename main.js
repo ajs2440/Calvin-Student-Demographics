@@ -108,14 +108,22 @@ let colorScale;
 
 
 function genColorScale(possibleValues, d3ColorScheme) {
-  ordinalVarScale = d3.scaleOrdinal().domain(possibleValues).range(possibleValues.map((v, i, n) => {
-    console.log(v +" = " + (i/n.length*100));
+  let ordinalVarScale = d3.scaleOrdinal().domain(possibleValues).range(possibleValues.map((v, i, n) => {
     return i/n.length*100;
   }));
   return d3.scaleSequential().domain([0,100]).interpolator(d3ColorScheme);
 }
 
+const getPossibleValues = (d, k) => {
+  return Array.from(
+    new Set(d.map(e => e[k]))
+  );
+}
+
 function update(data) {
+
+  console.log(getPossibleValues(data, "Academic Year"));
+
 
   let xvar = d3.select("#x-var").property("value");
 

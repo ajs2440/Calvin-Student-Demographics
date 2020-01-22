@@ -28,7 +28,7 @@
 }
 
 .spin {
-    animation: spinner 1.4s linear infinite;
+    animation: spinner .4s linear infinite;
 }
 
 .hide {

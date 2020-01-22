@@ -9,7 +9,7 @@ const nHEIGHT = HEIGHT - MARGIN.top - MARGIN.bottom;
 
 const BORDER_COLOR = "gray";
 const BORDER_SIZE = 4;
-const SHOW_TIME = 10;
+const SHOW_TIME = 500;
 const TRANSITION_DURATION = 1000;
 
 const YEAR_COLUMN_NAME = "Academic Year";
@@ -123,7 +123,7 @@ const getPossibleValues = (d, k) => {
 function update(data) {
 
   console.log(getPossibleValues(data, "Academic Year"));
-
+  console.log(data);
 
   let xvar = d3.select("#x-var").property("value");
 

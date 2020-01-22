@@ -4,29 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Calvin Student Demographics</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-array.v2.min.js"></script>
     
 </head>
 <body>
     <h1>Calvin University Demographics</h1>
-
-    <h2>Select Year</h2>
-    <input type="range" name="mySlider" id="slider" min="2007" max="2019" value="50">
-
-    <h2>Select X-Axis</h2>
-    <select name="X-Axis" id="x-selector">
-    </select>
-
-    <div id="container">
-        <svg class="gridbox" id="jacob"></svg>
-        <svg class="gridbox" id="advait"></svg>
-        <svg class="gridbox" id="carson"></svg>
-        <svg class="gridbox" id="tom"></svg>
+    <div id="spinner" class="loader spin centeredAnimation"></div>
+    <div id="visual">
+        <h3>X-Var</h3>
+        <select id="x-var" class="data_parameter"></select>
+        <h3>Year</h3>
+        <input type="range" class="data_parameter" name="yearSlider" id="yearSlider" min="2007" max="2019" value="2008">
+        <br>
     </div>
-        
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://d3js.org/d3-array.v2.min.js"></script>
     <script src="main.js"></script>
-    <script src="jacob.js"></script>
-</body>
 </html>

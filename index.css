@@ -1,3 +1,28 @@
+body {
+    background: #fafafa;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+h2, body, footer {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+footer{
+    font-weight: inherit;
+    font-size:12px;
+    line-height: 5px;
+}
+
 .centeredAnimation {
     position: fixed;
     top: -100%; bottom: -100%; right:-100%; left:-100%;

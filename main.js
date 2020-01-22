@@ -3,7 +3,7 @@ let svg;
 const WIDTH = 800;
 const HEIGHT = 640;
 
-const MARGIN = { left: 20, top: 10, right: 20, bottom: 10 };
+const MARGIN = { left: 100, top: 10, right: 20, bottom: 100 };
 const nWIDTH = WIDTH - MARGIN.left - MARGIN.right;
 const nHEIGHT = HEIGHT - MARGIN.top - MARGIN.bottom;
 
@@ -82,6 +82,8 @@ function setup(data) {
     .attr("value", d => d)
     .text(d => nicerText[d]);
   
+  
+
     d3.selectAll(".data_parameter")
       .on("change", () => update(data));
 
@@ -103,6 +105,15 @@ let xVarScale;
 let xYearScale;
 let ordinalVarScale;
 let colorScale;
+
+
+function genColorScale(possibleValues, d3ColorScheme) {
+  ordinalVarScale = d3.scaleOrdinal().domain(possibleValues).range(possibleValues.map((v, i, n) => {
+    console.log(v +" = " + (i/n.length*100));
+    return i/n.length*100;
+  }));
+  return d3.scaleSequential().domain([0,100]).interpolator(d3ColorScheme);
+}
 
 function update(data) {
 
@@ -160,9 +171,10 @@ function update(data) {
 
   console.log(normalData[0].year);
 
+  
+
   svg.append("g")
-    .attr("transform", `translate(0, ${nHEIGHT})`)
-    .call(d3.axisBottom(xYearScale))
+    .attr("")
 
   let range = d3.extent(flattenedData.map(e => e.studentcount));
 
@@ -182,15 +194,20 @@ function update(data) {
 
   console.log(Array.from(normalData[0].yearMap.keys()));
 
-  //https://www.d3-graph-gallery.com/graph/custom_color.html
-  ordinalVarScale = d3.scaleOrdinal().domain(Array.from(normalData[0].yearMap.keys())).range(types.map((v, i, n) => {
-    console.log(v +" = " + (i/n.length*100));
-    return i/n.length*100;
-  }));
-  colorScale = d3.scaleSequential().domain([0,100]).interpolator(d3.interpolateCool);
+
+  svg.append("g")
+    .attr("transform", `translate(0, ${nHEIGHT})`)
+    .call(d3.axisBottom(xYearScale))
+
+  svg.append("g")
+    .attr("transform", `translate(0, ${nHEIGHT+20})`)
+    .call(d3.axisLeft(yScale));
+
+
+  //ordinal to color
+  colorScale = genColorScale(types, d3.interpolateRainbow);
   
   //https://stackoverflow.com/questions/45211408/making-a-grouped-bar-chart-using-d3-js
-
   svg.selectAll("rect.bar").data(flattenedData).join(
     enter => enter
       .append("rect")

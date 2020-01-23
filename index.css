@@ -27,6 +27,13 @@ p {
     margin-bottom: 0px;
 }
 
+.tooltip {
+    font-family: 'Monsterrat', sans-serif;
+    font-weight: initial;
+    font-size: 13px;
+    text-align: center;
+}
+
 .centeredAnimation {
     position: fixed;
     top: -100%; bottom: -100%; right:-100%; left:-100%;

@@ -12,6 +12,7 @@ const BORDER_SIZE = 4;
 const SHOW_TIME = 500;
 const TRANSITION_DURATION = 1000;
 
+const LEGEND_COLOR_SYMBOL_HEIGHT = 10;
 const YEAR_COLUMN_NAME = "Academic Year";
 const STUDENT_COUNT_COLUMN_NAME = "StudentCount";
 const REMOVED_DATA = ["StudentCount", "Academic Year"];
@@ -202,7 +203,7 @@ function update(data) {
 
 
   //ordinal to color
-  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateCool, [20, 100]);
+  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateRainbow, [20, 100]);
   
   console.log(flattenedData);
 
@@ -233,35 +234,52 @@ function update(data) {
         .remove()
   )
 
-
   let types = getPossibleValues(data, xvar);
   console.log(types);
-  let legendScale = d3.scaleOrdinal()
-      .domain(types)
-      .range(types.map((e, i, n) => {
-        return i/types.length*nWIDTH;
-      }))
+
+  
+  let legendScale = d3.scaleBand()
+    .domain(types)
+    .range([MARGIN.top, MARGIN.top + LEGEND_COLOR_SYMBOL_HEIGHT*types.length])
+    .paddingInner(1);
     
 
   svg.selectAll("rect.legend").data(types)
       .join(
         enter => enter.append("rect")
           .attr("class", "legend")
-          .attr("x", d => legendScale(d))
-          .attr("y", d => {console.log("asfd"); return 10;})
-          .attr("width", 10)
-          .attr("height", 10)
+          .attr("x", 10)
+          .attr("y", d => (legendScale(d)))
+          .attr("width", LEGEND_COLOR_SYMBOL_HEIGHT)
+          .attr("height", LEGEND_COLOR_SYMBOL_HEIGHT)
           .attr("fill", d => colorScale(d)),
         update => update
-          .attr("x", d => legendScale(d))
-          .attr("y", d => {console.log("asfd"); return 10;})
-          .attr("width", 10)
-          .attr("height", 10)
+          .attr("x", 10)
+          .attr("y", d => (legendScale(d)))
+          .attr("width", LEGEND_COLOR_SYMBOL_HEIGHT)
+          .attr("height", LEGEND_COLOR_SYMBOL_HEIGHT)
           .attr("fill", d => colorScale(d)),
         exit => exit.remove()
       )
-     
-    
+
+  svg.selectAll("text.legend").data(types)
+  .join(
+    enter => enter.append("text")
+      .attr("class", "legend")
+      .attr("x", 3*LEGEND_COLOR_SYMBOL_HEIGHT)
+      .attr("y", d => (legendScale(d)+LEGEND_COLOR_SYMBOL_HEIGHT))
+      .attr("font-family", "sans-serif")
+      .attr("font-size", `${LEGEND_COLOR_SYMBOL_HEIGHT-1}px`)
+      .text(d => d),
+    update => update
+      .attr("x", 3*LEGEND_COLOR_SYMBOL_HEIGHT)
+      .attr("y", d => (legendScale(d)+LEGEND_COLOR_SYMBOL_HEIGHT))
+      .attr("font-family", "sans-serif")
+      .attr("font-size", `${LEGEND_COLOR_SYMBOL_HEIGHT-1}px`)
+      .text(d => d),
+    exit => exit.remove()
+  )
+
 
   console.log("marker3");
 

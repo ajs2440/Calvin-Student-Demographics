@@ -9,7 +9,7 @@ const nHEIGHT = HEIGHT - MARGIN.top - MARGIN.bottom;
 
 const BORDER_COLOR = "gray";
 const BORDER_SIZE = 4;
-const SHOW_TIME = 500;
+const SHOW_TIME = 5000;
 const TRANSITION_DURATION = 1000;
 
 const LEGEND_COLOR_SYMBOL_HEIGHT = 10;

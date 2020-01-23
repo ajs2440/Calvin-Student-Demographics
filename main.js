@@ -195,7 +195,7 @@ function update(data) {
   //update y axis
   let range = d3.extent(flattenedData.map(e => e.studentCount));
   yScale.domain([range[0], range[1]])  
-  svg.select(".y.axis")
+  svg.select(".y.axis").transition().duration(TRANSITION_DURATION)
     .call(d3.axisLeft(yScale));
 
   
@@ -213,7 +213,7 @@ function update(data) {
     .join(
       enter => enter
         .append("rect")
-        .classed("bar", true)
+          .attr("class", "bar")
           .attr("x", d => xVarScale(d[d.varType])+xYearScale(d.year))
           .attr("y", d => yScale(d.studentCount))
           .attr("width", xVarScale.bandwidth())
@@ -232,15 +232,37 @@ function update(data) {
         .duration(0)
         .remove()
   )
-/*
-  let legendGroup = svg.append("g").attr("classed", "legend");
-  legendGroup.selectAll("rect").data(getPossibleValues(data, xvar)).enter().append("rect")
-    .attr("x1", 10)
-    .attr("y1", 10)
-    .attr("width", 10)
-    .attr("height", 10)
-    .attr("fill", d => colorScale(d))
-*/
+
+
+  let types = getPossibleValues(data, xvar);
+  console.log(types);
+  let legendScale = d3.scaleOrdinal()
+      .domain(types)
+      .range(types.map((e, i, n) => {
+        return i/types.length*nWIDTH;
+      }))
+    
+
+  svg.selectAll("rect.legend").data(types)
+      .join(
+        enter => enter.append("rect")
+          .attr("class", "legend")
+          .attr("x", d => legendScale(d))
+          .attr("y", d => {console.log("asfd"); return 10;})
+          .attr("width", 10)
+          .attr("height", 10)
+          .attr("fill", d => colorScale(d)),
+        update => update
+          .attr("x", d => legendScale(d))
+          .attr("y", d => {console.log("asfd"); return 10;})
+          .attr("width", 10)
+          .attr("height", 10)
+          .attr("fill", d => colorScale(d)),
+        exit => exit.remove()
+      )
+     
+    
+
   console.log("marker3");
 
 }

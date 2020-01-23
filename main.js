@@ -194,6 +194,24 @@ function update(data) {
 
   console.log(Array.from(normalData[0].yearMap.keys()));
 
+  // // What happens when user hover a bar
+  // var mouseover = function (d) {
+  //   // what subgroup are we hovering?
+  //   var subgroupName = d3.select(this).datum().key; // This was the tricky part
+  //   // console.log(subgroupName);
+  //   var subgroupValue = d.data[subgroupName];
+  //   // Reduce opacity of all rect to 0.2
+  //   d3.selectAll(".bar").style("opacity", 0.2)
+  //   // Highlight all rects of this subgroup with opacity 0.8. It is possible to select them since they have a specific class = their name.
+  //   d3.select("." + subgroupValue)
+  //     .style("opacity", 1)
+  // }
+
+  // // Set opacity back to normal once mouse leaves
+  // var mouseleave = function (d) {
+  //   d3.selectAll(".bar")
+  //     .style("opacity", 1)
+  // }
 
   svg.append("g")
     .attr("transform", `translate(0, ${nHEIGHT})`)
@@ -211,6 +229,8 @@ function update(data) {
   svg.selectAll("rect.bar").data(flattenedData).join(
     enter => enter
       .append("rect")
+      // .on("mouseover", mouseover)
+      // .on("mouseleave", mouseleave)
       .classed("bar", true)
       .transition() 
       .duration(TRANSITION_DURATION)
@@ -219,6 +239,7 @@ function update(data) {
         .attr("width", xVarScale.bandwidth())
         .attr("height", d=> nHEIGHT-yScale(d.studentcount))
         .style("fill", d => colorScale(ordinalVarScale(d.varvalue)))
+        
        ,
     update =>
       update.transition()

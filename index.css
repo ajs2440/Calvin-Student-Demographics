@@ -20,7 +20,7 @@ h2 {
 footer{
     font-weight: inherit;
     font-size:12px;
-    line-height: 5px;
+    margin-top: 0px;
 }
 
 .centeredAnimation {

@@ -116,6 +116,8 @@ function setup(data) {
   d3.selectAll(".data_parameter")
     .on("change", () => update(data));
 
+  
+
   update(data);
 }
 
@@ -132,7 +134,6 @@ var yScale;
 let xVarScale;
 let xYearScale;
 let colorScale;
-
 
 function genColorScale(possibleValues, d3ColorScheme, range) {
   let ordinalVarScale = d3.scaleOrdinal().domain(possibleValues).range(possibleValues.map((v, i, n) => {
@@ -193,7 +194,7 @@ function update(data) {
 
   //update y axis
   let range = d3.extent(flattenedData.map(e => e.studentCount));
-  yScale.domain([range[0]-10, range[1]+10])  
+  yScale.domain([range[0], range[1]])  
   svg.select(".y.axis")
     .call(d3.axisLeft(yScale));
 
@@ -201,33 +202,45 @@ function update(data) {
 
 
   //ordinal to color
-  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateYlOrRd, [20, 100]);
+  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateCool, [20, 100]);
   
+  console.log(flattenedData);
+
   //https://stackoverflow.com/questions/45211408/making-a-grouped-bar-chart-using-d3-js
-  svg.selectAll("rect.bar").data(flattenedData).join(
-    enter => enter
-      .append("rect")
-      .classed("bar", true)
-      .transition() 
-      .duration(TRANSITION_DURATION)
+  svg
+    .selectAll("rect.bar")
+    .data(flattenedData)
+    .join(
+      enter => enter
+        .append("rect")
+        .classed("bar", true)
+          .attr("x", d => xVarScale(d[d.varType])+xYearScale(d.year))
+          .attr("y", d => yScale(d.studentCount))
+          .attr("width", xVarScale.bandwidth())
+          .attr("height", d=> nHEIGHT-yScale(d.studentCount))
+          .style("fill", d => colorScale(d[d.varType])),
+      update =>
+        update.transition()
+        .duration(TRANSITION_DURATION)
         .attr("x", d => xVarScale(d[d.varType])+xYearScale(d.year))
         .attr("y", d => yScale(d.studentCount))
         .attr("width", xVarScale.bandwidth())
         .attr("height", d=> nHEIGHT-yScale(d.studentCount))
         .style("fill", d => colorScale(d[d.varType])),
-    update =>
-      update.transition()
-      .duration(TRANSITION_DURATION)
-      .attr("x", d => xVarScale(d[d.varType])+xYearScale(d.year))
-      .attr("y", d => yScale(d.studentCount))
-      .attr("width", xVarScale.bandwidth())
-      .attr("height", d=> nHEIGHT-yScale(d.studentCount))
-      .style("fill", d => colorScale(d[d.varType])),
-    exit => 
-      exit.transition()
-      .duration(0)
-      .remove()
+      exit => 
+        exit.transition()
+        .duration(0)
+        .remove()
   )
+/*
+  let legendGroup = svg.append("g").attr("classed", "legend");
+  legendGroup.selectAll("rect").data(getPossibleValues(data, xvar)).enter().append("rect")
+    .attr("x1", 10)
+    .attr("y1", 10)
+    .attr("width", 10)
+    .attr("height", 10)
+    .attr("fill", d => colorScale(d))
+*/
   console.log("marker3");
 
 }

@@ -232,8 +232,6 @@ function update(data) {
         .duration(0)
         .remove()
   )
-<<<<<<< HEAD
-=======
 
 
   let types = getPossibleValues(data, xvar);
@@ -266,7 +264,6 @@ function update(data) {
     
 
   console.log("marker3");
->>>>>>> 2e358b62cb132ab1f7754f27f3f523f040a729e8
 
 
   let types = getPossibleValues(data, xvar);

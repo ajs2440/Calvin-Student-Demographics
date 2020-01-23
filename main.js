@@ -15,7 +15,7 @@ const TRANSITION_DURATION = 1000;
 const LEGEND_COLOR_SYMBOL_HEIGHT = 10;
 const YEAR_COLUMN_NAME = "Academic Year";
 const STUDENT_COUNT_COLUMN_NAME = "StudentCount";
-const REMOVED_DATA = ["StudentCount", "Academic Year"];
+const REMOVED_DATA = ["StudentCount"];
 
 let nicerText = {
   "Academic Year": "Year",
@@ -78,7 +78,7 @@ function setup(data) {
   
   d3.select("#x-var")
     .selectAll("option")
-    .data(Object.keys(data[0]))
+    .data(Object.keys(data[0]).filter(e => !REMOVED_DATA.includes(e)))
     .enter()
     .append("option")
     .attr("value", d => d)
@@ -86,7 +86,7 @@ function setup(data) {
 
   d3.select("#x-sub-var")
     .selectAll("option")
-    .data(Object.keys(data[0]))
+    .data(Object.keys(data[0]).filter(e => !REMOVED_DATA.includes(e)))
     .enter()
     .append("option")
     .attr("value", d => d)

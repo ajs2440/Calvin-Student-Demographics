@@ -82,12 +82,41 @@ function setup(data) {
     .attr("value", d => d)
     .text(d => nicerText[d]);
   
+  let xvar = d3.select("#x-var").property("value");
+
+  let flattenedData = flattenData(data, xvar);
+
+  xYearScale = d3.scaleBand()
+    .domain(flattenedData.map(e => e.year))
+    .range([MARGIN.left, nWIDTH])
+    .paddingInner(.3);
+
+
+  xVarScale = d3.scaleBand()
+    .domain(flattenedData.map(e => e[e.varType]))
+    .range([0, xYearScale.bandwidth()])
+    .paddingInner(.1);
+
+  let range = d3.extent(flattenedData.map(e => e.studentCount));
+
+  yScale = d3.scaleLinear()
+    .domain([range[0], range[1]])
+    .range([nHEIGHT, MARGIN.bottom]);
+
+  svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", `translate(0, ${nHEIGHT+4})`)
+    .call(d3.axisBottom(xYearScale))
+
+  svg.append("g")
+    .attr("class", "y axis")
+    .attr("transform", `translate(${MARGIN.left-4}, 0)`)
+    .call(d3.axisLeft(yScale));
   
+  d3.selectAll(".data_parameter")
+    .on("change", () => update(data));
 
-    d3.selectAll(".data_parameter")
-      .on("change", () => update(data));
-
-    update(data);
+  update(data);
 }
 
 function updateEvent() {
@@ -151,32 +180,24 @@ function update(data) {
 
   let xvar = d3.select("#x-var").property("value");
 
-  flattenedData = flattenData(data, xvar);
+  let flattenedData = flattenData(data, xvar);
 
-  xYearScale = d3.scaleBand()
-    .domain(flattenedData.map(e => e.year))
-    .range([MARGIN.left, nWIDTH])
-    .paddingInner(.3);
-
-
-  xVarScale = d3.scaleBand()
-    .domain(flattenedData.map(e => e[e.varType]))
-    .range([0, xYearScale.bandwidth()])
-    .paddingInner(.1);
-
-  let range = d3.extent(flattenedData.map(e => e.studentCount));
-
-  yScale = d3.scaleLinear()
-    .domain([range[0]-10, range[1]+10])
-    .range([nHEIGHT, MARGIN.bottom]);
-
-  svg.append("g")
-    .attr("transform", `translate(0, ${nHEIGHT})`)
+  //update x axis
+  xYearScale.domain(flattenedData.map(e => e.year))
+  svg.select(".x.axis")
     .call(d3.axisBottom(xYearScale))
 
-  svg.append("g")
-    .attr("transform", `translate(0, ${nHEIGHT+20})`)
+
+  xVarScale.domain(flattenedData.map(e => e[e.varType]))
+  .range([0, xYearScale.bandwidth()])
+
+  //update y axis
+  let range = d3.extent(flattenedData.map(e => e.studentCount));
+  yScale.domain([range[0]-10, range[1]+10])  
+  svg.select(".y.axis")
     .call(d3.axisLeft(yScale));
+
+  
 
 
   //ordinal to color

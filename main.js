@@ -283,36 +283,4 @@ function update(data) {
 
   console.log("marker3");
 
-
-  let types = getPossibleValues(data, xvar);
-  console.log(types);
-  let legendScale = d3.scaleOrdinal()
-      .domain(types)
-      .range(types.map((e, i, n) => {
-        return i/types.length*nWIDTH;
-      }))
-    
-
-  svg.selectAll("rect.legend").data(types)
-      .join(
-        enter => enter.append("rect")
-          .attr("class", "legend")
-          .attr("x", d => legendScale(d))
-          .attr("y", d => {console.log("asfd"); return 10;})
-          .attr("width", 10)
-          .attr("height", 10)
-          .attr("fill", d => colorScale(d)),
-        update => update
-          .attr("x", d => legendScale(d))
-          .attr("y", d => {console.log("asfd"); return 10;})
-          .attr("width", 10)
-          .attr("height", 10)
-          .attr("fill", d => colorScale(d)),
-        exit => exit.remove()
-      )
-     
-    
-
-  console.log("marker3");
-
 }

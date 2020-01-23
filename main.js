@@ -11,6 +11,8 @@ const BORDER_COLOR = "gray";
 const BORDER_SIZE = 4;
 const SHOW_TIME = 1000;
 const TRANSITION_DURATION = 1000;
+const HOVER_TRANSITION_DURATION = 500;
+
 
 const LEGEND_COLOR_SYMBOL_HEIGHT = 10;
 const YEAR_COLUMN_NAME = "Academic Year";
@@ -211,12 +213,12 @@ function update(data) {
   //update y axis
   let range = d3.extent(flattenedData.map(e => e.studentCount));
   yScale.domain([0, range[1]])  
-  svg.select(".y.axis").transition().duration(TRANSITION_DURATION)
+  svg.select(".y.axis").transition("ytrans").duration(TRANSITION_DURATION)
     .call(d3.axisLeft(yScale));
 
   
   //ordinal to color
-  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateRainbow, [20, 100]);
+  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateCool, [20, 100]);
   
   console.log(flattenedData);
 
@@ -236,27 +238,33 @@ function update(data) {
     // var subgroupName = d3.select(this.parentNode).datum().key; // This was the tricky part
     // var subgroupValue = d.data[subgroupName];
     // Reduce opacity of all rect to 0.2
-    d3.selectAll(".bar").style("opacity", 0.3)
+    d3.selectAll(".bar").transition("mouseover")
+    .duration(HOVER_TRANSITION_DURATION)
+    .style("opacity", 0.3)
     // Highlight all rects of this subgroup with opacity 0.8. It is possible to select them since they have a specific class = their name.
     d3.select(this)
-      .style("opacity", 1)
-    tooltip.html("some info").style("opacity", 1)
+    .transition("mouseover")
+    .duration(HOVER_TRANSITION_DURATION)  
+    .style("opacity", 1)
+    tooltip.html(d[d.varType] + " count = " + d.studentCount).style("opacity", 1)
   }
 
   // set opacity back to normal when mouse is not over any bar
   var mouseleave = function(d) {
     d3.selectAll(".bar")
+      .transition()
+      .duration(HOVER_TRANSITION_DURATION)  
       .style("opacity", 1)
       tooltip.style("opacity", 0)
   }
 
   //https://stackoverflow.com/questions/45211408/making-a-grouped-bar-chart-using-d3-js
   svg
-    .selectAll("rect.bar")
-    .data(flattenedData)
-    .join(
-      enter => enter
-        .append("rect")
+  .selectAll("rect.bar")
+  .data(flattenedData)
+  .join(
+    enter => enter
+      .append("rect")
           .on("mouseover", mouseover)
           .on("mouseleave", mouseleave)
           .attr("class", "bar")
@@ -266,7 +274,7 @@ function update(data) {
           .attr("height", d=> nHEIGHT-yScale(d.studentCount))
           .style("fill", d => colorScale(d[d.varType])),
       update =>
-        update.transition()
+        update.transition("bartrans")
         .duration(TRANSITION_DURATION)
         .attr("x", d => ((d.varType == xmainvar) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d[d.varType])))
         .attr("y", d => yScale(d.studentCount))
@@ -274,7 +282,7 @@ function update(data) {
         .attr("height", d=> nHEIGHT-yScale(d.studentCount))
         .style("fill", d => colorScale(d[d.varType])),
       exit => 
-        exit.transition()
+        exit.transition("bartrans")
         .duration(0)
         .remove()
   )

@@ -9,7 +9,7 @@ const nHEIGHT = HEIGHT - MARGIN.top - MARGIN.bottom;
 
 const BORDER_COLOR = "gray";
 const BORDER_SIZE = 4;
-const SHOW_TIME = 5000;
+const SHOW_TIME = 1000;
 const TRANSITION_DURATION = 1000;
 
 const LEGEND_COLOR_SYMBOL_HEIGHT = 10;
@@ -59,6 +59,11 @@ function cleanupData(data) {
 }
 
 function setup(data) {
+
+
+
+
+
   //create svg and center it
   svg = d3.select("#visual").append("svg")
     .attr("width", `${WIDTH}px`)
@@ -195,7 +200,7 @@ function update(data) {
 
   //update y axis
   let range = d3.extent(flattenedData.map(e => e.studentCount));
-  yScale.domain([range[0], range[1]])  
+  yScale.domain([0, range[1]])  
   svg.select(".y.axis").transition().duration(TRANSITION_DURATION)
     .call(d3.axisLeft(yScale));
 

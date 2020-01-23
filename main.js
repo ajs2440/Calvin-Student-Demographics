@@ -15,7 +15,7 @@ const TRANSITION_DURATION = 1000;
 const LEGEND_COLOR_SYMBOL_HEIGHT = 10;
 const YEAR_COLUMN_NAME = "Academic Year";
 const STUDENT_COUNT_COLUMN_NAME = "StudentCount";
-const REMOVED_DATA = ["StudentCount", "Academic Year"];
+const REMOVED_DATA = ["StudentCount"];
 
 let nicerText = {
   "Academic Year": "Year",
@@ -59,6 +59,7 @@ function cleanupData(data) {
 }
 
 function setup(data) {
+
   //create svg and center it
   svg = d3.select("#visual").append("svg")
     .attr("width", `${WIDTH}px`)
@@ -82,20 +83,30 @@ function setup(data) {
     .append("option")
     .attr("value", d => d)
     .text(d => nicerText[d]);
+
+  d3.select("#x-sub-var")
+    .selectAll("option")
+    .data(Object.keys(data[0]).filter(e => !REMOVED_DATA.includes(e)))
+    .enter()
+    .append("option")
+    .attr("value", d => d)
+    .text(d => nicerText[d]);
+  
   
   let xvar = d3.select("#x-var").property("value");
+  let xmainvar = d3.select("#x-sub-var").property("value")
 
-  let flattenedData = flattenData(data, xvar);
+  let flattenedData = flattenData(data, xvar, xmainvar);
 
-  xYearScale = d3.scaleBand()
-    .domain(flattenedData.map(e => e.year))
+  xGroupScale = d3.scaleBand()
+    .domain(flattenedData.map(e => e.mainvar))
     .range([MARGIN.left, nWIDTH])
     .paddingInner(.3);
 
 
   xVarScale = d3.scaleBand()
     .domain(flattenedData.map(e => e[e.varType]))
-    .range([0, xYearScale.bandwidth()])
+    .range([0, xGroupScale.bandwidth()])
     .paddingInner(.1);
 
   let range = d3.extent(flattenedData.map(e => e.studentCount));
@@ -107,7 +118,7 @@ function setup(data) {
   svg.append("g")
     .attr("class", "x axis")
     .attr("transform", `translate(0, ${nHEIGHT+4})`)
-    .call(d3.axisBottom(xYearScale))
+    .call(d3.axisBottom(xGroupScale))
 
   svg.append("g")
     .attr("class", "y axis")
@@ -133,7 +144,7 @@ function updateEvent() {
 
 var yScale;
 let xVarScale;
-let xYearScale;
+let xGroupScale;
 let colorScale;
 
 function genColorScale(possibleValues, d3ColorScheme, range) {
@@ -156,17 +167,19 @@ const getPossibleValues = (d, k) => {
   );
 }
 
-const flattenData = (data, xvar) => {
+const flattenData = (data, xvar, xgroup) => {
   let pValues = getPossibleValues(data, xvar);
-  let rollup = d3.rollup(data, v => d3.sum(v, d => d[STUDENT_COUNT_COLUMN_NAME]), d => d[YEAR_COLUMN_NAME], d => d[xvar]);
+  let rollup = d3.rollup(data, v => d3.sum(v, d => d[STUDENT_COUNT_COLUMN_NAME]), d => d[xgroup], d => d[xvar]);
+  
+  console.log(rollup);
   let flat = [];
-  rollup.forEach((map, currentYear) => {
+  rollup.forEach((map, currentGroup) => {
 
     let givenValues = Array.from(map.keys());
 
     pValues.forEach(pValue => {
       let row = {
-        year: currentYear,
+        mainvar:  currentGroup,
         studentCount: givenValues.includes(pValue) ?  map.get(pValue) : 0,
         varType: xvar,
       }
@@ -181,17 +194,19 @@ const flattenData = (data, xvar) => {
 function update(data) {
 
   let xvar = d3.select("#x-var").property("value");
+  let xmainvar = d3.select("#x-sub-var").property("value")
 
-  let flattenedData = flattenData(data, xvar);
+  let flattenedData = flattenData(data, xvar, xmainvar);
+
 
   //update x axis
-  xYearScale.domain(flattenedData.map(e => e.year))
+  xGroupScale.domain(flattenedData.map(e => e.mainvar))
   svg.select(".x.axis")
-    .call(d3.axisBottom(xYearScale))
+    .call(d3.axisBottom(xGroupScale))
 
 
   xVarScale.domain(flattenedData.map(e => e[e.varType]))
-  .range([0, xYearScale.bandwidth()])
+  .range([0, xGroupScale.bandwidth()])
 
   //update y axis
   let range = d3.extent(flattenedData.map(e => e.studentCount));
@@ -245,17 +260,17 @@ function update(data) {
           .on("mouseover", mouseover)
           .on("mouseleave", mouseleave)
           .attr("class", "bar")
-          .attr("x", d => xVarScale(d[d.varType])+xYearScale(d.year))
+          .attr("x", d => ((d.varType == xmainvar) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d[d.varType])))
           .attr("y", d => yScale(d.studentCount))
-          .attr("width", xVarScale.bandwidth())
+          .attr("width", d => ((d.varType == xmainvar) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
           .attr("height", d=> nHEIGHT-yScale(d.studentCount))
           .style("fill", d => colorScale(d[d.varType])),
       update =>
         update.transition()
         .duration(TRANSITION_DURATION)
-        .attr("x", d => xVarScale(d[d.varType])+xYearScale(d.year))
+        .attr("x", d => ((d.varType == xmainvar) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d[d.varType])))
         .attr("y", d => yScale(d.studentCount))
-        .attr("width", xVarScale.bandwidth())
+        .attr("width", d => ((d.varType == xmainvar) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
         .attr("height", d=> nHEIGHT-yScale(d.studentCount))
         .style("fill", d => colorScale(d[d.varType])),
       exit => 

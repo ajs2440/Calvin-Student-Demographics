@@ -9,7 +9,7 @@ const nHEIGHT = HEIGHT - MARGIN.top - MARGIN.bottom;
 
 const BORDER_COLOR = "gray";
 const BORDER_SIZE = 4;
-const SHOW_TIME = 10;
+const SHOW_TIME = 500;
 const TRANSITION_DURATION = 1000;
 
 const YEAR_COLUMN_NAME = "Academic Year";
@@ -82,13 +82,43 @@ function setup(data) {
     .attr("value", d => d)
     .text(d => nicerText[d]);
   
+  let xvar = d3.select("#x-var").property("value");
+
+  let flattenedData = flattenData(data, xvar);
+
+  xYearScale = d3.scaleBand()
+    .domain(flattenedData.map(e => e.year))
+    .range([MARGIN.left, nWIDTH])
+    .paddingInner(.3);
+
+
+  xVarScale = d3.scaleBand()
+    .domain(flattenedData.map(e => e[e.varType]))
+    .range([0, xYearScale.bandwidth()])
+    .paddingInner(.1);
+
+  let range = d3.extent(flattenedData.map(e => e.studentCount));
+
+  yScale = d3.scaleLinear()
+    .domain([range[0], range[1]])
+    .range([nHEIGHT, MARGIN.bottom]);
+
+  svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", `translate(0, ${nHEIGHT+4})`)
+    .call(d3.axisBottom(xYearScale))
+
+  svg.append("g")
+    .attr("class", "y axis")
+    .attr("transform", `translate(${MARGIN.left-4}, 0)`)
+    .call(d3.axisLeft(yScale));
+  
+  d3.selectAll(".data_parameter")
+    .on("change", () => update(data));
+
   
 
-    d3.selectAll(".data_parameter")
-      .on("change", () => update(data));
-
-    console.log(data);
-    update(data);
+  update(data);
 }
 
 function updateEvent() {
@@ -103,159 +133,136 @@ function updateEvent() {
 var yScale;
 let xVarScale;
 let xYearScale;
-let ordinalVarScale;
 let colorScale;
 
-
-function genColorScale(possibleValues, d3ColorScheme) {
-  ordinalVarScale = d3.scaleOrdinal().domain(possibleValues).range(possibleValues.map((v, i, n) => {
-    console.log(v +" = " + (i/n.length*100));
-    return i/n.length*100;
+function genColorScale(possibleValues, d3ColorScheme, range) {
+  let ordinalVarScale = d3.scaleOrdinal().domain(possibleValues).range(possibleValues.map((v, i, n) => {
+    return i/n.length*(Math.abs(range[1]-range[0])) + range[0];
   }));
-  return d3.scaleSequential().domain([0,100]).interpolator(d3ColorScheme);
+
+  let colorScale = d3.scaleSequential().domain([0,100]).interpolator(d3ColorScheme);
+
+  const func = value => {
+    return colorScale(ordinalVarScale(value));
+  }
+
+  return func;
+}
+
+const getPossibleValues = (d, k) => {
+  return Array.from(
+    new Set(d.map(e => e[k]))
+  );
+}
+
+const flattenData = (data, xvar) => {
+  let pValues = getPossibleValues(data, xvar);
+  let rollup = d3.rollup(data, v => d3.sum(v, d => d[STUDENT_COUNT_COLUMN_NAME]), d => d[YEAR_COLUMN_NAME], d => d[xvar]);
+  let flat = [];
+  rollup.forEach((map, currentYear) => {
+
+    let givenValues = Array.from(map.keys());
+
+    pValues.forEach(pValue => {
+      let row = {
+        year: currentYear,
+        studentCount: givenValues.includes(pValue) ?  map.get(pValue) : 0,
+        varType: xvar,
+      }
+      row[xvar] = pValue;
+      flat.push(row);
+    })
+    
+  })
+  return flat;
 }
 
 function update(data) {
 
   let xvar = d3.select("#x-var").property("value");
 
-  let formattedData = d3.rollup(data, v => d3.sum(v, d => d[STUDENT_COUNT_COLUMN_NAME]), d => d[YEAR_COLUMN_NAME], d => d[xvar]);
-  
-  //not necessary but makes extraction easier by converting it to an array
-  let normalData = Array.from(formattedData.keys())
-    .map(e => 
-      (
-        {
-          year: e,
-          yearMap: formattedData.get(e)//nested data
-        }
-      )
-    );
-  
-  let flattenedData = [];
+  let flattenedData = flattenData(data, xvar);
 
-  normalData.forEach(yearData => {
-
-    //get nested data
-    let yearSpecificData = yearData.yearMap;
-    
-    //loop through nested data and push flattened data to array
-    Array.from(yearSpecificData.keys()).forEach(d => {
-      
-      flattenedData.push({
-        year: yearData.year,
-        varname: nicerText[xvar],
-        studentcount: yearSpecificData.get(d),
-        varvalue: d
-      })
-
-    });    
-
-  });
-  console.log(normalData[0])
-
-  xYearScale = d3.scaleBand()
-    .domain(flattenedData.map(e => e.year))
-    .range([MARGIN.left, nWIDTH])
-    .paddingInner(.3);
-
-  console.log(d3.extent(flattenedData.map(e => e.year)));
-
-  xVarScale = d3.scaleBand()
-    .domain(Array.from(normalData[0].yearMap.keys()))
-    .range([0, xYearScale.bandwidth()])
-    .paddingInner(.1);
-
-  
-    console.log("Marker 111");
-
-  console.log(normalData[0].year);
-
-  
-
-  svg.append("g")
-    .attr("")
-
-  let range = d3.extent(flattenedData.map(e => e.studentcount));
-
-  yScale = d3.scaleLinear()
-    .domain([range[0]-10, range[1]+10])
-    .range([nHEIGHT, MARGIN.bottom]);
-
-  let types = Array.from(normalData[0].yearMap.keys());
-  console.log(types);
-  console.log(types.map((v, i, n) => {
-    console.log(v);
-    console.log(i);
-    console.log(n);
-    
-    return i/n.length*100;
-  }))
-
-  console.log(Array.from(normalData[0].yearMap.keys()));
-
-  // // What happens when user hover a bar
-  // var mouseover = function (d) {
-  //   // what subgroup are we hovering?
-  //   var subgroupName = d3.select(this).datum().key; // This was the tricky part
-  //   // console.log(subgroupName);
-  //   var subgroupValue = d.data[subgroupName];
-  //   // Reduce opacity of all rect to 0.2
-  //   d3.selectAll(".bar").style("opacity", 0.2)
-  //   // Highlight all rects of this subgroup with opacity 0.8. It is possible to select them since they have a specific class = their name.
-  //   d3.select("." + subgroupValue)
-  //     .style("opacity", 1)
-  // }
-
-  // // Set opacity back to normal once mouse leaves
-  // var mouseleave = function (d) {
-  //   d3.selectAll(".bar")
-  //     .style("opacity", 1)
-  // }
-
-  svg.append("g")
-    .attr("transform", `translate(0, ${nHEIGHT})`)
+  //update x axis
+  xYearScale.domain(flattenedData.map(e => e.year))
+  svg.select(".x.axis")
     .call(d3.axisBottom(xYearScale))
 
-  svg.append("g")
-    .attr("transform", `translate(0, ${nHEIGHT+20})`)
+
+  xVarScale.domain(flattenedData.map(e => e[e.varType]))
+  .range([0, xYearScale.bandwidth()])
+
+  //update y axis
+  let range = d3.extent(flattenedData.map(e => e.studentCount));
+  yScale.domain([range[0], range[1]])  
+  svg.select(".y.axis").transition().duration(TRANSITION_DURATION)
     .call(d3.axisLeft(yScale));
+
+  
 
 
   //ordinal to color
-  colorScale = genColorScale(types, d3.interpolateRainbow);
+  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateCool, [20, 100]);
   
+  console.log(flattenedData);
+
   //https://stackoverflow.com/questions/45211408/making-a-grouped-bar-chart-using-d3-js
-  svg.selectAll("rect.bar").data(flattenedData).join(
-    enter => enter
-      .append("rect")
-      // .on("mouseover", mouseover)
-      // .on("mouseleave", mouseleave)
-      .classed("bar", true)
-      .transition() 
-      .duration(TRANSITION_DURATION)
-        .attr("x", d => xVarScale(d.varvalue)+xYearScale(d.year))
-        .attr("y", d => yScale(d.studentcount))
+  svg
+    .selectAll("rect.bar")
+    .data(flattenedData)
+    .join(
+      enter => enter
+        .append("rect")
+          .attr("class", "bar")
+          .attr("x", d => xVarScale(d[d.varType])+xYearScale(d.year))
+          .attr("y", d => yScale(d.studentCount))
+          .attr("width", xVarScale.bandwidth())
+          .attr("height", d=> nHEIGHT-yScale(d.studentCount))
+          .style("fill", d => colorScale(d[d.varType])),
+      update =>
+        update.transition()
+        .duration(TRANSITION_DURATION)
+        .attr("x", d => xVarScale(d[d.varType])+xYearScale(d.year))
+        .attr("y", d => yScale(d.studentCount))
         .attr("width", xVarScale.bandwidth())
-        .attr("height", d=> nHEIGHT-yScale(d.studentcount))
-        .style("fill", d => colorScale(ordinalVarScale(d.varvalue)))
-        
-       ,
-    update =>
-      update.transition()
-      .duration(TRANSITION_DURATION)
-      .attr("x", d => xVarScale(d.varvalue)+xYearScale(d.year))
-      .attr("y", d => yScale(d.studentcount))
-      .attr("width", xVarScale.bandwidth())
-      .attr("height", d=> nHEIGHT-yScale(d.studentcount))
-      .style("fill", d => colorScale(ordinalVarScale(d.varvalue))),
-    exit => 
-      exit.transition()
-      .duration(0)
-      .remove()
+        .attr("height", d=> nHEIGHT-yScale(d.studentCount))
+        .style("fill", d => colorScale(d[d.varType])),
+      exit => 
+        exit.transition()
+        .duration(0)
+        .remove()
   )
+
+
+  let types = getPossibleValues(data, xvar);
+  console.log(types);
+  let legendScale = d3.scaleOrdinal()
+      .domain(types)
+      .range(types.map((e, i, n) => {
+        return i/types.length*nWIDTH;
+      }))
+    
+
+  svg.selectAll("rect.legend").data(types)
+      .join(
+        enter => enter.append("rect")
+          .attr("class", "legend")
+          .attr("x", d => legendScale(d))
+          .attr("y", d => {console.log("asfd"); return 10;})
+          .attr("width", 10)
+          .attr("height", 10)
+          .attr("fill", d => colorScale(d)),
+        update => update
+          .attr("x", d => legendScale(d))
+          .attr("y", d => {console.log("asfd"); return 10;})
+          .attr("width", 10)
+          .attr("height", 10)
+          .attr("fill", d => colorScale(d)),
+        exit => exit.remove()
+      )
+     
+    
+
   console.log("marker3");
 
 }
-
-

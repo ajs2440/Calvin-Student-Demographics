@@ -10,12 +10,16 @@ const nHEIGHT = HEIGHT - MARGIN.top - MARGIN.bottom;
 const BORDER_COLOR = "gray";
 const BORDER_SIZE = 4;
 const SHOW_TIME = 1000;
-const TRANSITION_DURATION = 1000;
+const TRANSITION_DURATION = 100;
+const HOVER_TRANSITION_DURATION = 400;
+
 
 const LEGEND_COLOR_SYMBOL_HEIGHT = 10;
 const YEAR_COLUMN_NAME = "Academic Year";
 const STUDENT_COUNT_COLUMN_NAME = "StudentCount";
 const REMOVED_DATA = ["StudentCount"];
+
+let transition_count_hack = 0;
 
 let nicerText = {
   "Academic Year": "Year",
@@ -26,6 +30,10 @@ let nicerText = {
   "ClassLevel": "Class Level",
   "Gender": "Gender",
   "StudentCount": "Student Count"
+}
+
+function getNicerText(d) {
+  return nicerText[d] != undefined ? nicerText[d] : d;
 }
 
 let data = null;
@@ -61,7 +69,7 @@ function cleanupData(data) {
 function setup(data) {
 
   //create svg and center it
-  svg = d3.select("#visual").append("svg")
+  svg = d3.select("#visual").select("svg#barchart")
     .attr("width", `${WIDTH}px`)
     .attr("height", `${HEIGHT}px`);
     //.classed("horizontalCentered", true);
@@ -82,21 +90,21 @@ function setup(data) {
     .enter()
     .append("option")
     .attr("value", d => d)
-    .text(d => nicerText[d]);
+    .text(d => getNicerText(d));
 
   d3.select("#x-sub-var")
     .selectAll("option")
-    .data(Object.keys(data[0]).filter(e => !REMOVED_DATA.includes(e)))
+    .data(["Per Year", "Year Per"])
     .enter()
     .append("option")
     .attr("value", d => d)
-    .text(d => nicerText[d]);
+    .text(d => getNicerText(d));
   
   
   let xvar = d3.select("#x-var").property("value");
   let xmainvar = d3.select("#x-sub-var").property("value")
 
-  let flattenedData = flattenData(data, xvar, xmainvar);
+  let flattenedData = xmainvar == "Per Year" ? flattenData(data, xvar, YEAR_COLUMN_NAME) : flattenData(data, YEAR_COLUMN_NAME, xvar);
 
   xGroupScale = d3.scaleBand()
     .domain(flattenedData.map(e => e.mainvar))
@@ -105,7 +113,7 @@ function setup(data) {
 
 
   xVarScale = d3.scaleBand()
-    .domain(flattenedData.map(e => e[e.varType]))
+    .domain(flattenedData.map(e => e[e.subvarname]))
     .range([0, xGroupScale.bandwidth()])
     .paddingInner(.1);
 
@@ -167,11 +175,24 @@ const getPossibleValues = (d, k) => {
   );
 }
 
+const yearIsMain = () => {
+  return d3.select("#x-sub-var").property("value") == "Per Year";
+}
+
+const getMainVar = () => {
+  let xvar = d3.select("#x-var").property("value");
+  return yearIsMain() ? YEAR_COLUMN_NAME : xvar;
+}
+
+const getSubVar = () => {
+  let xvar = d3.select("#x-var").property("value");
+  return yearIsMain() ? xvar : YEAR_COLUMN_NAME;
+}
+
 const flattenData = (data, xvar, xgroup) => {
   let pValues = getPossibleValues(data, xvar);
   let rollup = d3.rollup(data, v => d3.sum(v, d => d[STUDENT_COUNT_COLUMN_NAME]), d => d[xgroup], d => d[xvar]);
   
-  console.log(rollup);
   let flat = [];
   rollup.forEach((map, currentGroup) => {
 
@@ -180,10 +201,11 @@ const flattenData = (data, xvar, xgroup) => {
     pValues.forEach(pValue => {
       let row = {
         mainvar:  currentGroup,
+        subvar: pValue,
         studentCount: givenValues.includes(pValue) ?  map.get(pValue) : 0,
-        varType: xvar,
+        subvarname: xvar,
+        mainvarname: xgroup,
       }
-      row[xvar] = pValue;
       flat.push(row);
     })
     
@@ -191,75 +213,122 @@ const flattenData = (data, xvar, xgroup) => {
   return flat;
 }
 
-function update(data) {
-
+const getFlattenedData = (data) => {
   let xvar = d3.select("#x-var").property("value");
   let xmainvar = d3.select("#x-sub-var").property("value")
+  return xmainvar == "Per Year" ? flattenData(data, xvar, YEAR_COLUMN_NAME) : flattenData(data, YEAR_COLUMN_NAME, xvar);
+}
 
-  let flattenedData = flattenData(data, xvar, xmainvar);
+const getPossibleCurrentValues = (data) => {
+  console.log(getSubVar(data));
+  return getPossibleValues(data, getSubVar(data));
+}
 
+function update(data) {
+
+  let flattenedData = getFlattenedData(data);
+  let types = getPossibleCurrentValues(data);
 
   //update x axis
   xGroupScale.domain(flattenedData.map(e => e.mainvar))
   svg.select(".x.axis")
     .call(d3.axisBottom(xGroupScale))
 
-
-  xVarScale.domain(flattenedData.map(e => e[e.varType]))
+  xVarScale.domain(flattenedData.map(e => e.subvar))
   .range([0, xGroupScale.bandwidth()])
 
   //update y axis
   let range = d3.extent(flattenedData.map(e => e.studentCount));
+  
+  //for line chart, set max to total student count per year that is max
+  let maxStudentCountYear = flattenData(data, YEAR_COLUMN_NAME, YEAR_COLUMN_NAME);
+
   yScale.domain([0, range[1]])  
-  svg.select(".y.axis").transition().duration(TRANSITION_DURATION)
+  svg.select(".y.axis").transition("ytrans").duration(TRANSITION_DURATION)
     .call(d3.axisLeft(yScale));
 
   
-
-
   //ordinal to color
-  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateRainbow, [20, 100]);
+  colorScale = genColorScale(types, d3.interpolateViridis, [0, 100]);
   
-  console.log(flattenedData);
 
+  var tooltip = d3.select("#visual")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
 
+  // fade out other bars when mouse hovers over this bar
+  var mouseover = function(d) {
+    // what subgroup are we hovering?
+    // var subgroupName = d3.select(this.parentNode).datum().key; // This was the tricky part
+    // var subgroupValue = d.data[subgroupName];
+    // Reduce opacity of all rect to 0.2\
+    transition_count_hack += 1;
+    d3.selectAll(".bar").transition(`${transition_count_hack}`)
+    .duration(HOVER_TRANSITION_DURATION)
+    .style("opacity", 0.3)
+
+    transition_count_hack += 1;
+    // Highlight all rects of this subgroup with opacity 0.8. It is possible to select them since they have a specific class = their name.
+    d3.select(this)
+    .transition(`${transition_count_hack}`)
+    .duration(HOVER_TRANSITION_DURATION)  
+    .style("opacity", 1)
+    tooltip.html(d.subvar + " count = " + d.studentCount).style("opacity", 1)
+  }
+
+  // set opacity back to normal when mouse is not over any bar
+  var mouseleave = function(d) {
+    transition_count_hack += 1;
+    d3.selectAll(".bar")
+      .transition(`${transition_count_hack}`)
+      .duration(HOVER_TRANSITION_DURATION)  
+      .style("opacity", 1)
+      tooltip.style("opacity", 0)
+  }
 
   //https://stackoverflow.com/questions/45211408/making-a-grouped-bar-chart-using-d3-js
   svg
-    .selectAll("rect.bar")
-    .data(flattenedData)
-    .join(
-      enter => enter
-        .append("rect")
+  .selectAll("rect.bar")
+  .data(flattenedData)
+  .join(
+    enter => enter
+      .append("rect")
+          .on("mouseover", mouseover)
+          .on("mouseleave", mouseleave)
           .attr("class", "bar")
-          .attr("x", d => ((d.varType == xmainvar) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d[d.varType])))
+          .attr("x", d => ((d.subvarname == getMainVar()) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d.subvar)))
           .attr("y", d => yScale(d.studentCount))
-          .attr("width", d => ((d.varType == xmainvar) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
+          .attr("width", d => ((d.subvarname == getMainVar()) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
           .attr("height", d=> nHEIGHT-yScale(d.studentCount))
-          .style("fill", d => colorScale(d[d.varType])),
+          .style("fill", d => colorScale(d.subvar)),
       update =>
-        update.transition()
+        update.transition("bartrans")
         .duration(TRANSITION_DURATION)
-        .attr("x", d => ((d.varType == xmainvar) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d[d.varType])))
+        .attr("x", d => ((d.subvarname == getMainVar()) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d.subvar)))
         .attr("y", d => yScale(d.studentCount))
-        .attr("width", d => ((d.varType == xmainvar) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
+        .attr("width", d => ((d.subvarname == getMainVar()) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
         .attr("height", d=> nHEIGHT-yScale(d.studentCount))
-        .style("fill", d => colorScale(d[d.varType])),
+        .style("fill", d => colorScale(d.subvar)),
       exit => 
-        exit.transition()
+        exit.transition("bartrans")
         .duration(0)
         .remove()
   )
 
-  let types = getPossibleValues(data, xvar);
-  console.log(types);
+  //make total student count line graph
+  svg.selectAll("path.total_student_count")
 
-  
+  //make legend
   let legendScale = d3.scaleBand()
     .domain(types)
     .range([MARGIN.top, MARGIN.top + LEGEND_COLOR_SYMBOL_HEIGHT*types.length])
-    .paddingInner(1);
-    
+    .paddingInner(1);    
 
   svg.selectAll("rect.legend").data(types)
       .join(
@@ -297,9 +366,4 @@ function update(data) {
     exit => exit.remove()
   )
 
-
-  console.log("marker3");
-
 }
-
-

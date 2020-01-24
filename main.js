@@ -21,6 +21,16 @@ const REMOVED_DATA = ["StudentCount"];
 
 let transition_count_hack = 0;
 
+var tooltip = d3.select("#visual")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
+
 let nicerText = {
   "Academic Year": "Year",
   "InState": "In State",
@@ -35,6 +45,35 @@ let nicerText = {
 function getNicerText(d) {
   return nicerText[d] != undefined ? nicerText[d] : d;
 }
+
+// selects all bars (except the one being hovered on) and fades them on a mouseover
+function fade(opacity, selectedBar) {
+  d3.selectAll(".bar")
+    .filter(function (d, i) { 
+      return selectedBar !== d
+     })
+    .transition()
+    .duration(HOVER_TRANSITION_DURATION)
+    .style("opacity", opacity);
+};
+
+// show tooltip displaying bar info on a mouseover
+function mouseover(d) {
+  tooltip
+    .html(d.mainvarname + ": " + d.mainvar + ", " +
+      d.subvarname + ": " + d.subvar + ", " +
+      " Count = " + d.studentCount + " students.")
+      .transition(HOVER_TRANSITION_DURATION)
+      .style("opacity", 1)
+}
+
+// hide tooltip on a mouseleave
+function mouseleave(d) {
+  tooltip
+    .transition(HOVER_TRANSITION_DURATION)
+    .style("opacity", 0)
+}
+
 
 let data = null;
 
@@ -250,47 +289,6 @@ function update(data) {
   
   //ordinal to color
   colorScale = genColorScale(types, d3.interpolateViridis, [0, 100]);
-  
-
-  var tooltip = d3.select("#visual")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "1px")
-    .style("border-radius", "5px")
-    .style("padding", "10px")
-
-  // fade out other bars when mouse hovers over this bar
-  var mouseover = function(d) {
-    // what subgroup are we hovering?
-    // var subgroupName = d3.select(this.parentNode).datum().key; // This was the tricky part
-    // var subgroupValue = d.data[subgroupName];
-    // Reduce opacity of all rect to 0.2\
-    transition_count_hack += 1;
-    d3.selectAll(".bar").transition(`${transition_count_hack}`)
-    .duration(HOVER_TRANSITION_DURATION)
-    .style("opacity", 0.3)
-
-    transition_count_hack += 1;
-    // Highlight all rects of this subgroup with opacity 0.8. It is possible to select them since they have a specific class = their name.
-    d3.select(this)
-    .transition(`${transition_count_hack}`)
-    .duration(HOVER_TRANSITION_DURATION)  
-    .style("opacity", 1)
-    tooltip.html(d.subvar + " count = " + d.studentCount).style("opacity", 1)
-  }
-
-  // set opacity back to normal when mouse is not over any bar
-  var mouseleave = function(d) {
-    transition_count_hack += 1;
-    d3.selectAll(".bar")
-      .transition(`${transition_count_hack}`)
-      .duration(HOVER_TRANSITION_DURATION)  
-      .style("opacity", 1)
-      tooltip.style("opacity", 0)
-  }
 
   //https://stackoverflow.com/questions/45211408/making-a-grouped-bar-chart-using-d3-js
   svg
@@ -299,8 +297,15 @@ function update(data) {
   .join(
     enter => enter
       .append("rect")
-          .on("mouseover", mouseover)
-          .on("mouseleave", mouseleave)
+          .on("mouseover", function(d) {
+            fade(.4, d);
+            mouseover(d);
+          }
+          )
+          .on("mouseleave", function(d) {
+            fade(1, d);
+            mouseleave(d);
+          })
           .attr("class", "bar")
           .attr("x", d => ((d.subvarname == getMainVar()) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d.subvar)))
           .attr("y", d => yScale(d.studentCount))

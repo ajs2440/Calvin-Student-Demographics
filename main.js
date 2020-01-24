@@ -113,7 +113,7 @@ function setup(data) {
 
 
   xVarScale = d3.scaleBand()
-    .domain(flattenedData.map(e => e[e.varType]))
+    .domain(flattenedData.map(e => e[e.subvarname]))
     .range([0, xGroupScale.bandwidth()])
     .paddingInner(.1);
 
@@ -201,10 +201,11 @@ const flattenData = (data, xvar, xgroup) => {
     pValues.forEach(pValue => {
       let row = {
         mainvar:  currentGroup,
+        subvar: pValue,
         studentCount: givenValues.includes(pValue) ?  map.get(pValue) : 0,
-        varType: xvar,
+        subvarname: xvar,
+        mainvarname: xgroup,
       }
-      row[xvar] = pValue;
       flat.push(row);
     })
     
@@ -225,29 +226,30 @@ const getPossibleCurrentValues = (data) => {
 
 function update(data) {
 
-  
-
   let flattenedData = getFlattenedData(data);
-
+  let types = getPossibleCurrentValues(data);
 
   //update x axis
   xGroupScale.domain(flattenedData.map(e => e.mainvar))
   svg.select(".x.axis")
     .call(d3.axisBottom(xGroupScale))
 
-
-  xVarScale.domain(flattenedData.map(e => e[e.varType]))
+  xVarScale.domain(flattenedData.map(e => e.subvar))
   .range([0, xGroupScale.bandwidth()])
 
   //update y axis
   let range = d3.extent(flattenedData.map(e => e.studentCount));
+  
+  //for line chart, set max to total student count per year that is max
+  let maxStudentCountYear = flattenData(data, YEAR_COLUMN_NAME, YEAR_COLUMN_NAME);
+
   yScale.domain([0, range[1]])  
   svg.select(".y.axis").transition("ytrans").duration(TRANSITION_DURATION)
     .call(d3.axisLeft(yScale));
 
   
   //ordinal to color
-  colorScale = genColorScale(getPossibleCurrentValues(data), d3.interpolateViridis, [0, 100]);
+  colorScale = genColorScale(types, d3.interpolateViridis, [0, 100]);
   
 
   var tooltip = d3.select("#visual")
@@ -277,7 +279,7 @@ function update(data) {
     .transition(`${transition_count_hack}`)
     .duration(HOVER_TRANSITION_DURATION)  
     .style("opacity", 1)
-    tooltip.html(d[d.varType] + " count = " + d.studentCount).style("opacity", 1)
+    tooltip.html(d.subvar + " count = " + d.studentCount).style("opacity", 1)
   }
 
   // set opacity back to normal when mouse is not over any bar
@@ -300,29 +302,29 @@ function update(data) {
           .on("mouseover", mouseover)
           .on("mouseleave", mouseleave)
           .attr("class", "bar")
-          .attr("x", d => ((d.varType == getMainVar()) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d[d.varType])))
+          .attr("x", d => ((d.subvarname == getMainVar()) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d.subvar)))
           .attr("y", d => yScale(d.studentCount))
-          .attr("width", d => ((d.varType == getMainVar()) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
+          .attr("width", d => ((d.subvarname == getMainVar()) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
           .attr("height", d=> nHEIGHT-yScale(d.studentCount))
-          .style("fill", d => colorScale(d[d.varType])),
+          .style("fill", d => colorScale(d.subvar)),
       update =>
         update.transition("bartrans")
         .duration(TRANSITION_DURATION)
-        .attr("x", d => ((d.varType == getMainVar()) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d[d.varType])))
+        .attr("x", d => ((d.subvarname == getMainVar()) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d.subvar)))
         .attr("y", d => yScale(d.studentCount))
-        .attr("width", d => ((d.varType == getMainVar()) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
+        .attr("width", d => ((d.subvarname == getMainVar()) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
         .attr("height", d=> nHEIGHT-yScale(d.studentCount))
-        .style("fill", d => colorScale(d[d.varType])),
+        .style("fill", d => colorScale(d.subvar)),
       exit => 
         exit.transition("bartrans")
         .duration(0)
         .remove()
   )
 
-  let types = getPossibleCurrentValues(data);
-  console.log(types);
+  //make total student count line graph
+  svg.selectAll("path.total_student_count")
 
-  
+  //make legend
   let legendScale = d3.scaleBand()
     .domain(types)
     .range([MARGIN.top, MARGIN.top + LEGEND_COLOR_SYMBOL_HEIGHT*types.length])

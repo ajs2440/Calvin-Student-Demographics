@@ -10,7 +10,7 @@ const nHEIGHT = HEIGHT - MARGIN.top - MARGIN.bottom;
 const BORDER_COLOR = "gray";
 const BORDER_SIZE = 4;
 const SHOW_TIME = 1000;
-const TRANSITION_DURATION = 400;
+const TRANSITION_DURATION = 100;
 const HOVER_TRANSITION_DURATION = 400;
 
 
@@ -137,7 +137,7 @@ function setup(data) {
 
   d3.select("#x-sub-var")
     .selectAll("option")
-    .data(Object.keys(data[0]).filter(e => !REMOVED_DATA.includes(e)))
+    .data(["Per Year", "Year Per"])
     .enter()
     .append("option")
     .attr("value", d => d)
@@ -147,7 +147,7 @@ function setup(data) {
   let xvar = d3.select("#x-var").property("value");
   let xmainvar = d3.select("#x-sub-var").property("value")
 
-  let flattenedData = flattenData(data, xvar, xmainvar);
+  let flattenedData = xmainvar == "Per Year" ? flattenData(data, xvar, YEAR_COLUMN_NAME) : flattenData(data, YEAR_COLUMN_NAME, xvar);
 
   xGroupScale = d3.scaleBand()
     .domain(flattenedData.map(e => e.mainvar))
@@ -156,7 +156,7 @@ function setup(data) {
 
 
   xVarScale = d3.scaleBand()
-    .domain(flattenedData.map(e => e[e.varType]))
+    .domain(flattenedData.map(e => e[e.subvarname]))
     .range([0, xGroupScale.bandwidth()])
     .paddingInner(.1);
 
@@ -218,11 +218,24 @@ const getPossibleValues = (d, k) => {
   );
 }
 
+const yearIsMain = () => {
+  return d3.select("#x-sub-var").property("value") == "Per Year";
+}
+
+const getMainVar = () => {
+  let xvar = d3.select("#x-var").property("value");
+  return yearIsMain() ? YEAR_COLUMN_NAME : xvar;
+}
+
+const getSubVar = () => {
+  let xvar = d3.select("#x-var").property("value");
+  return yearIsMain() ? xvar : YEAR_COLUMN_NAME;
+}
+
 const flattenData = (data, xvar, xgroup) => {
   let pValues = getPossibleValues(data, xvar);
   let rollup = d3.rollup(data, v => d3.sum(v, d => d[STUDENT_COUNT_COLUMN_NAME]), d => d[xgroup], d => d[xvar]);
   
-  console.log(rollup);
   let flat = [];
   rollup.forEach((map, currentGroup) => {
 
@@ -231,10 +244,11 @@ const flattenData = (data, xvar, xgroup) => {
     pValues.forEach(pValue => {
       let row = {
         mainvar:  currentGroup,
+        subvar: pValue,
         studentCount: givenValues.includes(pValue) ?  map.get(pValue) : 0,
-        varType: xvar,
+        subvarname: xvar,
+        mainvarname: xgroup,
       }
-      row[xvar] = pValue;
       flat.push(row);
     })
     
@@ -242,34 +256,44 @@ const flattenData = (data, xvar, xgroup) => {
   return flat;
 }
 
+const getFlattenedData = (data) => {
+  let xvar = d3.select("#x-var").property("value");
+  let xmainvar = d3.select("#x-sub-var").property("value")
+  return xmainvar == "Per Year" ? flattenData(data, xvar, YEAR_COLUMN_NAME) : flattenData(data, YEAR_COLUMN_NAME, xvar);
+}
 
+const getPossibleCurrentValues = (data) => {
+  console.log(getSubVar(data));
+  return getPossibleValues(data, getSubVar(data));
+}
 
 function update(data) {
 
-  let xvar = d3.select("#x-var").property("value");
-  let xmainvar = d3.select("#x-sub-var").property("value")
-
-  let flattenedData = flattenData(data, xvar, xmainvar);
-
+  let flattenedData = getFlattenedData(data);
+  let types = getPossibleCurrentValues(data);
 
   //update x axis
   xGroupScale.domain(flattenedData.map(e => e.mainvar))
   svg.select(".x.axis")
+    .call(d3.axisBottom(xGroupScale))
 
-  xVarScale.domain(flattenedData.map(e => e[e.varType]))
+  xVarScale.domain(flattenedData.map(e => e.subvar))
   .range([0, xGroupScale.bandwidth()])
 
   //update y axis
   let range = d3.extent(flattenedData.map(e => e.studentCount));
+  
+  //for line chart, set max to total student count per year that is max
+  let maxStudentCountYear = flattenData(data, YEAR_COLUMN_NAME, YEAR_COLUMN_NAME);
+
   yScale.domain([0, range[1]])  
   svg.select(".y.axis").transition("ytrans").duration(TRANSITION_DURATION)
     .call(d3.axisLeft(yScale));
 
   
   //ordinal to color
-  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateGreens, [50, 100]);
+  colorScale = genColorScale(types, d3.interpolateViridis, [0, 100]);
   
-  console.log(flattenedData);
 
   //https://stackoverflow.com/questions/45211408/making-a-grouped-bar-chart-using-d3-js
   svg
@@ -281,29 +305,29 @@ function update(data) {
           .on("mouseover", mouseover)
           .on("mouseleave", mouseleave)
           .attr("class", "bar")
-          .attr("x", d => ((d.varType == xmainvar) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d[d.varType])))
+          .attr("x", d => ((d.subvarname == getMainVar()) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d.subvar)))
           .attr("y", d => yScale(d.studentCount))
-          .attr("width", d => ((d.varType == xmainvar) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
+          .attr("width", d => ((d.subvarname == getMainVar()) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
           .attr("height", d=> nHEIGHT-yScale(d.studentCount))
-          .style("fill", d => colorScale(d[d.varType])),
+          .style("fill", d => colorScale(d.subvar)),
       update =>
         update.transition("bartrans")
         .duration(TRANSITION_DURATION)
-        .attr("x", d => ((d.varType == xmainvar) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d[d.varType])))
+        .attr("x", d => ((d.subvarname == getMainVar()) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d.subvar)))
         .attr("y", d => yScale(d.studentCount))
-        .attr("width", d => ((d.varType == xmainvar) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
+        .attr("width", d => ((d.subvarname == getMainVar()) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
         .attr("height", d=> nHEIGHT-yScale(d.studentCount))
-        .style("fill", d => colorScale(d[d.varType])),
+        .style("fill", d => colorScale(d.subvar)),
       exit => 
         exit.transition("bartrans")
         .duration(0)
         .remove()
   )
 
-  let types = getPossibleValues(data, xvar);
-  console.log(types);
+  //make total student count line graph
+  svg.selectAll("path.total_student_count")
 
-  
+  //make legend
   let legendScale = d3.scaleBand()
     .domain(types)
     .range([MARGIN.top, MARGIN.top + LEGEND_COLOR_SYMBOL_HEIGHT*types.length])
@@ -344,8 +368,5 @@ function update(data) {
       .text(d => d),
     exit => exit.remove()
   )
-
-
-  console.log("marker3");
 
 }

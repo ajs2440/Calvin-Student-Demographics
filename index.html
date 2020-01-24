@@ -12,23 +12,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
 
 </head>
+
 <body>
-    <h1>Calvin University Demographics</h1>
+
     <div id="spinner" class="loader spin centeredAnimation"></div>
-    <div id="visual">
+
+    <div class="grid-container">
         
-        <p>Main X-Axis</p><select id="x-sub-var" class="data_parameter"></select>
+        <div id="header" class="grid-item">
+            <h1>Calvin University Demographics</h1>
+        </div>
         
-        <p>Sub X-Axis</p><select id="x-var" class="data_parameter"></select>
+        <div id="left-control" class="grid-item">
+            <p>Main X-Axis</p><select id="x-sub-var" class="data_parameter"></select>
+        </div>
         
-        <br>
+        <div id="right-control" class="grid-item">
+            <p>Sub X-Axis</p><select id="x-var" class="data_parameter"></select>
+        </div>
+
+        <div id="visual" class="grid-item" style="text-align:center;">
+            <svg id="barchart"></svg>
+        </div>
+        
+        <footer style="text-align: center;" class="grid-item">
+            <p> This website was created to fulfill the requirements of
+                <a href="https://rpruim.github.io/D3/">Math W82 Data Visualization with D3</a> 
+                at Calvin University, January 2020.</p>
+            <br>
+            <p>Made by: Jacob Brink, Tomoki Takeuchi, Carson Ellis, Advait Scaria</p>
+        </footer> 
 
     </div>
-    <footer>
-        <p> This website was created to fulfill the requirements of
-            <a href="https://rpruim.github.io/D3/">Math W82 Data Visualization with D3</a> 
-            at Calvin University, January 2020.</p>
-        <p>Made by: Jacob Brink, Tomoki Takeuchi, Carson Ellis, Advait Scaria</p>
-    </footer> 
+
     <script src="main.js"></script>
 </html>

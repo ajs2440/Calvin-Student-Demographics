@@ -28,6 +28,10 @@ let nicerText = {
   "StudentCount": "Student Count"
 }
 
+function getNicerText(d) {
+  return nicerText[d] != undefined ? nicerText[d] : d;
+}
+
 let data = null;
 
 const dataPromise = d3.csv('data/simple_2007_2019.csv')
@@ -61,7 +65,7 @@ function cleanupData(data) {
 function setup(data) {
 
   //create svg and center it
-  svg = d3.select("#visual").append("svg")
+  svg = d3.select("#visual").select("svg#barchart")
     .attr("width", `${WIDTH}px`)
     .attr("height", `${HEIGHT}px`);
     //.classed("horizontalCentered", true);
@@ -82,7 +86,7 @@ function setup(data) {
     .enter()
     .append("option")
     .attr("value", d => d)
-    .text(d => nicerText[d]);
+    .text(d => getNicerText(d));
 
   d3.select("#x-sub-var")
     .selectAll("option")
@@ -90,7 +94,7 @@ function setup(data) {
     .enter()
     .append("option")
     .attr("value", d => d)
-    .text(d => nicerText[d]);
+    .text(d => getNicerText(d));
   
   
   let xvar = d3.select("#x-var").property("value");
@@ -218,7 +222,7 @@ function update(data) {
 
 
   //ordinal to color
-  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateRainbow, [20, 100]);
+  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateYlOrBr, [50, 100]);
   
   console.log(flattenedData);
 

@@ -21,6 +21,16 @@ const REMOVED_DATA = ["StudentCount"];
 
 let transition_count_hack = 0;
 
+var tooltip = d3.select("#visual")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "white")
+    .style("border", "solid")
+    .style("border-width", "1px")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
+
 let nicerText = {
   "Academic Year": "Year",
   "InState": "In State",
@@ -32,63 +42,38 @@ let nicerText = {
   "StudentCount": "Student Count"
 }
 
-var tooltip = d3.select("#visual")
-  .append("div")
-  .style("opacity", 0)
-  .attr("class", "tooltip")
-  .style("background-color", "white")
-  .style("border", "solid")
-  .style("border-width", "1px")
-  .style("border-radius", "5px")
-  .style("padding", "10px")
+function getNicerText(d) {
+  return nicerText[d] != undefined ? nicerText[d] : d;
+}
 
-
+// selects all bars (except the one being hovered on) and fades them on a mouseover
 function fade(opacity, selectedBar) {
   d3.selectAll(".bar")
-    .filter(function (d, i) { return selectedBar !== d 
-      && selectedBar.studentCount !== d.studentCount
+    .filter(function (d, i) { 
+      return selectedBar !== d
      })
     .transition()
     .duration(HOVER_TRANSITION_DURATION)
     .style("opacity", opacity);
 };
 
-// fade out other bars when mouse hovers over this bar
-var mouseover = function (d) {
-  // transition_count_hack += 1;
-  // d3.selectAll(".bar")
-  //   .filter(function(d, i) { return  })
-  //   .transition(`${transition_count_hack}`)
-  //   .duration(HOVER_TRANSITION_DURATION)
-  //   .style("opacity", 0.3)
-    
-  // transition_count_hack += 1;
-  // d3.select(this)
-  //   .transition(`${transition_count_hack}`)
-  //   .duration(HOVER_TRANSITION_DURATION)
-  //   .style("opacity", 1)
-
+// show tooltip displaying bar info on a mouseover
+function mouseover(d) {
   tooltip
     .html(d.mainvarname + ": " + d.mainvar + ", " +
       d.subvarname + ": " + d.subvar + ", " +
-      " Count = " + d.studentCount + " students.").style("opacity", 1)
+      " Count = " + d.studentCount + " students.")
+      .transition(HOVER_TRANSITION_DURATION)
+      .style("opacity", 1)
 }
 
-// set opacity back to normal when mouse is not over any bar
-var mouseleave = function (d) {
-  // transition_count_hack += 1;
-  // d3.selectAll(".bar")
-  //   .transition(`${transition_count_hack}`)
-  //   .duration(HOVER_TRANSITION_DURATION)
-  //   .style("opacity", 1)
-
+// hide tooltip on a mouseleave
+function mouseleave(d) {
   tooltip
+    .transition(HOVER_TRANSITION_DURATION)
     .style("opacity", 0)
 }
 
-function getNicerText(d) {
-  return nicerText[d] != undefined ? nicerText[d] : d;
-}
 
 let data = null;
 
@@ -304,7 +289,6 @@ function update(data) {
   
   //ordinal to color
   colorScale = genColorScale(types, d3.interpolateViridis, [0, 100]);
-  
 
   //https://stackoverflow.com/questions/45211408/making-a-grouped-bar-chart-using-d3-js
   svg
@@ -313,13 +297,14 @@ function update(data) {
   .join(
     enter => enter
       .append("rect")
-          .on("mouseover", function(d) { 
+          .on("mouseover", function(d) {
             fade(.4, d);
-            // mouseover();
-          })
-          .on("mouseleave", function(d) { 
+            mouseover(d);
+          }
+          )
+          .on("mouseleave", function(d) {
             fade(1, d);
-            // mouseleave();
+            mouseleave(d);
           })
           .attr("class", "bar")
           .attr("x", d => ((d.subvarname == getMainVar()) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d.subvar)))
@@ -340,7 +325,11 @@ function update(data) {
         .duration(0)
         .remove()
   )
-  
+
+  //make total student count line graph
+  svg.selectAll("path.total_student_count")
+
+  //make legend
   let legendScale = d3.scaleBand()
     .domain(types)
     .range([MARGIN.top, MARGIN.top + LEGEND_COLOR_SYMBOL_HEIGHT*types.length])

@@ -10,8 +10,8 @@ const nHEIGHT = HEIGHT - MARGIN.top - MARGIN.bottom;
 const BORDER_COLOR = "gray";
 const BORDER_SIZE = 4;
 const SHOW_TIME = 1000;
-const TRANSITION_DURATION = 1000;
-const HOVER_TRANSITION_DURATION = 2000;
+const TRANSITION_DURATION = 400;
+const HOVER_TRANSITION_DURATION = 400;
 
 
 const LEGEND_COLOR_SYMBOL_HEIGHT = 10;
@@ -30,6 +30,49 @@ let nicerText = {
   "ClassLevel": "Class Level",
   "Gender": "Gender",
   "StudentCount": "Student Count"
+}
+
+var tooltip = d3.select("#visual")
+  .append("div")
+  .style("opacity", 0)
+  .attr("class", "tooltip")
+  .style("background-color", "white")
+  .style("border", "solid")
+  .style("border-width", "1px")
+  .style("border-radius", "5px")
+  .style("padding", "10px")
+
+// var rects = d3.selectAll(".bar").filter(function(d, i) {  });
+
+// fade out other bars when mouse hovers over this bar
+var mouseover = function (d) {
+  transition_count_hack += 1;
+  d3.selectAll(".bar")
+    .transition(`${transition_count_hack}`)
+    .duration(HOVER_TRANSITION_DURATION)
+    .style("opacity", 0.3)
+
+  transition_count_hack += 1;
+  d3.select(this)
+    .transition(`${transition_count_hack}`)
+    .duration(HOVER_TRANSITION_DURATION)
+    .style("opacity", 1)
+
+  tooltip
+    .html(d.varType + ": " + d[d.varType] +
+      ", Count = " + d.studentCount + " students.").style("opacity", 1)
+}
+
+// set opacity back to normal when mouse is not over any bar
+var mouseleave = function (d) {
+  transition_count_hack += 1;
+  d3.selectAll(".bar")
+    .transition(`${transition_count_hack}`)
+    .duration(HOVER_TRANSITION_DURATION)
+    .style("opacity", 1)
+
+  tooltip
+    .style("opacity", 0)
 }
 
 function getNicerText(d) {
@@ -199,6 +242,8 @@ const flattenData = (data, xvar, xgroup) => {
   return flat;
 }
 
+
+
 function update(data) {
 
   let xvar = d3.select("#x-var").property("value");
@@ -210,8 +255,6 @@ function update(data) {
   //update x axis
   xGroupScale.domain(flattenedData.map(e => e.mainvar))
   svg.select(".x.axis")
-    .call(d3.axisBottom(xGroupScale))
-
 
   xVarScale.domain(flattenedData.map(e => e[e.varType]))
   .range([0, xGroupScale.bandwidth()])
@@ -227,51 +270,6 @@ function update(data) {
   colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateGreens, [50, 100]);
   
   console.log(flattenedData);
-
-  var tooltip = d3.select("#visual")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "white")
-    .style("border", "solid")
-    .style("border-width", "1px")
-    .style("border-radius", "5px")
-    .style("padding", "10px")
-
-  // fade out other bars when mouse hovers over this bar
-  var mouseover = function(d) {
-    // what subgroup are we hovering?
-    // var subgroupName = d3.select(this.parentNode).datum().key; // This was the tricky part
-    // var subgroupValue = d.data[subgroupName];
-    // Reduce opacity of all rect to 0.2\
-    transition_count_hack += 1;
-    d3.selectAll(".bar").transition(`${transition_count_hack}`)
-    .duration(HOVER_TRANSITION_DURATION)
-    .style("opacity", 0.3)
-
-    transition_count_hack += 1;
-    // Highlight all rects of this subgroup with opacity 0.8. It is possible to select them since they have a specific class = their name.
-    d3.select(this)
-    .transition(`${transition_count_hack}`)
-    .duration(HOVER_TRANSITION_DURATION)  
-    .style("opacity", 1)
-
-    tooltip
-      .html(d.varType + ": " + d[d.varType] + 
-      ", Count = " + d.studentCount + " students.").style("opacity", 1)
-  }
-
-  // set opacity back to normal when mouse is not over any bar
-  var mouseleave = function(d) {
-    transition_count_hack += 1;
-    d3.selectAll(".bar")
-      .transition(`${transition_count_hack}`)
-      .duration(HOVER_TRANSITION_DURATION)  
-      .style("opacity", 1)
-
-    tooltip
-      .style("opacity", 0)
-  }
 
   //https://stackoverflow.com/questions/45211408/making-a-grouped-bar-chart-using-d3-js
   svg

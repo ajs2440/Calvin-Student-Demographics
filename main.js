@@ -11,13 +11,15 @@ const BORDER_COLOR = "gray";
 const BORDER_SIZE = 4;
 const SHOW_TIME = 1000;
 const TRANSITION_DURATION = 1000;
-const HOVER_TRANSITION_DURATION = 500;
+const HOVER_TRANSITION_DURATION = 2000;
 
 
 const LEGEND_COLOR_SYMBOL_HEIGHT = 10;
 const YEAR_COLUMN_NAME = "Academic Year";
 const STUDENT_COUNT_COLUMN_NAME = "StudentCount";
 const REMOVED_DATA = ["StudentCount"];
+
+let transition_count_hack = 0;
 
 let nicerText = {
   "Academic Year": "Year",
@@ -28,6 +30,10 @@ let nicerText = {
   "ClassLevel": "Class Level",
   "Gender": "Gender",
   "StudentCount": "Student Count"
+}
+
+function getNicerText(d) {
+  return nicerText[d] != undefined ? nicerText[d] : d;
 }
 
 let data = null;
@@ -63,7 +69,7 @@ function cleanupData(data) {
 function setup(data) {
 
   //create svg and center it
-  svg = d3.select("#visual").append("svg")
+  svg = d3.select("#visual").select("svg#barchart")
     .attr("width", `${WIDTH}px`)
     .attr("height", `${HEIGHT}px`);
     //.classed("horizontalCentered", true);
@@ -84,7 +90,7 @@ function setup(data) {
     .enter()
     .append("option")
     .attr("value", d => d)
-    .text(d => nicerText[d]);
+    .text(d => getNicerText(d));
 
   d3.select("#x-sub-var")
     .selectAll("option")
@@ -92,7 +98,7 @@ function setup(data) {
     .enter()
     .append("option")
     .attr("value", d => d)
-    .text(d => nicerText[d]);
+    .text(d => getNicerText(d));
   
   
   let xvar = d3.select("#x-var").property("value");
@@ -218,7 +224,7 @@ function update(data) {
 
   
   //ordinal to color
-  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateYlOrBr, [50, 100]);
+  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateGreens, [50, 100]);
   
   console.log(flattenedData);
 
@@ -237,13 +243,16 @@ function update(data) {
     // what subgroup are we hovering?
     // var subgroupName = d3.select(this.parentNode).datum().key; // This was the tricky part
     // var subgroupValue = d.data[subgroupName];
-    // Reduce opacity of all rect to 0.2
-    d3.selectAll(".bar").transition("mouseover")
+    // Reduce opacity of all rect to 0.2\
+    transition_count_hack += 1;
+    d3.selectAll(".bar").transition(`${transition_count_hack}`)
     .duration(HOVER_TRANSITION_DURATION)
     .style("opacity", 0.3)
+
+    transition_count_hack += 1;
     // Highlight all rects of this subgroup with opacity 0.8. It is possible to select them since they have a specific class = their name.
     d3.select(this)
-    .transition("mouseover")
+    .transition(`${transition_count_hack}`)
     .duration(HOVER_TRANSITION_DURATION)  
     .style("opacity", 1)
 
@@ -254,8 +263,9 @@ function update(data) {
 
   // set opacity back to normal when mouse is not over any bar
   var mouseleave = function(d) {
+    transition_count_hack += 1;
     d3.selectAll(".bar")
-      .transition()
+      .transition(`${transition_count_hack}`)
       .duration(HOVER_TRANSITION_DURATION)  
       .style("opacity", 1)
 

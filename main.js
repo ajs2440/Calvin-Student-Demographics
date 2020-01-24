@@ -218,7 +218,7 @@ function update(data) {
 
   
   //ordinal to color
-  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateCool, [20, 100]);
+  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateYlOrBr, [50, 100]);
   
   console.log(flattenedData);
 
@@ -246,7 +246,10 @@ function update(data) {
     .transition("mouseover")
     .duration(HOVER_TRANSITION_DURATION)  
     .style("opacity", 1)
-    tooltip.html(d[d.varType] + " count = " + d.studentCount).style("opacity", 1)
+
+    tooltip
+      .html(d.varType + ": " + d[d.varType] + 
+      ", Count = " + d.studentCount + " students.").style("opacity", 1)
   }
 
   // set opacity back to normal when mouse is not over any bar
@@ -255,7 +258,9 @@ function update(data) {
       .transition()
       .duration(HOVER_TRANSITION_DURATION)  
       .style("opacity", 1)
-      tooltip.style("opacity", 0)
+
+    tooltip
+      .style("opacity", 0)
   }
 
   //https://stackoverflow.com/questions/45211408/making-a-grouped-bar-chart-using-d3-js

@@ -2,15 +2,25 @@ body {
     background: #fafafa;
 }
 
-h1 {
-    font-family: 'Montserrat', sans-serif;
+@font-face {
+    font-family: 'Fjalla One';
     font-style: normal;
-    font-weight: bolder;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Fjalla One'), local('FjallaOne-Regular'), url(https://fonts.gstatic.com/s/fjallaone/v7/Yq6R-LCAWCX3-6Ky7FAFrO96kigt.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+h1 {
+    font-family: 'Gotham', 'Fjalla One', 'Monsterrat', sans-serif;
+    font-style: bold;
+    color: maroon;
+    text-align: center;
 }
 
 h2, body, footer {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
+    font-family: 'Fjalla One', 'Monsterrat', sans-serif;
+    font-weight: initial;
 }
 
 h2 {
@@ -28,7 +38,7 @@ p {
 }
 
 .tooltip {
-    font-family: 'Monsterrat', sans-serif;
+    font-family: 'Fjalla One', 'Monsterrat', sans-serif;
     font-weight: initial;
     font-size: 13px;
     text-align: center;

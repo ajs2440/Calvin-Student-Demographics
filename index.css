@@ -1,11 +1,14 @@
 body {
     background: #fafafa;
     width:100%;
+    margin: 0px;
 }
 
 #header {
     grid-column: 1 / 7;
     text-align: center;
+    background-color: rgb(112, 0, 0);
+    color: white;
 }
 
 #left-control {
@@ -19,7 +22,7 @@ body {
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Times New Roman', serif;
     font-style: normal;
     font-weight: bolder;
 }
@@ -38,6 +41,8 @@ h2 {
     grid-row-gap: 50px;
     grid-template-columns: auto auto auto auto auto auto;
     grid-template-rows: auto auto auto auto auto auto;
+    width:100%;
+    height:100%;
 }
 
 footer {
@@ -65,14 +70,12 @@ p {
     margin-right: 20px;
 }
 
-<<<<<<< HEAD
 .data_parameter {
     display: inline-block;
 
     margin-left: 20px;
     margin-right: 20px;
 }
-=======
 .tooltip {
     font-family: 'Monsterrat', sans-serif;
     font-weight: initial;
@@ -80,7 +83,6 @@ p {
     text-align: center;
 }
 
->>>>>>> f388db27483ac55524e5068e56defc08c3285533
 .centeredAnimation {
     position: fixed;
     top: -100%; bottom: -100%; right:-100%; left:-100%;

@@ -10,8 +10,8 @@ const nHEIGHT = HEIGHT - MARGIN.top - MARGIN.bottom;
 const BORDER_COLOR = "gray";
 const BORDER_SIZE = 4;
 const SHOW_TIME = 1000;
-const TRANSITION_DURATION = 1000;
-const HOVER_TRANSITION_DURATION = 2000;
+const TRANSITION_DURATION = 100;
+const HOVER_TRANSITION_DURATION = 400;
 
 
 const LEGEND_COLOR_SYMBOL_HEIGHT = 10;
@@ -94,7 +94,7 @@ function setup(data) {
 
   d3.select("#x-sub-var")
     .selectAll("option")
-    .data(Object.keys(data[0]).filter(e => !REMOVED_DATA.includes(e)))
+    .data(["Per Year", "Year Per"])
     .enter()
     .append("option")
     .attr("value", d => d)
@@ -104,7 +104,7 @@ function setup(data) {
   let xvar = d3.select("#x-var").property("value");
   let xmainvar = d3.select("#x-sub-var").property("value")
 
-  let flattenedData = flattenData(data, xvar, xmainvar);
+  let flattenedData = xmainvar == "Per Year" ? flattenData(data, xvar, YEAR_COLUMN_NAME) : flattenData(data, YEAR_COLUMN_NAME, xvar);
 
   xGroupScale = d3.scaleBand()
     .domain(flattenedData.map(e => e.mainvar))
@@ -175,11 +175,24 @@ const getPossibleValues = (d, k) => {
   );
 }
 
+const yearIsMain = () => {
+  return d3.select("#x-sub-var").property("value") == "Per Year";
+}
+
+const getMainVar = () => {
+  let xvar = d3.select("#x-var").property("value");
+  return yearIsMain() ? YEAR_COLUMN_NAME : xvar;
+}
+
+const getSubVar = () => {
+  let xvar = d3.select("#x-var").property("value");
+  return yearIsMain() ? xvar : YEAR_COLUMN_NAME;
+}
+
 const flattenData = (data, xvar, xgroup) => {
   let pValues = getPossibleValues(data, xvar);
   let rollup = d3.rollup(data, v => d3.sum(v, d => d[STUDENT_COUNT_COLUMN_NAME]), d => d[xgroup], d => d[xvar]);
   
-  console.log(rollup);
   let flat = [];
   rollup.forEach((map, currentGroup) => {
 
@@ -199,12 +212,22 @@ const flattenData = (data, xvar, xgroup) => {
   return flat;
 }
 
-function update(data) {
-
+const getFlattenedData = (data) => {
   let xvar = d3.select("#x-var").property("value");
   let xmainvar = d3.select("#x-sub-var").property("value")
+  return xmainvar == "Per Year" ? flattenData(data, xvar, YEAR_COLUMN_NAME) : flattenData(data, YEAR_COLUMN_NAME, xvar);
+}
 
-  let flattenedData = flattenData(data, xvar, xmainvar);
+const getPossibleCurrentValues = (data) => {
+  console.log(getSubVar(data));
+  return getPossibleValues(data, getSubVar(data));
+}
+
+function update(data) {
+
+  
+
+  let flattenedData = getFlattenedData(data);
 
 
   //update x axis
@@ -224,9 +247,8 @@ function update(data) {
 
   
   //ordinal to color
-  colorScale = genColorScale(getPossibleValues(data, xvar), d3.interpolateGreens, [50, 100]);
+  colorScale = genColorScale(getPossibleCurrentValues(data), d3.interpolateViridis, [0, 100]);
   
-  console.log(flattenedData);
 
   var tooltip = d3.select("#visual")
     .append("div")
@@ -278,17 +300,17 @@ function update(data) {
           .on("mouseover", mouseover)
           .on("mouseleave", mouseleave)
           .attr("class", "bar")
-          .attr("x", d => ((d.varType == xmainvar) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d[d.varType])))
+          .attr("x", d => ((d.varType == getMainVar()) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d[d.varType])))
           .attr("y", d => yScale(d.studentCount))
-          .attr("width", d => ((d.varType == xmainvar) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
+          .attr("width", d => ((d.varType == getMainVar()) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
           .attr("height", d=> nHEIGHT-yScale(d.studentCount))
           .style("fill", d => colorScale(d[d.varType])),
       update =>
         update.transition("bartrans")
         .duration(TRANSITION_DURATION)
-        .attr("x", d => ((d.varType == xmainvar) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d[d.varType])))
+        .attr("x", d => ((d.varType == getMainVar()) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d[d.varType])))
         .attr("y", d => yScale(d.studentCount))
-        .attr("width", d => ((d.varType == xmainvar) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
+        .attr("width", d => ((d.varType == getMainVar()) ? xGroupScale.bandwidth() : xVarScale.bandwidth()))
         .attr("height", d=> nHEIGHT-yScale(d.studentCount))
         .style("fill", d => colorScale(d[d.varType])),
       exit => 
@@ -297,7 +319,7 @@ function update(data) {
         .remove()
   )
 
-  let types = getPossibleValues(data, xvar);
+  let types = getPossibleCurrentValues(data);
   console.log(types);
 
   
@@ -341,8 +363,5 @@ function update(data) {
       .text(d => d),
     exit => exit.remove()
   )
-
-
-  console.log("marker3");
 
 }

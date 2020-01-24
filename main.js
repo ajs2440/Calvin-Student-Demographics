@@ -42,34 +42,45 @@ var tooltip = d3.select("#visual")
   .style("border-radius", "5px")
   .style("padding", "10px")
 
-// var rects = d3.selectAll(".bar").filter(function(d, i) {  });
+
+function fade(opacity, selectedBar) {
+  d3.selectAll(".bar")
+    .filter(function (d, i) { return selectedBar !== d 
+      && selectedBar.studentCount !== d.studentCount
+     })
+    .transition()
+    .duration(HOVER_TRANSITION_DURATION)
+    .style("opacity", opacity);
+};
 
 // fade out other bars when mouse hovers over this bar
 var mouseover = function (d) {
-  transition_count_hack += 1;
-  d3.selectAll(".bar")
-    .transition(`${transition_count_hack}`)
-    .duration(HOVER_TRANSITION_DURATION)
-    .style("opacity", 0.3)
-
-  transition_count_hack += 1;
-  d3.select(this)
-    .transition(`${transition_count_hack}`)
-    .duration(HOVER_TRANSITION_DURATION)
-    .style("opacity", 1)
+  // transition_count_hack += 1;
+  // d3.selectAll(".bar")
+  //   .filter(function(d, i) { return  })
+  //   .transition(`${transition_count_hack}`)
+  //   .duration(HOVER_TRANSITION_DURATION)
+  //   .style("opacity", 0.3)
+    
+  // transition_count_hack += 1;
+  // d3.select(this)
+  //   .transition(`${transition_count_hack}`)
+  //   .duration(HOVER_TRANSITION_DURATION)
+  //   .style("opacity", 1)
 
   tooltip
-    .html(d.varType + ": " + d[d.varType] +
-      ", Count = " + d.studentCount + " students.").style("opacity", 1)
+    .html(d.mainvarname + ": " + d.mainvar + ", " +
+      d.subvarname + ": " + d.subvar + ", " +
+      " Count = " + d.studentCount + " students.").style("opacity", 1)
 }
 
 // set opacity back to normal when mouse is not over any bar
 var mouseleave = function (d) {
-  transition_count_hack += 1;
-  d3.selectAll(".bar")
-    .transition(`${transition_count_hack}`)
-    .duration(HOVER_TRANSITION_DURATION)
-    .style("opacity", 1)
+  // transition_count_hack += 1;
+  // d3.selectAll(".bar")
+  //   .transition(`${transition_count_hack}`)
+  //   .duration(HOVER_TRANSITION_DURATION)
+  //   .style("opacity", 1)
 
   tooltip
     .style("opacity", 0)
@@ -302,8 +313,14 @@ function update(data) {
   .join(
     enter => enter
       .append("rect")
-          .on("mouseover", mouseover)
-          .on("mouseleave", mouseleave)
+          .on("mouseover", function(d) { 
+            fade(.4, d);
+            // mouseover();
+          })
+          .on("mouseleave", function(d) { 
+            fade(1, d);
+            // mouseleave();
+          })
           .attr("class", "bar")
           .attr("x", d => ((d.subvarname == getMainVar()) ? xGroupScale(d.mainvar) : xGroupScale(d.mainvar)+xVarScale(d.subvar)))
           .attr("y", d => yScale(d.studentCount))
@@ -323,11 +340,7 @@ function update(data) {
         .duration(0)
         .remove()
   )
-
-  //make total student count line graph
-  svg.selectAll("path.total_student_count")
-
-  //make legend
+  
   let legendScale = d3.scaleBand()
     .domain(types)
     .range([MARGIN.top, MARGIN.top + LEGEND_COLOR_SYMBOL_HEIGHT*types.length])

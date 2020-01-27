@@ -17,24 +17,24 @@ class Grapher {
 		console.log(legendBox);
 
 		//make color symbols for legend
-		legendBox.selectAll("circle.legend").data(ordinalData)
+		this.svg.selectAll(".legendWhatever").selectAll("circle.legend").data(ordinalData)
 			.join(
 				enter => enter.append("circle")
 				  .attr("class", "legend")
 				  .attr("cx", 10)
 				  .attr("cy", d => {console.log("creating"); return(legendScale(d))})
 				  .attr("r", 5)
-				  .style("fill", d => this.colorScale(d)),
+				  .style("fill", d => colorScale(d)),
 				update => update
 				  .attr("cx", 10)
 				  .attr("cy", d => {console.log("Updating!"); return(legendScale(d))})
 				  .attr("r", 5)
-				  .style("fill", d => this.colorScale(d)),
+				  .style("fill", d => colorScale(d)),
 				exit => exit.remove()
 		)
 
 		//make text for legend
-		legendBox.selectAll("text.legend").data(ordinalData)
+		this.svg.selectAll(".legendWhatever").selectAll("text.legend").data(ordinalData)
 			.join(
 				enter => enter.append("text")
 					.attr("class", "legend")

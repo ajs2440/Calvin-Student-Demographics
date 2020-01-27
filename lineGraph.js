@@ -75,14 +75,21 @@ class LineGraph extends Grapher {
 	showStacked() {		
 		let stackData = this.getStackData();
 		
-		let color = genColorScale(getPossibleValues(this.data, this.category), d3.interpolateRainbow, [0, 100]);
+		let types = getPossibleValues(this.data, this.category);
+		
+		let color = genColorScale(types, d3.interpolateRainbow, [0, 100]);
 		
 		const area = d3.area()
 			.x(d => this.xScale(d.year))
 			.y0(d => this.yScale(d.values[0]))
 			.y1(d => this.yScale(d.values[1]))
 		
-		const series = this.svg.selectAll(".series")
+		console.log(types);
+		
+		let g = this.makeLegend(types, color, 10);
+		g.attr("transform", "translate(0,0)");
+		
+		/*const series = this.svg.selectAll(".series")
 			.data(stackData)
 			.join(
 				enter => enter
@@ -99,9 +106,8 @@ class LineGraph extends Grapher {
 					.attr("d", d => area(d.data)),
 				exit => exit
 					.remove()
-					);
-		let g = this.makeLegend(getPossibleValues(this.data, this.category), color, 10);
-		g.attr("transform", "translate(0,0)");
+					);*/
+		
 	}
 	
 	getYearData() {
@@ -122,7 +128,6 @@ class LineGraph extends Grapher {
 	
 	update() {
 		this.showStacked();
-		this.getStackedFormattedData();
 		
 	}
 }

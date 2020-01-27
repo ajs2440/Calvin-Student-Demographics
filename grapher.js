@@ -23,12 +23,12 @@ class Grapher {
 				  .attr("class", "legend")
 				  .attr("cx", 10)
 				  .attr("cy", d => {console.log("creating"); return(legendScale(d))})
-				  .attr("r", 5)
+				  .attr("r", size/2)
 				  .style("fill", d => colorScale(d)),
 				update => update
 				  .attr("cx", 10)
 				  .attr("cy", d => {console.log("Updating!"); return(legendScale(d))})
-				  .attr("r", 5)
+				  .attr("r", size/2)
 				  .style("fill", d => colorScale(d)),
 				exit => exit.remove()
 		)
@@ -39,15 +39,15 @@ class Grapher {
 				enter => enter.append("text")
 					.attr("class", "legend")
 					.attr("x", 3*size)
-					.attr("y", d => (legendScale(d)+size))
+					.attr("y", d => (legendScale(d)+size/3))
 					.attr("font-family", "sans-serif")
-					.attr("font-size", `${size-1}px`)
+					.attr("font-size", `${size}px`)
 					.text(d => d),
 				update => update
 					.attr("x", 3*size)
-					.attr("y", d => (legendScale(d)+size))
+					.attr("y", d => (legendScale(d)+size/3))
 					.attr("font-family", "sans-serif")
-					.attr("font-size", `${size-1}px`)
+					.attr("font-size", `${size}px`)
 					.text(d => d),
 				exit => exit.remove()
 		)

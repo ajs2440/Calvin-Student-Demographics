@@ -132,7 +132,6 @@ class GroupedBarChart extends Grapher {
 		let flattenedData = this.getCurrentDoubleData(data);
 		let types = this.getPossibleCurrentValues(data);
 		
-		console.log(flattenedData);
 		
 		//update x axis
 		this.xGroupScale.domain(flattenedData.map(e => e.mainvar))
@@ -190,11 +189,9 @@ class GroupedBarChart extends Grapher {
 					.duration(0)
 					.remove()
 				)
-
-		console.log("===============");
-		console.log(types);
 		
-		this.makeLegend(types, this.colorScale, 10).attr("transform", `translate(${this.totalWidth/2}, ${this.totalHeight/2})`);
+		let g = this.makeLegend(types, this.colorScale, 10).attr("transform", `translate(${this.totalWidth/2}, ${this.totalHeight/2})`);
+		g.attr("transform", `translate(${this.drawRect.right+10}, ${this.drawRect.top})`);
 	}
 	
 

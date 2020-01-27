@@ -77,19 +77,19 @@ class LineGraph extends Grapher {
 		
 		let types = getPossibleValues(this.data, this.category);
 		
-		let color = genColorScale(types, d3.interpolateRainbow, [0, 100]);
+		let color = genColorScale(types, d3.interpolateViridis, [0, 100]);
 		
 		const area = d3.area()
 			.x(d => this.xScale(d.year))
 			.y0(d => this.yScale(d.values[0]))
 			.y1(d => this.yScale(d.values[1]))
 		
-		console.log(types);
+		console.log(stackData);
 		
-		let g = this.makeLegend(types, color, 10);
-		g.attr("transform", "translate(0,0)");
+		let g = this.makeLegend(types, color, 15);
+		g.attr("transform", `translate(${this.drawRect.right}, ${this.drawRect.top})`);
 		
-		/*const series = this.svg.selectAll(".series")
+		const series = this.svg.selectAll(".series")
 			.data(stackData)
 			.join(
 				enter => enter
@@ -106,7 +106,7 @@ class LineGraph extends Grapher {
 					.attr("d", d => area(d.data)),
 				exit => exit
 					.remove()
-					);*/
+					);
 		
 	}
 	

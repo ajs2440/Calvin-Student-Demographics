@@ -134,8 +134,8 @@ function setup(data) {
 		});
 	
 	let g = new GroupedBarChart("barchart", data, {
-		left: 200,
-		right: 30,
+		left: 50,
+		right: 200,
 		bottom: 200,
 		top: 20
 	});
@@ -150,11 +150,10 @@ function setup(data) {
 	let lineGraph = new LineGraph(data, YEAR_COLUMN_NAME, STUDENT_COUNT_COLUMN_NAME, 
 		{
 			left: 50,
-			right: 30,
+			right: 300,
 			top: 50,
 			bottom: 40
-		},
-		"Calvin Student Count vs. Year"
+		}
 	);
 	
 	

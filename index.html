@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYP	E html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,21 +23,32 @@
             <h1>Calvin University Demographics</h1>
         </div>
         
-        <div id="left-control" class="grid-item">
-            <p>Grouping Order</p><select id="x-sub-var" class="data_parameter"></select>
-        </div>
-        
-<<<<<<< HEAD
-        <br>
-		<br>
-=======
         <div id="right-control" class="grid-item">
-            <p>Content</p><select id="x-var" class="data_parameter"></select>
-        </div>
+			<p>Categories</p><select id="x-var" class="data_parameter"></select>
+		</div>
+		
+		<div id="linegraph" class="grid-item widget" style="text-align: center;">
+			
+			<svg id="linegraphsvg"></svg>
+		</div>
+		
+		<div id="piechart" class="grid-item widget" style="text-align: center;">
+			<input id="year_slider" class="data_parameter" type="range" min="2007" max="2019" value="50">
+			<svg id="piechartsvg"></svg>
+		</div>
+		
+        <div id="visual" class="grid-item widget" style="text-align:center;">
+		
+			<div id="left-control" class="grid-item">
+				<p>Grouping Order</p><select id="x-sub-var" class="data_parameter"></select>
+			</div>
 
-        <div id="visual" class="grid-item" style="text-align:center;">
+			
+		
             <svg id="barchart"></svg>
         </div>
+		
+		
 
         
         
@@ -48,10 +59,15 @@
             <br>
             <p>Made by: Jacob Brink, Tomoki Takeuchi, Carson Ellis, Advait Scaria</p>
         </footer> 
->>>>>>> c7a452389e29f6d5ff02dd4e661c75e99fe83b95
 
         <div id="tooltip"></div>
 
     </div>
-    <script src="main.js"></script>
+    
+	<script src="rectangle.js"></script>
+	<script src="grapher.js"></script>
+	<script src="main.js"></script>
+	<script src="barChart.js"></script>
+	<script src="lineGraph.js"></script>
+	<script src="pieChart.js"></script>
 </html>

@@ -32,6 +32,7 @@ var tooltip = d3.select("#visual")
 
 
 const getPossibleValues = (d, k) => {
+  console.log("key is " + k);
   return Array.from(
     new Set(d.map(e => e[k]))
   );
@@ -118,6 +119,14 @@ dataPromise.then((d) => {
 });
 
 
+function updateCategoryOnChange(d) {
+	updateCategory(d3.select(this).property("value"));
+}
+
+function updateCategory(value) {
+	widgets.forEach(d => d.updateCategory(value));
+}
+
 function setup(data) {
 	
 	d3.select("#x-var")
@@ -129,15 +138,13 @@ function setup(data) {
 		.text(d => getNicerText(d));
 	
 	d3.selectAll("#x-var")
-		.on("change", function(d) {
-			widgets.forEach(w => w.updateCategory(d3.select(this).property("value")));
-		});
+		.on("change", updateCategoryOnChange);
 	
 	let g = new GroupedBarChart("barchart", data, {
 		left: 50,
-		right: 200,
-		bottom: 200,
-		top: 20
+		right: 150,
+		bottom: 100,
+		top: 10
 	});
 	
 	pieGraph = new PieChart("piechartsvg", data, {
@@ -150,15 +157,15 @@ function setup(data) {
 	let lineGraph = new LineGraph(data, YEAR_COLUMN_NAME, STUDENT_COUNT_COLUMN_NAME, 
 		{
 			left: 50,
-			right: 300,
-			top: 50,
-			bottom: 40
+			right: 150,
+			top: 10,
+			bottom: 30
 		}
 	);
 	
 	
 	widgets = [g, pieGraph, lineGraph];
-	
+	updateCategory(d3.select("#x-var").property("value"));
 	
 }
 

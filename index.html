@@ -25,6 +25,7 @@
         
         <div id="right-control" class="grid-item">
 			<p>Categories</p><select id="x-var" class="data_parameter"></select>
+			<p>Year Slider</p><input id="year_slider" class="data_parameter" type="range" min="2007" max="2019" value="50">
 		</div>
 		
 		<div id="linegraph" class="grid-item widget" style="text-align: center;">
@@ -33,18 +34,11 @@
 		</div>
 		
 		<div id="piechart" class="grid-item widget" style="text-align: center;">
-			<input id="year_slider" class="data_parameter" type="range" min="2007" max="2019" value="50">
 			<svg id="piechartsvg"></svg>
 		</div>
 		
         <div id="visual" class="grid-item widget" style="text-align:center;">
-		
-			<div id="left-control" class="grid-item">
-				<p>Grouping Order</p><select id="x-sub-var" class="data_parameter"></select>
-			</div>
-
-			
-		
+			<p>Grouping Order</p><select id="x-sub-var" class="data_parameter"></select>
             <svg id="barchart"></svg>
         </div>
 		

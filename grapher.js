@@ -81,6 +81,8 @@ class Grapher {
 	}
 	
 	updateCategory(category) {
+		console.log("Is this ever undefined");
+		console.log(category);
 		this.category = category;
 		this.update();
 	};

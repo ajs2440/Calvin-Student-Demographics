@@ -19,8 +19,8 @@ class LineGraph extends Grapher {
 			.domain([0, d3.extent(this.yearFlattenedData.map(e => e.y))[1]])
 			.range([this.drawRect.bottom, this.drawRect.top]);
 		
-		this.svg.append("g").call(d3.axisBottom(this.xScale)).attr("transform", `translate(0, ${this.drawRect.bottom+this.drawPadding})`);
-		this.svg.append("g").call(d3.axisLeft(this.yScale)).attr("transform", `translate(${this.drawRect.left-this.drawPadding}, 0)`);
+		this.bottomAxis = this.svg.append("g").call(d3.axisBottom(this.xScale)).attr("transform", `translate(0, ${this.drawRect.bottom+this.drawPadding})`);
+		this.leftAxis = this.svg.append("g").call(d3.axisLeft(this.yScale)).attr("transform", `translate(${this.drawRect.left-this.drawPadding}, 0)`);
 		
 	}
 	
@@ -44,7 +44,7 @@ class LineGraph extends Grapher {
 			dataFormatted.push(newObj);
 			
 		});
-		
+		console.log(getPossibleValues(this.data, this.category));
 		const stack = d3.stack().keys(getPossibleValues(this.data, this.category));
 		const stackedValues = stack(dataFormatted);
 		
@@ -86,7 +86,7 @@ class LineGraph extends Grapher {
 		
 		console.log(stackData);
 		
-		let g = this.makeLegend(types, color, 15);
+		let g = this.makeLegend(types, color, 10);
 		g.attr("transform", `translate(${this.drawRect.right}, ${this.drawRect.top})`);
 		
 		const series = this.svg.selectAll(".series")
@@ -128,6 +128,5 @@ class LineGraph extends Grapher {
 	
 	update() {
 		this.showStacked();
-		
 	}
 }
